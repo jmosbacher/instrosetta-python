@@ -24,6 +24,11 @@ class SingleLinearAxisStub(object):
         request_serializer=interfaces_dot_motion_dot_linear_dot_singleaxis__pb2.ConnectRequest.SerializeToString,
         response_deserializer=interfaces_dot_motion_dot_linear_dot_singleaxis__pb2.Device.FromString,
         )
+    self.Disconnect = channel.unary_unary(
+        '/devices.motion.linear.singleaxis.SingleLinearAxis/Disconnect',
+        request_serializer=interfaces_dot_motion_dot_linear_dot_singleaxis__pb2.DisconnectRequest.SerializeToString,
+        response_deserializer=interfaces_dot_motion_dot_linear_dot_singleaxis__pb2.Device.FromString,
+        )
     self.GetRange = channel.unary_unary(
         '/devices.motion.linear.singleaxis.SingleLinearAxis/GetRange',
         request_serializer=interfaces_dot_motion_dot_linear_dot_singleaxis__pb2.GetRangeRequest.SerializeToString,
@@ -42,7 +47,7 @@ class SingleLinearAxisStub(object):
     self.MoveRelative = channel.unary_stream(
         '/devices.motion.linear.singleaxis.SingleLinearAxis/MoveRelative',
         request_serializer=interfaces_dot_motion_dot_linear_dot_singleaxis__pb2.MoveRelativeRequest.SerializeToString,
-        response_deserializer=interfaces_dot_motion_dot_linear_dot_singleaxis__pb2.Distance.FromString,
+        response_deserializer=interfaces_dot_motion_dot_linear_dot_singleaxis__pb2.Position.FromString,
         )
 
 
@@ -58,6 +63,13 @@ class SingleLinearAxisServicer(object):
     raise NotImplementedError('Method not implemented!')
 
   def Connect(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def Disconnect(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -105,6 +117,11 @@ def add_SingleLinearAxisServicer_to_server(servicer, server):
           request_deserializer=interfaces_dot_motion_dot_linear_dot_singleaxis__pb2.ConnectRequest.FromString,
           response_serializer=interfaces_dot_motion_dot_linear_dot_singleaxis__pb2.Device.SerializeToString,
       ),
+      'Disconnect': grpc.unary_unary_rpc_method_handler(
+          servicer.Disconnect,
+          request_deserializer=interfaces_dot_motion_dot_linear_dot_singleaxis__pb2.DisconnectRequest.FromString,
+          response_serializer=interfaces_dot_motion_dot_linear_dot_singleaxis__pb2.Device.SerializeToString,
+      ),
       'GetRange': grpc.unary_unary_rpc_method_handler(
           servicer.GetRange,
           request_deserializer=interfaces_dot_motion_dot_linear_dot_singleaxis__pb2.GetRangeRequest.FromString,
@@ -123,7 +140,7 @@ def add_SingleLinearAxisServicer_to_server(servicer, server):
       'MoveRelative': grpc.unary_stream_rpc_method_handler(
           servicer.MoveRelative,
           request_deserializer=interfaces_dot_motion_dot_linear_dot_singleaxis__pb2.MoveRelativeRequest.FromString,
-          response_serializer=interfaces_dot_motion_dot_linear_dot_singleaxis__pb2.Distance.SerializeToString,
+          response_serializer=interfaces_dot_motion_dot_linear_dot_singleaxis__pb2.Position.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
