@@ -2,7 +2,7 @@ from grpc_tools import protoc
 import os
 
 proto_files = []
-rootDir = '../../instrosetta-proto'
+rootDir = '../instrosetta-proto'
 for dirName, subdirList, fileList in os.walk(rootDir):
     for fname in fileList:
         if fname.endswith('.proto'):
@@ -10,6 +10,7 @@ for dirName, subdirList, fileList in os.walk(rootDir):
             proto_files.append(path)
 
 for path in proto_files:
+    print(path)
     protoc.main((
         '',
         f'-I{rootDir}',

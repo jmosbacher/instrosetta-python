@@ -1,9 +1,9 @@
 import grpc
 from enum import Enum
 import pint
-from instrosseta.utils.units import accept_text
-from instrosseta.interfaces.motion.linear import singleaxis_pb2
-from instrosseta.interfaces.motion.linear import singleaxis_pb2_grpc
+from instrosetta.utils.units import accept_text
+from instrosetta.interfaces.motion.linear import singleaxis_pb2
+from instrosetta.interfaces.motion.linear import singleaxis_pb2_grpc
 
 ureg = pint.UnitRegistry()
 Q_ = ureg.Quantity
@@ -12,26 +12,28 @@ class MotorType(Enum):
     DC_SERVO = 0
     STEPPER = 1
 
-class LinearSingleAxis:
+class SingleLinearAxis:
     def __init__(self, addr="localhost:50051"):
         self.addr = addr 
 
-    def connect(self, serial_number, motor_type=MotorType.DC_SERVO):
+    def connect(self, serial_number, motor_type=0):
         with grpc.insecure_channel(self.addr) as channel:
-            stub = singleaxis_pb2_grpc.SingleLinearAxis(channel)
-            req = singleaxis_pb2_grpc.Device(serial_number=serial_number, motor_type=motor_type)
+            stub = singleaxis_pb2_grpc.SingleLinearAxisStub(channel)
+            dev = singleaxis_pb2.Device(serial_number=serial_number, motor_type=motor_type)
+            req = singleaxis_pb2.ConnectRequest(device=dev)
             try:
                 resp = stub.Connect(req)
                 return True
             except grpc.RpcError as e:
+                print(e)
                 # FIXME: log error/ raise exception.
                 return False
 
     
     def get_range(self, units='mm'):
         with grpc.insecure_channel(self.addr) as channel:
-            stub = singleaxis_pb2_grpc.SingleLinearAxis(channel)
-            req = singleaxis_pb2_grpc.GetRangeReqeust(units=units)
+            stub = singleaxis_pb2_grpc.SingleLinearAxisStub(channel)
+            req = singleaxis_pb2.GetRangeReqeust(units=units)
             try:
                 resp = stub.GetRange(req)
                 return (Q_(resp.min, resp.units), Q_(resp.max, resp.units), Q_(resp.resolution, resp.units))
@@ -41,10 +43,10 @@ class LinearSingleAxis:
     @property
     def position(self):
         with grpc.insecure_channel(self.addr) as channel:
-            stub = singleaxis_pb2_grpc.SingleLinearAxis(channel)
-            req = singleaxis_pb2_grpc.GetPositionRequest()
+            stub = singleaxis_pb2_grpc.SingleLinearAxisStub(channel)
+            req = singleaxis_pb2.GetPositionRequest()
             try:
-                resp = singleaxis_pb2_grpc.GetPosition(req)
+                resp = stub.GetPosition(req)
                 return Q_(resp.value, resp.units)
             except grpc.RpcError as e:
                 return Q_(float('nan'))
@@ -54,11 +56,11 @@ class LinearSingleAxis:
     @ureg.check(None, '[length]')
     def position(self, destination):
         with grpc.insecure_channel(self.addr) as channel:
-            stub = singleaxis_pb2_grpc.SingleLinearAxis(channel)
-            pos = singleaxis_pb2_grpc.Position(value=destination.magnitute, units=destination.units)
-            req = singleaxis_pb2_grpc.MoveAbsoluteRequest(position=pos)
+            stub = singleaxis_pb2_grpc.SingleLinearAxisStub(channel)
+            pos = singleaxis_pb2.Position(value=destination.magnitute, units=destination.units)
+            req = singleaxis_pb2.MoveAbsoluteRequest(position=pos)
             try:
-                resp = singleaxis_pb2_grpc.MoveAbsolute(req)
+                resp = stub.MoveAbsolute(req)
                 return True
             except grpc.RpcError as e:
                 return False
