@@ -14,6 +14,11 @@ class SingleLinearAxisStub(object):
     Args:
       channel: A grpc.Channel.
     """
+    self.Echo = channel.unary_unary(
+        '/devices.motion.linear.singleaxis.SingleLinearAxis/Echo',
+        request_serializer=instrosetta_dot_interfaces_dot_motion_dot_linear_dot_singleaxis__pb2.TextMessage.SerializeToString,
+        response_deserializer=instrosetta_dot_interfaces_dot_motion_dot_linear_dot_singleaxis__pb2.TextMessage.FromString,
+        )
     self.ScanDevices = channel.unary_stream(
         '/devices.motion.linear.singleaxis.SingleLinearAxis/ScanDevices',
         request_serializer=instrosetta_dot_interfaces_dot_motion_dot_linear_dot_singleaxis__pb2.ScanDevicesRequest.SerializeToString,
@@ -54,6 +59,13 @@ class SingleLinearAxisStub(object):
 class SingleLinearAxisServicer(object):
   # missing associated documentation comment in .proto file
   pass
+
+  def Echo(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
 
   def ScanDevices(self, request, context):
     # missing associated documentation comment in .proto file
@@ -107,6 +119,11 @@ class SingleLinearAxisServicer(object):
 
 def add_SingleLinearAxisServicer_to_server(servicer, server):
   rpc_method_handlers = {
+      'Echo': grpc.unary_unary_rpc_method_handler(
+          servicer.Echo,
+          request_deserializer=instrosetta_dot_interfaces_dot_motion_dot_linear_dot_singleaxis__pb2.TextMessage.FromString,
+          response_serializer=instrosetta_dot_interfaces_dot_motion_dot_linear_dot_singleaxis__pb2.TextMessage.SerializeToString,
+      ),
       'ScanDevices': grpc.unary_stream_rpc_method_handler(
           servicer.ScanDevices,
           request_deserializer=instrosetta_dot_interfaces_dot_motion_dot_linear_dot_singleaxis__pb2.ScanDevicesRequest.FromString,

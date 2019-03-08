@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='devices.motion.linear.singleaxis',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n5instrosetta/interfaces/motion/linear/singleaxis.proto\x12 devices.motion.linear.singleaxis\"\x14\n\x12ScanDevicesRequest\"\xb2\x01\n\x06\x44\x65vice\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x15\n\rserial_number\x18\x02 \x01(\r\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x46\n\nmotor_type\x18\x04 \x01(\x0e\x32\x32.devices.motion.linear.singleaxis.Device.MotorType\"&\n\tMotorType\x12\x0c\n\x08\x44\x43_SERVO\x10\x00\x12\x0b\n\x07STEPPER\x10\x01\"\x83\x01\n\x0e\x43onnectRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x38\n\x06\x64\x65vice\x18\x02 \x01(\x0b\x32(.devices.motion.linear.singleaxis.Device\x12\x0f\n\x07timeout\x18\x03 \x01(\x02\x12\x18\n\x10polling_interval\x18\x04 \x01(\x02\"2\n\x11\x44isconnectRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07timeout\x18\x02 \x01(\x02\".\n\x0fGetRangeRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"W\n\nStageRange\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\x12\x0b\n\x03min\x18\x03 \x01(\x01\x12\x0b\n\x03max\x18\x04 \x01(\x01\x12\x12\n\nresolution\x18\x05 \x01(\x01\"#\n\x12GetPositionRequest\x12\r\n\x05units\x18\x01 \x01(\t\"\xa8\x01\n\x08\x44istance\x12\r\n\x05value\x18\x01 \x01(\x01\x12\r\n\x05units\x18\x02 \x01(\t\x12G\n\tdirection\x18\x03 \x01(\x0e\x32\x34.devices.motion.linear.singleaxis.Distance.Direction\"5\n\tDirection\x12\r\n\tundefined\x10\x00\x12\x0b\n\x07\x66orward\x10\x01\x12\x0c\n\x08\x62\x61\x63kward\x10\x02\"(\n\x08Position\x12\r\n\x05value\x18\x01 \x01(\x01\x12\r\n\x05units\x18\x02 \x01(\t\"a\n\x13MoveAbsoluteRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12<\n\x08position\x18\x02 \x01(\x0b\x32*.devices.motion.linear.singleaxis.Position\"a\n\x13MoveRelativeRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12<\n\x08\x64istance\x18\x02 \x01(\x0b\x32*.devices.motion.linear.singleaxis.Distance2\xad\x06\n\x10SingleLinearAxis\x12q\n\x0bScanDevices\x12\x34.devices.motion.linear.singleaxis.ScanDevicesRequest\x1a(.devices.motion.linear.singleaxis.Device\"\x00\x30\x01\x12g\n\x07\x43onnect\x12\x30.devices.motion.linear.singleaxis.ConnectRequest\x1a(.devices.motion.linear.singleaxis.Device\"\x00\x12m\n\nDisconnect\x12\x33.devices.motion.linear.singleaxis.DisconnectRequest\x1a(.devices.motion.linear.singleaxis.Device\"\x00\x12m\n\x08GetRange\x12\x31.devices.motion.linear.singleaxis.GetRangeRequest\x1a,.devices.motion.linear.singleaxis.StageRange\"\x00\x12q\n\x0bGetPosition\x12\x34.devices.motion.linear.singleaxis.GetPositionRequest\x1a*.devices.motion.linear.singleaxis.Position\"\x00\x12u\n\x0cMoveAbsolute\x12\x35.devices.motion.linear.singleaxis.MoveAbsoluteRequest\x1a*.devices.motion.linear.singleaxis.Position\"\x00\x30\x01\x12u\n\x0cMoveRelative\x12\x35.devices.motion.linear.singleaxis.MoveRelativeRequest\x1a*.devices.motion.linear.singleaxis.Position\"\x00\x30\x01\x62\x06proto3')
+  serialized_pb=_b('\n5instrosetta/interfaces/motion/linear/singleaxis.proto\x12 devices.motion.linear.singleaxis\",\n\x0bTextMessage\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x02 \x01(\t\"\x14\n\x12ScanDevicesRequest\"\xb2\x01\n\x06\x44\x65vice\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x15\n\rserial_number\x18\x02 \x01(\r\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x46\n\nmotor_type\x18\x04 \x01(\x0e\x32\x32.devices.motion.linear.singleaxis.Device.MotorType\"&\n\tMotorType\x12\x0c\n\x08\x44\x43_SERVO\x10\x00\x12\x0b\n\x07STEPPER\x10\x01\"\x83\x01\n\x0e\x43onnectRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x38\n\x06\x64\x65vice\x18\x02 \x01(\x0b\x32(.devices.motion.linear.singleaxis.Device\x12\x0f\n\x07timeout\x18\x03 \x01(\x02\x12\x18\n\x10polling_interval\x18\x04 \x01(\x02\"2\n\x11\x44isconnectRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07timeout\x18\x02 \x01(\x02\".\n\x0fGetRangeRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"W\n\nStageRange\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\x12\x0b\n\x03min\x18\x03 \x01(\x01\x12\x0b\n\x03max\x18\x04 \x01(\x01\x12\x12\n\nresolution\x18\x05 \x01(\x01\"#\n\x12GetPositionRequest\x12\r\n\x05units\x18\x01 \x01(\t\"\xa8\x01\n\x08\x44istance\x12\r\n\x05value\x18\x01 \x01(\x01\x12\r\n\x05units\x18\x02 \x01(\t\x12G\n\tdirection\x18\x03 \x01(\x0e\x32\x34.devices.motion.linear.singleaxis.Distance.Direction\"5\n\tDirection\x12\r\n\tundefined\x10\x00\x12\x0b\n\x07\x66orward\x10\x01\x12\x0c\n\x08\x62\x61\x63kward\x10\x02\"(\n\x08Position\x12\r\n\x05value\x18\x01 \x01(\x01\x12\r\n\x05units\x18\x02 \x01(\t\"a\n\x13MoveAbsoluteRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12<\n\x08position\x18\x02 \x01(\x0b\x32*.devices.motion.linear.singleaxis.Position\"a\n\x13MoveRelativeRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12<\n\x08\x64istance\x18\x02 \x01(\x0b\x32*.devices.motion.linear.singleaxis.Distance2\x95\x07\n\x10SingleLinearAxis\x12\x66\n\x04\x45\x63ho\x12-.devices.motion.linear.singleaxis.TextMessage\x1a-.devices.motion.linear.singleaxis.TextMessage\"\x00\x12q\n\x0bScanDevices\x12\x34.devices.motion.linear.singleaxis.ScanDevicesRequest\x1a(.devices.motion.linear.singleaxis.Device\"\x00\x30\x01\x12g\n\x07\x43onnect\x12\x30.devices.motion.linear.singleaxis.ConnectRequest\x1a(.devices.motion.linear.singleaxis.Device\"\x00\x12m\n\nDisconnect\x12\x33.devices.motion.linear.singleaxis.DisconnectRequest\x1a(.devices.motion.linear.singleaxis.Device\"\x00\x12m\n\x08GetRange\x12\x31.devices.motion.linear.singleaxis.GetRangeRequest\x1a,.devices.motion.linear.singleaxis.StageRange\"\x00\x12q\n\x0bGetPosition\x12\x34.devices.motion.linear.singleaxis.GetPositionRequest\x1a*.devices.motion.linear.singleaxis.Position\"\x00\x12u\n\x0cMoveAbsolute\x12\x35.devices.motion.linear.singleaxis.MoveAbsoluteRequest\x1a*.devices.motion.linear.singleaxis.Position\"\x00\x30\x01\x12u\n\x0cMoveRelative\x12\x35.devices.motion.linear.singleaxis.MoveRelativeRequest\x1a*.devices.motion.linear.singleaxis.Position\"\x00\x30\x01\x62\x06proto3')
 )
 
 
@@ -41,8 +41,8 @@ _DEVICE_MOTORTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=254,
-  serialized_end=292,
+  serialized_start=300,
+  serialized_end=338,
 )
 _sym_db.RegisterEnumDescriptor(_DEVICE_MOTORTYPE)
 
@@ -67,10 +67,48 @@ _DISTANCE_DIRECTION = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=770,
-  serialized_end=823,
+  serialized_start=816,
+  serialized_end=869,
 )
 _sym_db.RegisterEnumDescriptor(_DISTANCE_DIRECTION)
+
+
+_TEXTMESSAGE = _descriptor.Descriptor(
+  name='TextMessage',
+  full_name='devices.motion.linear.singleaxis.TextMessage',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='devices.motion.linear.singleaxis.TextMessage.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='content', full_name='devices.motion.linear.singleaxis.TextMessage.content', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=91,
+  serialized_end=135,
+)
 
 
 _SCANDEVICESREQUEST = _descriptor.Descriptor(
@@ -92,8 +130,8 @@ _SCANDEVICESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=91,
-  serialized_end=111,
+  serialized_start=137,
+  serialized_end=157,
 )
 
 
@@ -145,8 +183,8 @@ _DEVICE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=114,
-  serialized_end=292,
+  serialized_start=160,
+  serialized_end=338,
 )
 
 
@@ -197,8 +235,8 @@ _CONNECTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=295,
-  serialized_end=426,
+  serialized_start=341,
+  serialized_end=472,
 )
 
 
@@ -235,8 +273,8 @@ _DISCONNECTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=428,
-  serialized_end=478,
+  serialized_start=474,
+  serialized_end=524,
 )
 
 
@@ -273,8 +311,8 @@ _GETRANGEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=480,
-  serialized_end=526,
+  serialized_start=526,
+  serialized_end=572,
 )
 
 
@@ -332,8 +370,8 @@ _STAGERANGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=528,
-  serialized_end=615,
+  serialized_start=574,
+  serialized_end=661,
 )
 
 
@@ -363,8 +401,8 @@ _GETPOSITIONREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=617,
-  serialized_end=652,
+  serialized_start=663,
+  serialized_end=698,
 )
 
 
@@ -409,8 +447,8 @@ _DISTANCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=655,
-  serialized_end=823,
+  serialized_start=701,
+  serialized_end=869,
 )
 
 
@@ -447,8 +485,8 @@ _POSITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=825,
-  serialized_end=865,
+  serialized_start=871,
+  serialized_end=911,
 )
 
 
@@ -485,8 +523,8 @@ _MOVEABSOLUTEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=867,
-  serialized_end=964,
+  serialized_start=913,
+  serialized_end=1010,
 )
 
 
@@ -523,8 +561,8 @@ _MOVERELATIVEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=966,
-  serialized_end=1063,
+  serialized_start=1012,
+  serialized_end=1109,
 )
 
 _DEVICE.fields_by_name['motor_type'].enum_type = _DEVICE_MOTORTYPE
@@ -534,6 +572,7 @@ _DISTANCE.fields_by_name['direction'].enum_type = _DISTANCE_DIRECTION
 _DISTANCE_DIRECTION.containing_type = _DISTANCE
 _MOVEABSOLUTEREQUEST.fields_by_name['position'].message_type = _POSITION
 _MOVERELATIVEREQUEST.fields_by_name['distance'].message_type = _DISTANCE
+DESCRIPTOR.message_types_by_name['TextMessage'] = _TEXTMESSAGE
 DESCRIPTOR.message_types_by_name['ScanDevicesRequest'] = _SCANDEVICESREQUEST
 DESCRIPTOR.message_types_by_name['Device'] = _DEVICE
 DESCRIPTOR.message_types_by_name['ConnectRequest'] = _CONNECTREQUEST
@@ -546,6 +585,13 @@ DESCRIPTOR.message_types_by_name['Position'] = _POSITION
 DESCRIPTOR.message_types_by_name['MoveAbsoluteRequest'] = _MOVEABSOLUTEREQUEST
 DESCRIPTOR.message_types_by_name['MoveRelativeRequest'] = _MOVERELATIVEREQUEST
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
+
+TextMessage = _reflection.GeneratedProtocolMessageType('TextMessage', (_message.Message,), dict(
+  DESCRIPTOR = _TEXTMESSAGE,
+  __module__ = 'instrosetta.interfaces.motion.linear.singleaxis_pb2'
+  # @@protoc_insertion_point(class_scope:devices.motion.linear.singleaxis.TextMessage)
+  ))
+_sym_db.RegisterMessage(TextMessage)
 
 ScanDevicesRequest = _reflection.GeneratedProtocolMessageType('ScanDevicesRequest', (_message.Message,), dict(
   DESCRIPTOR = _SCANDEVICESREQUEST,
@@ -632,13 +678,22 @@ _SINGLELINEARAXIS = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=1066,
-  serialized_end=1879,
+  serialized_start=1112,
+  serialized_end=2029,
   methods=[
+  _descriptor.MethodDescriptor(
+    name='Echo',
+    full_name='devices.motion.linear.singleaxis.SingleLinearAxis.Echo',
+    index=0,
+    containing_service=None,
+    input_type=_TEXTMESSAGE,
+    output_type=_TEXTMESSAGE,
+    serialized_options=None,
+  ),
   _descriptor.MethodDescriptor(
     name='ScanDevices',
     full_name='devices.motion.linear.singleaxis.SingleLinearAxis.ScanDevices',
-    index=0,
+    index=1,
     containing_service=None,
     input_type=_SCANDEVICESREQUEST,
     output_type=_DEVICE,
@@ -647,7 +702,7 @@ _SINGLELINEARAXIS = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='Connect',
     full_name='devices.motion.linear.singleaxis.SingleLinearAxis.Connect',
-    index=1,
+    index=2,
     containing_service=None,
     input_type=_CONNECTREQUEST,
     output_type=_DEVICE,
@@ -656,7 +711,7 @@ _SINGLELINEARAXIS = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='Disconnect',
     full_name='devices.motion.linear.singleaxis.SingleLinearAxis.Disconnect',
-    index=2,
+    index=3,
     containing_service=None,
     input_type=_DISCONNECTREQUEST,
     output_type=_DEVICE,
@@ -665,7 +720,7 @@ _SINGLELINEARAXIS = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='GetRange',
     full_name='devices.motion.linear.singleaxis.SingleLinearAxis.GetRange',
-    index=3,
+    index=4,
     containing_service=None,
     input_type=_GETRANGEREQUEST,
     output_type=_STAGERANGE,
@@ -674,7 +729,7 @@ _SINGLELINEARAXIS = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='GetPosition',
     full_name='devices.motion.linear.singleaxis.SingleLinearAxis.GetPosition',
-    index=4,
+    index=5,
     containing_service=None,
     input_type=_GETPOSITIONREQUEST,
     output_type=_POSITION,
@@ -683,7 +738,7 @@ _SINGLELINEARAXIS = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='MoveAbsolute',
     full_name='devices.motion.linear.singleaxis.SingleLinearAxis.MoveAbsolute',
-    index=5,
+    index=6,
     containing_service=None,
     input_type=_MOVEABSOLUTEREQUEST,
     output_type=_POSITION,
@@ -692,7 +747,7 @@ _SINGLELINEARAXIS = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='MoveRelative',
     full_name='devices.motion.linear.singleaxis.SingleLinearAxis.MoveRelative',
-    index=6,
+    index=7,
     containing_service=None,
     input_type=_MOVERELATIVEREQUEST,
     output_type=_POSITION,

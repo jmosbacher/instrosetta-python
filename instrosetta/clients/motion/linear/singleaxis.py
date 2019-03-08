@@ -13,22 +13,32 @@ class MotorType(Enum):
     STEPPER = 1
 
 class SingleLinearAxis:
-    def __init__(self, addr="localhost:50051"):
+    def __init__(self, addr="localhost:50052"):
         self.addr = addr 
 
+    def echo(self, text):
+        with grpc.insecure_channel(self.addr) as channel:
+            stub = singleaxis_pb2_grpc.SingleLinearAxisStub(channel)
+            req = singleaxis_pb2.TextMessage(content=text)
+            try:
+                resp = stub.Echo(req)
+                return resp.content
+            except grpc.RpcError as e:
+                print(e)
+                # FIXME: log error/ raise exception.
+                return False
+    
     def connect(self, serial_number, motor_type=0):
         with grpc.insecure_channel(self.addr) as channel:
             stub = singleaxis_pb2_grpc.SingleLinearAxisStub(channel)
             dev = singleaxis_pb2.Device(serial_number=serial_number, motor_type=motor_type)
             req = singleaxis_pb2.ConnectRequest(device=dev)
             try:
-                resp = stub.Connect(req)
-                return True
+                stub.Connect(req)
             except grpc.RpcError as e:
                 print(e)
                 # FIXME: log error/ raise exception.
                 return False
-
     
     def get_range(self, units='mm'):
         with grpc.insecure_channel(self.addr) as channel:
