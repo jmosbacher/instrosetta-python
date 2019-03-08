@@ -27,12 +27,23 @@ class SingleLinearAxis:
                 print(e)
                 # FIXME: log error/ raise exception.
                 return False
-    
+
+    def scan_devices(self):
+        with grpc.insecure_channel(self.addr) as channel:
+            stub = singleaxis_pb2_grpc.SingleLinearAxisStub(channel)
+            req = singleaxis_pb2.ScanDevicesRequest()
+            try:
+                return [resp.serial_number for resp in stub.ScanDevices(req)]
+            except grpc.RpcError as e:
+                print(e)
+                # FIXME: log error/ raise exception.
+                return False
+
     def connect(self, serial_number, motor_type=0):
         with grpc.insecure_channel(self.addr) as channel:
             stub = singleaxis_pb2_grpc.SingleLinearAxisStub(channel)
             dev = singleaxis_pb2.Device(serial_number=serial_number, motor_type=motor_type)
-            req = singleaxis_pb2.ConnectRequest(device=dev)
+            req = singleaxis_pb2.ConnectRequest(device=dev, timeout=5, polling_interval=0.25)
             try:
                 stub.Connect(req)
             except grpc.RpcError as e:
@@ -43,12 +54,17 @@ class SingleLinearAxis:
     def get_range(self, units='mm'):
         with grpc.insecure_channel(self.addr) as channel:
             stub = singleaxis_pb2_grpc.SingleLinearAxisStub(channel)
-            req = singleaxis_pb2.GetRangeReqeust(units=units)
+            req = singleaxis_pb2.GetRangeRequest(units=units)
             try:
                 resp = stub.GetRange(req)
-                return (Q_(resp.min, resp.units), Q_(resp.max, resp.units), Q_(resp.resolution, resp.units))
+                return {"minimum": Q_(resp.min, resp.units),
+                        "maximum": Q_(resp.max, resp.units),
+                        "resolution": Q_(resp.resolution, resp.units)}
+
             except grpc.RpcError as e:
-                return Q_(float('nan'))
+                return {"minimum": Q_(float('nan')),
+                        "maximum": Q_(float('nan')),
+                        "resolution": Q_(float('nan')),}
 
     @property
     def position(self):
@@ -56,10 +72,10 @@ class SingleLinearAxis:
             stub = singleaxis_pb2_grpc.SingleLinearAxisStub(channel)
             req = singleaxis_pb2.GetPositionRequest()
             try:
-                resp = stub.GetPosition(req)
-                return Q_(resp.value, resp.units)
+                track = [Q_(resp.value, resp.units) for resp in stub.GetPosition(req)]
+                return track
             except grpc.RpcError as e:
-                return Q_(float('nan'))
+                return [Q_(float('nan'))]
     
     @position.setter       
     @accept_text
@@ -70,16 +86,16 @@ class SingleLinearAxis:
             pos = singleaxis_pb2.Position(value=destination.magnitute, units=destination.units)
             req = singleaxis_pb2.MoveAbsoluteRequest(position=pos)
             try:
-                resp = stub.MoveAbsolute(req)
-                return True
+                track = [Q_(resp.value, resp.units) for resp in stub.GetPosition(req)]
+                return track
             except grpc.RpcError as e:
-                return False
+                return [Q_(float('nan'))]
 
     @ureg.check('[length]')
     def move_absolute(self, position, units='mm'):
         pass
 
     @ureg.check('[length]')
-    def move_relative(self):
+    def move_relative(self, distance):
         pass
     
