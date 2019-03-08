@@ -1,5 +1,5 @@
 import grpc
-from collections import enum
+from enum import Enum
 import pint
 from instrosseta.utils.units import accept_text
 from instrosseta.interfaces.motion.linear import singleaxis_pb2
@@ -8,7 +8,7 @@ from instrosseta.interfaces.motion.linear import singleaxis_pb2_grpc
 ureg = pint.UnitRegistry()
 Q_ = ureg.Quantity
 
-class MotorType(enum):
+class MotorType(Enum):
     DC_SERVO = 0
     STEPPER = 1
 
