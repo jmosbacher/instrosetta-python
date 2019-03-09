@@ -103,11 +103,10 @@ class SingleLinearAxis:
     
     @position.setter       
     @accept_text
-    @ureg.check(None, '[length]')
     def position(self, destination):
         with grpc.insecure_channel(self.addr) as channel:
             stub = singleaxis_pb2_grpc.SingleLinearAxisStub(channel)
-            pos = singleaxis_pb2.Position(value=destination.magnitute, units=destination.units)
+            pos = singleaxis_pb2.Position(value=destination.magnitude, units=str(destination.units))
             req = singleaxis_pb2.MoveAbsoluteRequest(position=pos)
             try:
                 track = [Q_(resp.value, resp.units) for resp in stub.GetPosition(req)]
@@ -115,9 +114,17 @@ class SingleLinearAxis:
             except grpc.RpcError as e:
                 return [Q_(float('nan'))]
 
-    @ureg.check('[length]')
-    def move_absolute(self, position, units='mm'):
-        pass
+    @accept_text
+    def move_absolute(self, destination):
+        with grpc.insecure_channel(self.addr) as channel:
+            stub = singleaxis_pb2_grpc.SingleLinearAxisStub(channel)
+            pos = singleaxis_pb2.Position(value=destination.magnitude, units=str(destination.units))
+            req = singleaxis_pb2.MoveAbsoluteRequest(position=pos)
+            try:
+                track = [Q_(resp.value, resp.units) for resp in stub.GetPosition(req)]
+                return track
+            except grpc.RpcError as e:
+                return [Q_(float('nan'))]
 
     @ureg.check('[length]')
     def move_relative(self, distance):
