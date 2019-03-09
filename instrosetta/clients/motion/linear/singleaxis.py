@@ -85,7 +85,7 @@ class SingleLinearAxis:
             pos = singleaxis_pb2.Position(value=destination.magnitude, units=str(destination.units))
             req = singleaxis_pb2.MoveAbsoluteRequest(position=pos)
             try:
-                track = [Q_(resp.value, resp.units) for resp in stub.GetPosition(req)]
+                track = [Q_(resp.value, resp.units) for resp in stub.MoveAbsolute(req)]
                 return track
             except grpc.RpcError as e:
                 return [Q_(float('nan'))]
@@ -97,7 +97,7 @@ class SingleLinearAxis:
             pos = singleaxis_pb2.Position(value=destination.magnitude, units=str(destination.units))
             req = singleaxis_pb2.MoveAbsoluteRequest(position=pos)
             try:
-                track = [Q_(resp.value, resp.units) for resp in stub.GetPosition(req)]
+                track = [Q_(resp.value, resp.units) for resp in stub.MoveAbsolute(req)]
                 return track
             except grpc.RpcError as e:
                 return [Q_(float('nan'))]
