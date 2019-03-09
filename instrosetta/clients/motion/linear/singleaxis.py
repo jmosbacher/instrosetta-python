@@ -61,7 +61,8 @@ class SingleLinearAxis:
     def connect(self, serial_number, motor_type=0, timeout=5, polling_interval=0.25):
         dev = singleaxis_pb2.Device(serial_number=serial_number, motor_type=motor_type)
         req = singleaxis_pb2.ConnectRequest(device=dev, timeout=timeout, polling_interval=polling_interval)
-            
+        self.single_rpc("Connect", req)
+        
     def get_range(self, units='mm'):
         req = singleaxis_pb2.GetRangeRequest(units=units)
         resp = self.single_rpc("GetRange", req)
