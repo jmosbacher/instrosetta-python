@@ -52,7 +52,7 @@ class SingleLinearAxis:
             
     def echo(self, text):
         req = singleaxis_pb2.TextMessage(content=text)
-        return self.single_rpc("Echo", req)
+        return self.single_rpc("Echo", req).content
 
     def scan_devices(self):
         req = singleaxis_pb2.ScanDevicesRequest()
