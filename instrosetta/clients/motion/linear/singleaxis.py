@@ -15,6 +15,30 @@ class MotorType(Enum):
 class SingleLinearAxis:
     def __init__(self, addr="localhost:50052"):
         self.addr = addr 
+        self._stub = None
+
+    def single_rpc(self, method, request):
+        if self._stub is None:
+            with grpc.insecure_channel(self.addr) as channel:
+                stub = singleaxis_pb2_grpc.SingleLinearAxisStub(channel)
+        else:
+            try:
+                resp = getattr(stub, method)(request)
+                return resp
+            except grpc.RpcError as e:
+                print(e)
+                # FIXME: log error/ raise exception.
+
+    def streaming_rpc(self, method, request):
+        with grpc.insecure_channel(self.addr) as channel:
+            stub = singleaxis_pb2_grpc.SingleLinearAxisStub(channel)
+            try:
+                for resp in getattr(stub, method)(request):
+                    yield resp
+            except grpc.RpcError as e:
+                print(e)
+                # FIXME: log error/ raise exception.
+               
 
     def echo(self, text):
         with grpc.insecure_channel(self.addr) as channel:
@@ -99,3 +123,12 @@ class SingleLinearAxis:
     def move_relative(self, distance):
         pass
     
+
+    def __enter__(self):
+        self._channel = grpc.insecure_channel(self.addr)
+        self._stub = singleaxis_pb2_grpc.SingleLinearAxisStub(self._channel)
+
+    def __exit__(self, exc_type, exc_value, traceback):
+        self._channel.close()
+        self._channel = None
+        self._stub = None
