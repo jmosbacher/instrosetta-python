@@ -62,7 +62,11 @@ class SingleLinearAxis:
         dev = singleaxis_pb2.Device(serial_number=serial_number, motor_type=motor_type)
         req = singleaxis_pb2.ConnectRequest(device=dev, timeout=timeout, polling_interval=polling_interval)
         self.single_rpc("Connect", req)
-        
+
+    def disconnect(self):
+        req = singleaxis_pb2.DisconnectRequest()
+        self.single_rpc("Disconnect", req)
+
     def get_range(self, units='mm'):
         req = singleaxis_pb2.GetRangeRequest(units=units)
         resp = self.single_rpc("GetRange", req)
@@ -100,8 +104,8 @@ class SingleLinearAxis:
         return track
 
     @accept_text
-    def move_relative(self, distance):
-        dist = singleaxis_pb2.Distance(value=distance.magnitude, units=str(distance.units), direction=1)
+    def move_relative(self, distance, direction=1):
+        dist = singleaxis_pb2.Distance(value=distance.magnitude, units=str(distance.units), direction=direction)
         req = singleaxis_pb2.MoveRelativeRequest(distance=dist)
         track = [(Q_(float('nan')) if resp is None else Q_(resp.value, resp.units)) for resp in self.streaming_rpc("MoveRelative", req)]
         return track
