@@ -58,9 +58,9 @@ class SingleLinearAxis:
         req = singleaxis_pb2.ScanDevicesRequest()
         return [resp.serial_number for resp in self.streaming_rpc('ScanDevices', req)]
 
-    def connect(self, serial_number, motor_type=0):
+    def connect(self, serial_number, motor_type=0, timeout=5, polling_interval=0.25):
         dev = singleaxis_pb2.Device(serial_number=serial_number, motor_type=motor_type)
-        req = singleaxis_pb2.ConnectRequest(device=dev, timeout=5, polling_interval=0.25)
+        req = singleaxis_pb2.ConnectRequest(device=dev, timeout=timeout, polling_interval=polling_interval)
             
     def get_range(self, units='mm'):
         req = singleaxis_pb2.GetRangeRequest(units=units)
