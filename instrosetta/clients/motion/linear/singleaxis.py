@@ -15,125 +15,100 @@ class MotorType(Enum):
 class SingleLinearAxis:
     def __init__(self, addr="localhost:50052"):
         self.addr = addr 
+        self._channel = None
         self._stub = None
+       
+    def _single_rpc(self, method, request):
+        try:
+            resp = getattr(self._stub, method)(request)
+            return resp
+        except grpc.RpcError as e:
+            print(e)
+            # FIXME: log error/ raise exception.
 
     def single_rpc(self, method, request):
-        if self._stub is None:
-            with grpc.insecure_channel(self.addr) as channel:
-                stub = singleaxis_pb2_grpc.SingleLinearAxisStub(channel)
+        if self._channel is None:
+            with self as s:
+                return s._single_rpc(method, request)
         else:
-            try:
-                resp = getattr(stub, method)(request)
-                return resp
-            except grpc.RpcError as e:
-                print(e)
-                # FIXME: log error/ raise exception.
+            return self._single_rpc(method, request)
 
+    def _streaming_rpc(self, method, request):
+        try:
+            for resp in getattr(self._stub, method)(request):
+                yield resp
+        except grpc.RpcError as e:
+            print(e)
+            # FIXME: log error/ raise exception.
+            #    
     def streaming_rpc(self, method, request):
-        with grpc.insecure_channel(self.addr) as channel:
-            stub = singleaxis_pb2_grpc.SingleLinearAxisStub(channel)
-            try:
-                for resp in getattr(stub, method)(request):
+        if self._channel is None:
+            with self as s:
+                for resp in s._streaming_rpc(method, request):
                     yield resp
-            except grpc.RpcError as e:
-                print(e)
-                # FIXME: log error/ raise exception.
-               
-
+        else:
+            for resp in self._streaming_rpc(method, request):
+                    yield resp
+            
     def echo(self, text):
-        with grpc.insecure_channel(self.addr) as channel:
-            stub = singleaxis_pb2_grpc.SingleLinearAxisStub(channel)
-            req = singleaxis_pb2.TextMessage(content=text)
-            try:
-                resp = stub.Echo(req)
-                return resp.content
-            except grpc.RpcError as e:
-                print(e)
-                # FIXME: log error/ raise exception.
-                return False
+        req = singleaxis_pb2.TextMessage(content=text)
+        return self.single_rpc("Echo", req)
 
     def scan_devices(self):
-        with grpc.insecure_channel(self.addr) as channel:
-            stub = singleaxis_pb2_grpc.SingleLinearAxisStub(channel)
-            req = singleaxis_pb2.ScanDevicesRequest()
-            try:
-                return [resp.serial_number for resp in stub.ScanDevices(req)]
-            except grpc.RpcError as e:
-                print(e)
-                # FIXME: log error/ raise exception.
-                return False
+        req = singleaxis_pb2.ScanDevicesRequest()
+        return [resp.serial_number for resp in self.streaming_rpc('ScanDevices', req)]
 
     def connect(self, serial_number, motor_type=0):
-        with grpc.insecure_channel(self.addr) as channel:
-            stub = singleaxis_pb2_grpc.SingleLinearAxisStub(channel)
-            dev = singleaxis_pb2.Device(serial_number=serial_number, motor_type=motor_type)
-            req = singleaxis_pb2.ConnectRequest(device=dev, timeout=5, polling_interval=0.25)
-            try:
-                stub.Connect(req)
-            except grpc.RpcError as e:
-                print(e)
-                # FIXME: log error/ raise exception.
-                return False
-    
+        dev = singleaxis_pb2.Device(serial_number=serial_number, motor_type=motor_type)
+        req = singleaxis_pb2.ConnectRequest(device=dev, timeout=5, polling_interval=0.25)
+            
     def get_range(self, units='mm'):
-        with grpc.insecure_channel(self.addr) as channel:
-            stub = singleaxis_pb2_grpc.SingleLinearAxisStub(channel)
-            req = singleaxis_pb2.GetRangeRequest(units=units)
-            try:
-                resp = stub.GetRange(req)
-                return {"minimum": Q_(resp.min, resp.units),
-                        "maximum": Q_(resp.max, resp.units),
-                        "resolution": Q_(resp.resolution, resp.units)}
+        req = singleaxis_pb2.GetRangeRequest(units=units)
+        resp = self.single_rpc("GetRange", req)
+        if resp is not None:
+            return {"minimum": Q_(resp.min, resp.units),
+                    "maximum": Q_(resp.max, resp.units),
+                    "resolution": Q_(resp.resolution, resp.units)}
 
-            except grpc.RpcError as e:
-                return {"minimum": Q_(float('nan')),
-                        "maximum": Q_(float('nan')),
-                        "resolution": Q_(float('nan')),}
+        else:
+            return {"minimum": Q_(float('nan')),
+                    "maximum": Q_(float('nan')),
+                    "resolution": Q_(float('nan')),}
 
     @property
     def position(self):
-        with grpc.insecure_channel(self.addr) as channel:
-            stub = singleaxis_pb2_grpc.SingleLinearAxisStub(channel)
-            req = singleaxis_pb2.GetPositionRequest()
-            try:
-                track = [Q_(resp.value, resp.units) for resp in stub.GetPosition(req)]
-                return track
-            except grpc.RpcError as e:
-                return [Q_(float('nan'))]
-    
+        req = singleaxis_pb2.GetPositionRequest()
+        resp = self.single_rpc("GetPosition", req)
+        if resp is not None:
+            return Q_(resp.value, resp.units)
+        else:
+            return [Q_(float('nan'))]
+
     @position.setter       
     @accept_text
     def position(self, destination):
-        with grpc.insecure_channel(self.addr) as channel:
-            stub = singleaxis_pb2_grpc.SingleLinearAxisStub(channel)
-            pos = singleaxis_pb2.Position(value=destination.magnitude, units=str(destination.units))
-            req = singleaxis_pb2.MoveAbsoluteRequest(position=pos)
-            try:
-                track = [Q_(resp.value, resp.units) for resp in stub.GetPosition(req)]
-                return track
-            except grpc.RpcError as e:
-                return [Q_(float('nan'))]
+        pos = singleaxis_pb2.Position(value=destination.magnitude, units=str(destination.units))
+        req = singleaxis_pb2.MoveAbsoluteRequest(position=pos)
+        [Q_(resp.value, resp.units) for resp in self.streaming_rpc("MoveAbsolute", req)]
 
     @accept_text
     def move_absolute(self, destination):
-        with grpc.insecure_channel(self.addr) as channel:
-            stub = singleaxis_pb2_grpc.SingleLinearAxisStub(channel)
-            pos = singleaxis_pb2.Position(value=destination.magnitude, units=str(destination.units))
-            req = singleaxis_pb2.MoveAbsoluteRequest(position=pos)
-            try:
-                track = [Q_(resp.value, resp.units) for resp in stub.GetPosition(req)]
-                return track
-            except grpc.RpcError as e:
-                return [Q_(float('nan'))]
+        pos = singleaxis_pb2.Position(value=destination.magnitude, units=str(destination.units))
+        req = singleaxis_pb2.MoveAbsoluteRequest(position=pos)
+        track = [(Q_(float('nan')) if resp is None else Q_(resp.value, resp.units)) for resp in self.streaming_rpc("MoveAbsolute", req)]
+        return track
 
-    @ureg.check('[length]')
+    @accept_text
     def move_relative(self, distance):
-        pass
-    
+        dist = singleaxis_pb2.Distance(value=distance.magnitude, units=str(distance.units), direction=1)
+        req = singleaxis_pb2.MoveRelativeRequest(distance=dist)
+        track = [(Q_(float('nan')) if resp is None else Q_(resp.value, resp.units)) for resp in self.streaming_rpc("MoveRelative", req)]
+        return track
 
     def __enter__(self):
         self._channel = grpc.insecure_channel(self.addr)
         self._stub = singleaxis_pb2_grpc.SingleLinearAxisStub(self._channel)
+        return self
 
     def __exit__(self, exc_type, exc_value, traceback):
         self._channel.close()
