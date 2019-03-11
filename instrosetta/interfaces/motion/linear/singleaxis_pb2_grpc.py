@@ -34,6 +34,11 @@ class SingleLinearAxisStub(object):
         request_serializer=instrosetta_dot_interfaces_dot_motion_dot_linear_dot_singleaxis__pb2.DisconnectRequest.SerializeToString,
         response_deserializer=instrosetta_dot_interfaces_dot_motion_dot_linear_dot_singleaxis__pb2.Device.FromString,
         )
+    self.HomeMotor = channel.unary_unary(
+        '/devices.motion.linear.singleaxis.SingleLinearAxis/HomeMotor',
+        request_serializer=instrosetta_dot_interfaces_dot_motion_dot_linear_dot_singleaxis__pb2.HomeMotorRequest.SerializeToString,
+        response_deserializer=instrosetta_dot_interfaces_dot_motion_dot_linear_dot_singleaxis__pb2.Position.FromString,
+        )
     self.GetRange = channel.unary_unary(
         '/devices.motion.linear.singleaxis.SingleLinearAxis/GetRange',
         request_serializer=instrosetta_dot_interfaces_dot_motion_dot_linear_dot_singleaxis__pb2.GetRangeRequest.SerializeToString,
@@ -82,6 +87,13 @@ class SingleLinearAxisServicer(object):
     raise NotImplementedError('Method not implemented!')
 
   def Disconnect(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def HomeMotor(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -138,6 +150,11 @@ def add_SingleLinearAxisServicer_to_server(servicer, server):
           servicer.Disconnect,
           request_deserializer=instrosetta_dot_interfaces_dot_motion_dot_linear_dot_singleaxis__pb2.DisconnectRequest.FromString,
           response_serializer=instrosetta_dot_interfaces_dot_motion_dot_linear_dot_singleaxis__pb2.Device.SerializeToString,
+      ),
+      'HomeMotor': grpc.unary_unary_rpc_method_handler(
+          servicer.HomeMotor,
+          request_deserializer=instrosetta_dot_interfaces_dot_motion_dot_linear_dot_singleaxis__pb2.HomeMotorRequest.FromString,
+          response_serializer=instrosetta_dot_interfaces_dot_motion_dot_linear_dot_singleaxis__pb2.Position.SerializeToString,
       ),
       'GetRange': grpc.unary_unary_rpc_method_handler(
           servicer.GetRange,

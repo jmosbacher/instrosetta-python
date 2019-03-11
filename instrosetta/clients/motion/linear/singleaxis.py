@@ -67,6 +67,10 @@ class SingleLinearAxis:
         req = singleaxis_pb2.DisconnectRequest()
         self.single_rpc("Disconnect", req)
 
+    def home(self):
+        req = singleaxis_pb2.HomeMotorRequest()
+        self.single_rpc("HomeMotor", req)
+
     def get_range(self, units='mm'):
         req = singleaxis_pb2.GetRangeRequest(units=units)
         resp = self.single_rpc("GetRange", req)
