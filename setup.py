@@ -14,6 +14,6 @@ setup(name='instrosetta',
           'protobuf',
       ],
       extra_requires={
-          "server": []
+          "server": ['pyserial']
       },
       zip_safe=False)
