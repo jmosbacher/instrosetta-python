@@ -12,7 +12,7 @@ class MotorType(Enum):
     DC_SERVO = 0
     STEPPER = 1
 
-class SingleLinearAxis:
+class SingleAxis:
     def __init__(self, addr="localhost:50052"):
         self.addr = addr 
         self._channel = None
@@ -116,7 +116,7 @@ class SingleLinearAxis:
 
     def __enter__(self):
         self._channel = grpc.insecure_channel(self.addr)
-        self._stub = singleaxis_pb2_grpc.SingleLinearAxisStub(self._channel)
+        self._stub = singleaxis_pb2_grpc.SingleAxisStub(self._channel)
         return self
 
     def __exit__(self, exc_type, exc_value, traceback):
