@@ -2,8 +2,8 @@ import grpc
 from enum import Enum
 import pint
 from instrosetta.utils.units import accept_text
-from instrosetta.interfaces.motion.linear import singleaxis_pb2
-from instrosetta.interfaces.motion.linear import singleaxis_pb2_grpc
+from instrosetta.interfaces.motion import singleaxis_pb2
+from instrosetta.interfaces.motion import singleaxis_pb2_grpc
 
 ureg = pint.UnitRegistry()
 Q_ = ureg.Quantity
