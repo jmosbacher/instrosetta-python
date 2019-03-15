@@ -2,8 +2,7 @@ import serial
 import struct
 import time
 
-
-class CM112:
+class CM112Device:
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.conn = None
@@ -61,29 +60,16 @@ class CM112:
             except:
                 pass
             
-    @property
-    def port(self):
-        return self._port
-
-    @port.setter
-    def port(self, value):
-        self._port = value
-        if self.connected:
-            self.disconnect()
-        try:
-            self.connect()
-        except:
-            pass
-
     def connect(self, port, baudrate=9600, timeout=1):
         self.conn = serial.Serial(port, baudrate=baudrate, timeout=timeout)
 
 
     @property
     def connected(self):
-        if self.conn:
-            return self.conn.is_open
-        return False
+        if self.conn is None:
+            return False
+        return self.conn.is_open
+        
 
     def disconnect(self):
         if self.connected:

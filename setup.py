@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(name='instrosetta',
       version='0.1',
@@ -7,7 +7,7 @@ setup(name='instrosetta',
       author='Yossi Mosbacher',
       author_email='joe.mosbacher@gmail.com',
       license='MIT',
-      packages=['instrosetta'],
+      packages=find_packages(where="instrosetta"),
       install_requires=[
           'grpcio',
           'pint',

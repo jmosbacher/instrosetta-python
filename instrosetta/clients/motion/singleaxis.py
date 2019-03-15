@@ -4,7 +4,7 @@ import pint
 from instrosetta.utils.units import accept_text
 from instrosetta.interfaces.motion import singleaxis_pb2
 from instrosetta.interfaces.motion import singleaxis_pb2_grpc
-
+from instrosetta.client import RpcClient
 ureg = pint.UnitRegistry()
 Q_ = ureg.Quantity
 
@@ -12,7 +12,7 @@ class MotorType(Enum):
     DC_SERVO = 0
     STEPPER = 1
 
-class SingleAxis:
+class SingleAxis(RpcClient):
     def __init__(self, addr="localhost:50052"):
         self.addr = addr 
         self._channel = None
