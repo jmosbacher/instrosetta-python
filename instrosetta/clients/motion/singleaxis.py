@@ -8,9 +8,6 @@ from instrosetta.client import RpcClient
 ureg = pint.UnitRegistry()
 Q_ = ureg.Quantity
 
-class MotorType(Enum):
-    DC_SERVO = 0
-    STEPPER = 1
 
 class SingleAxis(RpcClient):
     def __init__(self, addr="localhost:50052"):
