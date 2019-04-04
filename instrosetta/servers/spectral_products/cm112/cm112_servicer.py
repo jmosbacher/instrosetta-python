@@ -12,7 +12,7 @@ Q_ = ureg.Quantity
 class CM112Servicer(pb2_grpc.MonochromatorServicer):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.device = CM112Device()
+        self.device = CM112Device(*args, **kwargs)
 
     def Connect(self, request, context):
         if self.device.connected:
