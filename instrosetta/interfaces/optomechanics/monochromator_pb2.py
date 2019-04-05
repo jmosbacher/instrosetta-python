@@ -16,10 +16,10 @@ _sym_db = _symbol_database.Default()
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='instrosetta/interfaces/optomechanics/monochromator.proto',
-  package='devices.optomechanics.monochromator',
+  package='interfaces.optomechanics.monochromator',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n8instrosetta/interfaces/optomechanics/monochromator.proto\x12#devices.optomechanics.monochromator\"m\n\x0e\x43onnectRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x15\n\rserial_number\x18\x02 \x01(\t\x12\x13\n\x0bserial_port\x18\x03 \x01(\t\x12\x10\n\x08\x62\x61udrate\x18\x04 \x01(\r\x12\x0f\n\x07timeout\x18\x06 \x01(\x02\"\x1f\n\x0f\x43onnectResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\")\n\x19GetWavelengthRangeRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"[\n\x1aGetWavelengthRangeResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07minimum\x18\x02 \x01(\x02\x12\x0f\n\x07maximum\x18\x03 \x01(\x02\x12\r\n\x05units\x18\x04 \x01(\t\"$\n\x14GetWavelengthRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"H\n\x15GetWavelengthResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x12\n\nwavelength\x18\x02 \x01(\x02\x12\r\n\x05units\x18\x03 \x01(\t\"G\n\x14SetWavelengthRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x12\n\nwavelength\x18\x02 \x01(\x02\x12\r\n\x05units\x18\x03 \x01(\t\"H\n\x15SetWavelengthResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x12\n\nwavelength\x18\x02 \x01(\x02\x12\r\n\x05units\x18\x03 \x01(\t\"(\n\x18GetGratingOptionsRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\":\n\x19GetGratingOptionsResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07options\x18\x02 \x03(\r\"!\n\x11GetGratingRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"3\n\x12GetGratingResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07grating\x18\x02 \x01(\r\"2\n\x11SetGratingRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07grating\x18\x02 \x01(\r\"3\n\x12SetGratingResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07grating\x18\x02 \x01(\r2\xce\x07\n\rMonochromator\x12v\n\x07\x43onnect\x12\x33.devices.optomechanics.monochromator.ConnectRequest\x1a\x34.devices.optomechanics.monochromator.ConnectResponse\"\x00\x12\x97\x01\n\x12GetWavelengthRange\x12>.devices.optomechanics.monochromator.GetWavelengthRangeRequest\x1a?.devices.optomechanics.monochromator.GetWavelengthRangeResponse\"\x00\x12\x88\x01\n\rGetWavelength\x12\x39.devices.optomechanics.monochromator.GetWavelengthRequest\x1a:.devices.optomechanics.monochromator.GetWavelengthResponse\"\x00\x12\x88\x01\n\rSetWavelength\x12\x39.devices.optomechanics.monochromator.SetWavelengthRequest\x1a:.devices.optomechanics.monochromator.SetWavelengthResponse\"\x00\x12\x92\x01\n\x0fGetGratingRange\x12=.devices.optomechanics.monochromator.GetGratingOptionsRequest\x1a>.devices.optomechanics.monochromator.GetGratingOptionsResponse\"\x00\x12\x7f\n\nGetGrating\x12\x36.devices.optomechanics.monochromator.GetGratingRequest\x1a\x37.devices.optomechanics.monochromator.GetGratingResponse\"\x00\x12\x7f\n\nSetGrating\x12\x36.devices.optomechanics.monochromator.SetGratingRequest\x1a\x37.devices.optomechanics.monochromator.SetGratingResponse\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n8instrosetta/interfaces/optomechanics/monochromator.proto\x12&interfaces.optomechanics.monochromator\"m\n\x0e\x43onnectRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x15\n\rserial_number\x18\x02 \x01(\t\x12\x13\n\x0bserial_port\x18\x03 \x01(\t\x12\x10\n\x08\x62\x61udrate\x18\x04 \x01(\r\x12\x0f\n\x07timeout\x18\x06 \x01(\x02\"\x1f\n\x0f\x43onnectResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\"!\n\x11\x44isconnectRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"\"\n\x12\x44isconnectResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\")\n\x19GetWavelengthRangeRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"[\n\x1aGetWavelengthRangeResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07minimum\x18\x02 \x01(\x02\x12\x0f\n\x07maximum\x18\x03 \x01(\x02\x12\r\n\x05units\x18\x04 \x01(\t\"$\n\x14GetWavelengthRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"H\n\x15GetWavelengthResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x12\n\nwavelength\x18\x02 \x01(\x02\x12\r\n\x05units\x18\x03 \x01(\t\"G\n\x14SetWavelengthRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x12\n\nwavelength\x18\x02 \x01(\x02\x12\r\n\x05units\x18\x03 \x01(\t\"H\n\x15SetWavelengthResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x12\n\nwavelength\x18\x02 \x01(\x02\x12\r\n\x05units\x18\x03 \x01(\t\"(\n\x18GetGratingOptionsRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\":\n\x19GetGratingOptionsResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07options\x18\x02 \x03(\r\"!\n\x11GetGratingRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"3\n\x12GetGratingResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07grating\x18\x02 \x01(\r\"2\n\x11SetGratingRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07grating\x18\x02 \x01(\r\"3\n\x12SetGratingResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07grating\x18\x02 \x01(\r2\x82\t\n\rMonochromator\x12|\n\x07\x43onnect\x12\x36.interfaces.optomechanics.monochromator.ConnectRequest\x1a\x37.interfaces.optomechanics.monochromator.ConnectResponse\"\x00\x12\x85\x01\n\nDisconnect\x12\x39.interfaces.optomechanics.monochromator.DisconnectRequest\x1a:.interfaces.optomechanics.monochromator.DisconnectResponse\"\x00\x12\x9d\x01\n\x12GetWavelengthRange\x12\x41.interfaces.optomechanics.monochromator.GetWavelengthRangeRequest\x1a\x42.interfaces.optomechanics.monochromator.GetWavelengthRangeResponse\"\x00\x12\x8e\x01\n\rGetWavelength\x12<.interfaces.optomechanics.monochromator.GetWavelengthRequest\x1a=.interfaces.optomechanics.monochromator.GetWavelengthResponse\"\x00\x12\x8e\x01\n\rSetWavelength\x12<.interfaces.optomechanics.monochromator.SetWavelengthRequest\x1a=.interfaces.optomechanics.monochromator.SetWavelengthResponse\"\x00\x12\x98\x01\n\x0fGetGratingRange\x12@.interfaces.optomechanics.monochromator.GetGratingOptionsRequest\x1a\x41.interfaces.optomechanics.monochromator.GetGratingOptionsResponse\"\x00\x12\x85\x01\n\nGetGrating\x12\x39.interfaces.optomechanics.monochromator.GetGratingRequest\x1a:.interfaces.optomechanics.monochromator.GetGratingResponse\"\x00\x12\x85\x01\n\nSetGrating\x12\x39.interfaces.optomechanics.monochromator.SetGratingRequest\x1a:.interfaces.optomechanics.monochromator.SetGratingResponse\"\x00\x62\x06proto3')
 )
 
 
@@ -27,41 +27,41 @@ DESCRIPTOR = _descriptor.FileDescriptor(
 
 _CONNECTREQUEST = _descriptor.Descriptor(
   name='ConnectRequest',
-  full_name='devices.optomechanics.monochromator.ConnectRequest',
+  full_name='interfaces.optomechanics.monochromator.ConnectRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='devices.optomechanics.monochromator.ConnectRequest.name', index=0,
+      name='name', full_name='interfaces.optomechanics.monochromator.ConnectRequest.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='serial_number', full_name='devices.optomechanics.monochromator.ConnectRequest.serial_number', index=1,
+      name='serial_number', full_name='interfaces.optomechanics.monochromator.ConnectRequest.serial_number', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='serial_port', full_name='devices.optomechanics.monochromator.ConnectRequest.serial_port', index=2,
+      name='serial_port', full_name='interfaces.optomechanics.monochromator.ConnectRequest.serial_port', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='baudrate', full_name='devices.optomechanics.monochromator.ConnectRequest.baudrate', index=3,
+      name='baudrate', full_name='interfaces.optomechanics.monochromator.ConnectRequest.baudrate', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='timeout', full_name='devices.optomechanics.monochromator.ConnectRequest.timeout', index=4,
+      name='timeout', full_name='interfaces.optomechanics.monochromator.ConnectRequest.timeout', index=4,
       number=6, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -79,20 +79,20 @@ _CONNECTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=97,
-  serialized_end=206,
+  serialized_start=100,
+  serialized_end=209,
 )
 
 
 _CONNECTRESPONSE = _descriptor.Descriptor(
   name='ConnectResponse',
-  full_name='devices.optomechanics.monochromator.ConnectResponse',
+  full_name='interfaces.optomechanics.monochromator.ConnectResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='devices.optomechanics.monochromator.ConnectResponse.name', index=0,
+      name='name', full_name='interfaces.optomechanics.monochromator.ConnectResponse.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -110,20 +110,82 @@ _CONNECTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=208,
-  serialized_end=239,
+  serialized_start=211,
+  serialized_end=242,
+)
+
+
+_DISCONNECTREQUEST = _descriptor.Descriptor(
+  name='DisconnectRequest',
+  full_name='interfaces.optomechanics.monochromator.DisconnectRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='interfaces.optomechanics.monochromator.DisconnectRequest.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=244,
+  serialized_end=277,
+)
+
+
+_DISCONNECTRESPONSE = _descriptor.Descriptor(
+  name='DisconnectResponse',
+  full_name='interfaces.optomechanics.monochromator.DisconnectResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='interfaces.optomechanics.monochromator.DisconnectResponse.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=279,
+  serialized_end=313,
 )
 
 
 _GETWAVELENGTHRANGEREQUEST = _descriptor.Descriptor(
   name='GetWavelengthRangeRequest',
-  full_name='devices.optomechanics.monochromator.GetWavelengthRangeRequest',
+  full_name='interfaces.optomechanics.monochromator.GetWavelengthRangeRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='devices.optomechanics.monochromator.GetWavelengthRangeRequest.name', index=0,
+      name='name', full_name='interfaces.optomechanics.monochromator.GetWavelengthRangeRequest.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -141,41 +203,41 @@ _GETWAVELENGTHRANGEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=241,
-  serialized_end=282,
+  serialized_start=315,
+  serialized_end=356,
 )
 
 
 _GETWAVELENGTHRANGERESPONSE = _descriptor.Descriptor(
   name='GetWavelengthRangeResponse',
-  full_name='devices.optomechanics.monochromator.GetWavelengthRangeResponse',
+  full_name='interfaces.optomechanics.monochromator.GetWavelengthRangeResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='devices.optomechanics.monochromator.GetWavelengthRangeResponse.name', index=0,
+      name='name', full_name='interfaces.optomechanics.monochromator.GetWavelengthRangeResponse.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='minimum', full_name='devices.optomechanics.monochromator.GetWavelengthRangeResponse.minimum', index=1,
+      name='minimum', full_name='interfaces.optomechanics.monochromator.GetWavelengthRangeResponse.minimum', index=1,
       number=2, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='maximum', full_name='devices.optomechanics.monochromator.GetWavelengthRangeResponse.maximum', index=2,
+      name='maximum', full_name='interfaces.optomechanics.monochromator.GetWavelengthRangeResponse.maximum', index=2,
       number=3, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='units', full_name='devices.optomechanics.monochromator.GetWavelengthRangeResponse.units', index=3,
+      name='units', full_name='interfaces.optomechanics.monochromator.GetWavelengthRangeResponse.units', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -193,20 +255,20 @@ _GETWAVELENGTHRANGERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=284,
-  serialized_end=375,
+  serialized_start=358,
+  serialized_end=449,
 )
 
 
 _GETWAVELENGTHREQUEST = _descriptor.Descriptor(
   name='GetWavelengthRequest',
-  full_name='devices.optomechanics.monochromator.GetWavelengthRequest',
+  full_name='interfaces.optomechanics.monochromator.GetWavelengthRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='devices.optomechanics.monochromator.GetWavelengthRequest.name', index=0,
+      name='name', full_name='interfaces.optomechanics.monochromator.GetWavelengthRequest.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -224,79 +286,34 @@ _GETWAVELENGTHREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=377,
-  serialized_end=413,
+  serialized_start=451,
+  serialized_end=487,
 )
 
 
 _GETWAVELENGTHRESPONSE = _descriptor.Descriptor(
   name='GetWavelengthResponse',
-  full_name='devices.optomechanics.monochromator.GetWavelengthResponse',
+  full_name='interfaces.optomechanics.monochromator.GetWavelengthResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='devices.optomechanics.monochromator.GetWavelengthResponse.name', index=0,
+      name='name', full_name='interfaces.optomechanics.monochromator.GetWavelengthResponse.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='wavelength', full_name='devices.optomechanics.monochromator.GetWavelengthResponse.wavelength', index=1,
+      name='wavelength', full_name='interfaces.optomechanics.monochromator.GetWavelengthResponse.wavelength', index=1,
       number=2, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='units', full_name='devices.optomechanics.monochromator.GetWavelengthResponse.units', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=415,
-  serialized_end=487,
-)
-
-
-_SETWAVELENGTHREQUEST = _descriptor.Descriptor(
-  name='SetWavelengthRequest',
-  full_name='devices.optomechanics.monochromator.SetWavelengthRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='name', full_name='devices.optomechanics.monochromator.SetWavelengthRequest.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='wavelength', full_name='devices.optomechanics.monochromator.SetWavelengthRequest.wavelength', index=1,
-      number=2, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='units', full_name='devices.optomechanics.monochromator.SetWavelengthRequest.units', index=2,
+      name='units', full_name='interfaces.optomechanics.monochromator.GetWavelengthResponse.units', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -315,33 +332,33 @@ _SETWAVELENGTHREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=489,
-  serialized_end=560,
+  serialized_end=561,
 )
 
 
-_SETWAVELENGTHRESPONSE = _descriptor.Descriptor(
-  name='SetWavelengthResponse',
-  full_name='devices.optomechanics.monochromator.SetWavelengthResponse',
+_SETWAVELENGTHREQUEST = _descriptor.Descriptor(
+  name='SetWavelengthRequest',
+  full_name='interfaces.optomechanics.monochromator.SetWavelengthRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='devices.optomechanics.monochromator.SetWavelengthResponse.name', index=0,
+      name='name', full_name='interfaces.optomechanics.monochromator.SetWavelengthRequest.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='wavelength', full_name='devices.optomechanics.monochromator.SetWavelengthResponse.wavelength', index=1,
+      name='wavelength', full_name='interfaces.optomechanics.monochromator.SetWavelengthRequest.wavelength', index=1,
       number=2, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='units', full_name='devices.optomechanics.monochromator.SetWavelengthResponse.units', index=2,
+      name='units', full_name='interfaces.optomechanics.monochromator.SetWavelengthRequest.units', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -359,21 +376,35 @@ _SETWAVELENGTHRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=562,
+  serialized_start=563,
   serialized_end=634,
 )
 
 
-_GETGRATINGOPTIONSREQUEST = _descriptor.Descriptor(
-  name='GetGratingOptionsRequest',
-  full_name='devices.optomechanics.monochromator.GetGratingOptionsRequest',
+_SETWAVELENGTHRESPONSE = _descriptor.Descriptor(
+  name='SetWavelengthResponse',
+  full_name='interfaces.optomechanics.monochromator.SetWavelengthResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='devices.optomechanics.monochromator.GetGratingOptionsRequest.name', index=0,
+      name='name', full_name='interfaces.optomechanics.monochromator.SetWavelengthResponse.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='wavelength', full_name='interfaces.optomechanics.monochromator.SetWavelengthResponse.wavelength', index=1,
+      number=2, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='units', full_name='interfaces.optomechanics.monochromator.SetWavelengthResponse.units', index=2,
+      number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -391,26 +422,57 @@ _GETGRATINGOPTIONSREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=636,
-  serialized_end=676,
+  serialized_end=708,
 )
 
 
-_GETGRATINGOPTIONSRESPONSE = _descriptor.Descriptor(
-  name='GetGratingOptionsResponse',
-  full_name='devices.optomechanics.monochromator.GetGratingOptionsResponse',
+_GETGRATINGOPTIONSREQUEST = _descriptor.Descriptor(
+  name='GetGratingOptionsRequest',
+  full_name='interfaces.optomechanics.monochromator.GetGratingOptionsRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='devices.optomechanics.monochromator.GetGratingOptionsResponse.name', index=0,
+      name='name', full_name='interfaces.optomechanics.monochromator.GetGratingOptionsRequest.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=710,
+  serialized_end=750,
+)
+
+
+_GETGRATINGOPTIONSRESPONSE = _descriptor.Descriptor(
+  name='GetGratingOptionsResponse',
+  full_name='interfaces.optomechanics.monochromator.GetGratingOptionsResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='interfaces.optomechanics.monochromator.GetGratingOptionsResponse.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='options', full_name='devices.optomechanics.monochromator.GetGratingOptionsResponse.options', index=1,
+      name='options', full_name='interfaces.optomechanics.monochromator.GetGratingOptionsResponse.options', index=1,
       number=2, type=13, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -428,20 +490,20 @@ _GETGRATINGOPTIONSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=678,
-  serialized_end=736,
+  serialized_start=752,
+  serialized_end=810,
 )
 
 
 _GETGRATINGREQUEST = _descriptor.Descriptor(
   name='GetGratingRequest',
-  full_name='devices.optomechanics.monochromator.GetGratingRequest',
+  full_name='interfaces.optomechanics.monochromator.GetGratingRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='devices.optomechanics.monochromator.GetGratingRequest.name', index=0,
+      name='name', full_name='interfaces.optomechanics.monochromator.GetGratingRequest.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -459,27 +521,27 @@ _GETGRATINGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=738,
-  serialized_end=771,
+  serialized_start=812,
+  serialized_end=845,
 )
 
 
 _GETGRATINGRESPONSE = _descriptor.Descriptor(
   name='GetGratingResponse',
-  full_name='devices.optomechanics.monochromator.GetGratingResponse',
+  full_name='interfaces.optomechanics.monochromator.GetGratingResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='devices.optomechanics.monochromator.GetGratingResponse.name', index=0,
+      name='name', full_name='interfaces.optomechanics.monochromator.GetGratingResponse.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='grating', full_name='devices.optomechanics.monochromator.GetGratingResponse.grating', index=1,
+      name='grating', full_name='interfaces.optomechanics.monochromator.GetGratingResponse.grating', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -497,27 +559,27 @@ _GETGRATINGRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=773,
-  serialized_end=824,
+  serialized_start=847,
+  serialized_end=898,
 )
 
 
 _SETGRATINGREQUEST = _descriptor.Descriptor(
   name='SetGratingRequest',
-  full_name='devices.optomechanics.monochromator.SetGratingRequest',
+  full_name='interfaces.optomechanics.monochromator.SetGratingRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='devices.optomechanics.monochromator.SetGratingRequest.name', index=0,
+      name='name', full_name='interfaces.optomechanics.monochromator.SetGratingRequest.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='grating', full_name='devices.optomechanics.monochromator.SetGratingRequest.grating', index=1,
+      name='grating', full_name='interfaces.optomechanics.monochromator.SetGratingRequest.grating', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -535,27 +597,27 @@ _SETGRATINGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=826,
-  serialized_end=876,
+  serialized_start=900,
+  serialized_end=950,
 )
 
 
 _SETGRATINGRESPONSE = _descriptor.Descriptor(
   name='SetGratingResponse',
-  full_name='devices.optomechanics.monochromator.SetGratingResponse',
+  full_name='interfaces.optomechanics.monochromator.SetGratingResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='devices.optomechanics.monochromator.SetGratingResponse.name', index=0,
+      name='name', full_name='interfaces.optomechanics.monochromator.SetGratingResponse.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='grating', full_name='devices.optomechanics.monochromator.SetGratingResponse.grating', index=1,
+      name='grating', full_name='interfaces.optomechanics.monochromator.SetGratingResponse.grating', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -573,12 +635,14 @@ _SETGRATINGRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=878,
-  serialized_end=929,
+  serialized_start=952,
+  serialized_end=1003,
 )
 
 DESCRIPTOR.message_types_by_name['ConnectRequest'] = _CONNECTREQUEST
 DESCRIPTOR.message_types_by_name['ConnectResponse'] = _CONNECTRESPONSE
+DESCRIPTOR.message_types_by_name['DisconnectRequest'] = _DISCONNECTREQUEST
+DESCRIPTOR.message_types_by_name['DisconnectResponse'] = _DISCONNECTRESPONSE
 DESCRIPTOR.message_types_by_name['GetWavelengthRangeRequest'] = _GETWAVELENGTHRANGEREQUEST
 DESCRIPTOR.message_types_by_name['GetWavelengthRangeResponse'] = _GETWAVELENGTHRANGERESPONSE
 DESCRIPTOR.message_types_by_name['GetWavelengthRequest'] = _GETWAVELENGTHREQUEST
@@ -596,98 +660,112 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 ConnectRequest = _reflection.GeneratedProtocolMessageType('ConnectRequest', (_message.Message,), dict(
   DESCRIPTOR = _CONNECTREQUEST,
   __module__ = 'instrosetta.interfaces.optomechanics.monochromator_pb2'
-  # @@protoc_insertion_point(class_scope:devices.optomechanics.monochromator.ConnectRequest)
+  # @@protoc_insertion_point(class_scope:interfaces.optomechanics.monochromator.ConnectRequest)
   ))
 _sym_db.RegisterMessage(ConnectRequest)
 
 ConnectResponse = _reflection.GeneratedProtocolMessageType('ConnectResponse', (_message.Message,), dict(
   DESCRIPTOR = _CONNECTRESPONSE,
   __module__ = 'instrosetta.interfaces.optomechanics.monochromator_pb2'
-  # @@protoc_insertion_point(class_scope:devices.optomechanics.monochromator.ConnectResponse)
+  # @@protoc_insertion_point(class_scope:interfaces.optomechanics.monochromator.ConnectResponse)
   ))
 _sym_db.RegisterMessage(ConnectResponse)
+
+DisconnectRequest = _reflection.GeneratedProtocolMessageType('DisconnectRequest', (_message.Message,), dict(
+  DESCRIPTOR = _DISCONNECTREQUEST,
+  __module__ = 'instrosetta.interfaces.optomechanics.monochromator_pb2'
+  # @@protoc_insertion_point(class_scope:interfaces.optomechanics.monochromator.DisconnectRequest)
+  ))
+_sym_db.RegisterMessage(DisconnectRequest)
+
+DisconnectResponse = _reflection.GeneratedProtocolMessageType('DisconnectResponse', (_message.Message,), dict(
+  DESCRIPTOR = _DISCONNECTRESPONSE,
+  __module__ = 'instrosetta.interfaces.optomechanics.monochromator_pb2'
+  # @@protoc_insertion_point(class_scope:interfaces.optomechanics.monochromator.DisconnectResponse)
+  ))
+_sym_db.RegisterMessage(DisconnectResponse)
 
 GetWavelengthRangeRequest = _reflection.GeneratedProtocolMessageType('GetWavelengthRangeRequest', (_message.Message,), dict(
   DESCRIPTOR = _GETWAVELENGTHRANGEREQUEST,
   __module__ = 'instrosetta.interfaces.optomechanics.monochromator_pb2'
-  # @@protoc_insertion_point(class_scope:devices.optomechanics.monochromator.GetWavelengthRangeRequest)
+  # @@protoc_insertion_point(class_scope:interfaces.optomechanics.monochromator.GetWavelengthRangeRequest)
   ))
 _sym_db.RegisterMessage(GetWavelengthRangeRequest)
 
 GetWavelengthRangeResponse = _reflection.GeneratedProtocolMessageType('GetWavelengthRangeResponse', (_message.Message,), dict(
   DESCRIPTOR = _GETWAVELENGTHRANGERESPONSE,
   __module__ = 'instrosetta.interfaces.optomechanics.monochromator_pb2'
-  # @@protoc_insertion_point(class_scope:devices.optomechanics.monochromator.GetWavelengthRangeResponse)
+  # @@protoc_insertion_point(class_scope:interfaces.optomechanics.monochromator.GetWavelengthRangeResponse)
   ))
 _sym_db.RegisterMessage(GetWavelengthRangeResponse)
 
 GetWavelengthRequest = _reflection.GeneratedProtocolMessageType('GetWavelengthRequest', (_message.Message,), dict(
   DESCRIPTOR = _GETWAVELENGTHREQUEST,
   __module__ = 'instrosetta.interfaces.optomechanics.monochromator_pb2'
-  # @@protoc_insertion_point(class_scope:devices.optomechanics.monochromator.GetWavelengthRequest)
+  # @@protoc_insertion_point(class_scope:interfaces.optomechanics.monochromator.GetWavelengthRequest)
   ))
 _sym_db.RegisterMessage(GetWavelengthRequest)
 
 GetWavelengthResponse = _reflection.GeneratedProtocolMessageType('GetWavelengthResponse', (_message.Message,), dict(
   DESCRIPTOR = _GETWAVELENGTHRESPONSE,
   __module__ = 'instrosetta.interfaces.optomechanics.monochromator_pb2'
-  # @@protoc_insertion_point(class_scope:devices.optomechanics.monochromator.GetWavelengthResponse)
+  # @@protoc_insertion_point(class_scope:interfaces.optomechanics.monochromator.GetWavelengthResponse)
   ))
 _sym_db.RegisterMessage(GetWavelengthResponse)
 
 SetWavelengthRequest = _reflection.GeneratedProtocolMessageType('SetWavelengthRequest', (_message.Message,), dict(
   DESCRIPTOR = _SETWAVELENGTHREQUEST,
   __module__ = 'instrosetta.interfaces.optomechanics.monochromator_pb2'
-  # @@protoc_insertion_point(class_scope:devices.optomechanics.monochromator.SetWavelengthRequest)
+  # @@protoc_insertion_point(class_scope:interfaces.optomechanics.monochromator.SetWavelengthRequest)
   ))
 _sym_db.RegisterMessage(SetWavelengthRequest)
 
 SetWavelengthResponse = _reflection.GeneratedProtocolMessageType('SetWavelengthResponse', (_message.Message,), dict(
   DESCRIPTOR = _SETWAVELENGTHRESPONSE,
   __module__ = 'instrosetta.interfaces.optomechanics.monochromator_pb2'
-  # @@protoc_insertion_point(class_scope:devices.optomechanics.monochromator.SetWavelengthResponse)
+  # @@protoc_insertion_point(class_scope:interfaces.optomechanics.monochromator.SetWavelengthResponse)
   ))
 _sym_db.RegisterMessage(SetWavelengthResponse)
 
 GetGratingOptionsRequest = _reflection.GeneratedProtocolMessageType('GetGratingOptionsRequest', (_message.Message,), dict(
   DESCRIPTOR = _GETGRATINGOPTIONSREQUEST,
   __module__ = 'instrosetta.interfaces.optomechanics.monochromator_pb2'
-  # @@protoc_insertion_point(class_scope:devices.optomechanics.monochromator.GetGratingOptionsRequest)
+  # @@protoc_insertion_point(class_scope:interfaces.optomechanics.monochromator.GetGratingOptionsRequest)
   ))
 _sym_db.RegisterMessage(GetGratingOptionsRequest)
 
 GetGratingOptionsResponse = _reflection.GeneratedProtocolMessageType('GetGratingOptionsResponse', (_message.Message,), dict(
   DESCRIPTOR = _GETGRATINGOPTIONSRESPONSE,
   __module__ = 'instrosetta.interfaces.optomechanics.monochromator_pb2'
-  # @@protoc_insertion_point(class_scope:devices.optomechanics.monochromator.GetGratingOptionsResponse)
+  # @@protoc_insertion_point(class_scope:interfaces.optomechanics.monochromator.GetGratingOptionsResponse)
   ))
 _sym_db.RegisterMessage(GetGratingOptionsResponse)
 
 GetGratingRequest = _reflection.GeneratedProtocolMessageType('GetGratingRequest', (_message.Message,), dict(
   DESCRIPTOR = _GETGRATINGREQUEST,
   __module__ = 'instrosetta.interfaces.optomechanics.monochromator_pb2'
-  # @@protoc_insertion_point(class_scope:devices.optomechanics.monochromator.GetGratingRequest)
+  # @@protoc_insertion_point(class_scope:interfaces.optomechanics.monochromator.GetGratingRequest)
   ))
 _sym_db.RegisterMessage(GetGratingRequest)
 
 GetGratingResponse = _reflection.GeneratedProtocolMessageType('GetGratingResponse', (_message.Message,), dict(
   DESCRIPTOR = _GETGRATINGRESPONSE,
   __module__ = 'instrosetta.interfaces.optomechanics.monochromator_pb2'
-  # @@protoc_insertion_point(class_scope:devices.optomechanics.monochromator.GetGratingResponse)
+  # @@protoc_insertion_point(class_scope:interfaces.optomechanics.monochromator.GetGratingResponse)
   ))
 _sym_db.RegisterMessage(GetGratingResponse)
 
 SetGratingRequest = _reflection.GeneratedProtocolMessageType('SetGratingRequest', (_message.Message,), dict(
   DESCRIPTOR = _SETGRATINGREQUEST,
   __module__ = 'instrosetta.interfaces.optomechanics.monochromator_pb2'
-  # @@protoc_insertion_point(class_scope:devices.optomechanics.monochromator.SetGratingRequest)
+  # @@protoc_insertion_point(class_scope:interfaces.optomechanics.monochromator.SetGratingRequest)
   ))
 _sym_db.RegisterMessage(SetGratingRequest)
 
 SetGratingResponse = _reflection.GeneratedProtocolMessageType('SetGratingResponse', (_message.Message,), dict(
   DESCRIPTOR = _SETGRATINGRESPONSE,
   __module__ = 'instrosetta.interfaces.optomechanics.monochromator_pb2'
-  # @@protoc_insertion_point(class_scope:devices.optomechanics.monochromator.SetGratingResponse)
+  # @@protoc_insertion_point(class_scope:interfaces.optomechanics.monochromator.SetGratingResponse)
   ))
 _sym_db.RegisterMessage(SetGratingResponse)
 
@@ -695,16 +773,16 @@ _sym_db.RegisterMessage(SetGratingResponse)
 
 _MONOCHROMATOR = _descriptor.ServiceDescriptor(
   name='Monochromator',
-  full_name='devices.optomechanics.monochromator.Monochromator',
+  full_name='interfaces.optomechanics.monochromator.Monochromator',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=932,
-  serialized_end=1906,
+  serialized_start=1006,
+  serialized_end=2160,
   methods=[
   _descriptor.MethodDescriptor(
     name='Connect',
-    full_name='devices.optomechanics.monochromator.Monochromator.Connect',
+    full_name='interfaces.optomechanics.monochromator.Monochromator.Connect',
     index=0,
     containing_service=None,
     input_type=_CONNECTREQUEST,
@@ -712,9 +790,18 @@ _MONOCHROMATOR = _descriptor.ServiceDescriptor(
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='GetWavelengthRange',
-    full_name='devices.optomechanics.monochromator.Monochromator.GetWavelengthRange',
+    name='Disconnect',
+    full_name='interfaces.optomechanics.monochromator.Monochromator.Disconnect',
     index=1,
+    containing_service=None,
+    input_type=_DISCONNECTREQUEST,
+    output_type=_DISCONNECTRESPONSE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetWavelengthRange',
+    full_name='interfaces.optomechanics.monochromator.Monochromator.GetWavelengthRange',
+    index=2,
     containing_service=None,
     input_type=_GETWAVELENGTHRANGEREQUEST,
     output_type=_GETWAVELENGTHRANGERESPONSE,
@@ -722,8 +809,8 @@ _MONOCHROMATOR = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetWavelength',
-    full_name='devices.optomechanics.monochromator.Monochromator.GetWavelength',
-    index=2,
+    full_name='interfaces.optomechanics.monochromator.Monochromator.GetWavelength',
+    index=3,
     containing_service=None,
     input_type=_GETWAVELENGTHREQUEST,
     output_type=_GETWAVELENGTHRESPONSE,
@@ -731,8 +818,8 @@ _MONOCHROMATOR = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='SetWavelength',
-    full_name='devices.optomechanics.monochromator.Monochromator.SetWavelength',
-    index=3,
+    full_name='interfaces.optomechanics.monochromator.Monochromator.SetWavelength',
+    index=4,
     containing_service=None,
     input_type=_SETWAVELENGTHREQUEST,
     output_type=_SETWAVELENGTHRESPONSE,
@@ -740,8 +827,8 @@ _MONOCHROMATOR = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetGratingRange',
-    full_name='devices.optomechanics.monochromator.Monochromator.GetGratingRange',
-    index=4,
+    full_name='interfaces.optomechanics.monochromator.Monochromator.GetGratingRange',
+    index=5,
     containing_service=None,
     input_type=_GETGRATINGOPTIONSREQUEST,
     output_type=_GETGRATINGOPTIONSRESPONSE,
@@ -749,8 +836,8 @@ _MONOCHROMATOR = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetGrating',
-    full_name='devices.optomechanics.monochromator.Monochromator.GetGrating',
-    index=5,
+    full_name='interfaces.optomechanics.monochromator.Monochromator.GetGrating',
+    index=6,
     containing_service=None,
     input_type=_GETGRATINGREQUEST,
     output_type=_GETGRATINGRESPONSE,
@@ -758,8 +845,8 @@ _MONOCHROMATOR = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='SetGrating',
-    full_name='devices.optomechanics.monochromator.Monochromator.SetGrating',
-    index=6,
+    full_name='interfaces.optomechanics.monochromator.Monochromator.SetGrating',
+    index=7,
     containing_service=None,
     input_type=_SETGRATINGREQUEST,
     output_type=_SETGRATINGRESPONSE,

@@ -15,37 +15,42 @@ class MonochromatorStub(object):
       channel: A grpc.Channel.
     """
     self.Connect = channel.unary_unary(
-        '/devices.optomechanics.monochromator.Monochromator/Connect',
+        '/interfaces.optomechanics.monochromator.Monochromator/Connect',
         request_serializer=instrosetta_dot_interfaces_dot_optomechanics_dot_monochromator__pb2.ConnectRequest.SerializeToString,
         response_deserializer=instrosetta_dot_interfaces_dot_optomechanics_dot_monochromator__pb2.ConnectResponse.FromString,
         )
+    self.Disconnect = channel.unary_unary(
+        '/interfaces.optomechanics.monochromator.Monochromator/Disconnect',
+        request_serializer=instrosetta_dot_interfaces_dot_optomechanics_dot_monochromator__pb2.DisconnectRequest.SerializeToString,
+        response_deserializer=instrosetta_dot_interfaces_dot_optomechanics_dot_monochromator__pb2.DisconnectResponse.FromString,
+        )
     self.GetWavelengthRange = channel.unary_unary(
-        '/devices.optomechanics.monochromator.Monochromator/GetWavelengthRange',
+        '/interfaces.optomechanics.monochromator.Monochromator/GetWavelengthRange',
         request_serializer=instrosetta_dot_interfaces_dot_optomechanics_dot_monochromator__pb2.GetWavelengthRangeRequest.SerializeToString,
         response_deserializer=instrosetta_dot_interfaces_dot_optomechanics_dot_monochromator__pb2.GetWavelengthRangeResponse.FromString,
         )
     self.GetWavelength = channel.unary_unary(
-        '/devices.optomechanics.monochromator.Monochromator/GetWavelength',
+        '/interfaces.optomechanics.monochromator.Monochromator/GetWavelength',
         request_serializer=instrosetta_dot_interfaces_dot_optomechanics_dot_monochromator__pb2.GetWavelengthRequest.SerializeToString,
         response_deserializer=instrosetta_dot_interfaces_dot_optomechanics_dot_monochromator__pb2.GetWavelengthResponse.FromString,
         )
     self.SetWavelength = channel.unary_unary(
-        '/devices.optomechanics.monochromator.Monochromator/SetWavelength',
+        '/interfaces.optomechanics.monochromator.Monochromator/SetWavelength',
         request_serializer=instrosetta_dot_interfaces_dot_optomechanics_dot_monochromator__pb2.SetWavelengthRequest.SerializeToString,
         response_deserializer=instrosetta_dot_interfaces_dot_optomechanics_dot_monochromator__pb2.SetWavelengthResponse.FromString,
         )
     self.GetGratingRange = channel.unary_unary(
-        '/devices.optomechanics.monochromator.Monochromator/GetGratingRange',
+        '/interfaces.optomechanics.monochromator.Monochromator/GetGratingRange',
         request_serializer=instrosetta_dot_interfaces_dot_optomechanics_dot_monochromator__pb2.GetGratingOptionsRequest.SerializeToString,
         response_deserializer=instrosetta_dot_interfaces_dot_optomechanics_dot_monochromator__pb2.GetGratingOptionsResponse.FromString,
         )
     self.GetGrating = channel.unary_unary(
-        '/devices.optomechanics.monochromator.Monochromator/GetGrating',
+        '/interfaces.optomechanics.monochromator.Monochromator/GetGrating',
         request_serializer=instrosetta_dot_interfaces_dot_optomechanics_dot_monochromator__pb2.GetGratingRequest.SerializeToString,
         response_deserializer=instrosetta_dot_interfaces_dot_optomechanics_dot_monochromator__pb2.GetGratingResponse.FromString,
         )
     self.SetGrating = channel.unary_unary(
-        '/devices.optomechanics.monochromator.Monochromator/SetGrating',
+        '/interfaces.optomechanics.monochromator.Monochromator/SetGrating',
         request_serializer=instrosetta_dot_interfaces_dot_optomechanics_dot_monochromator__pb2.SetGratingRequest.SerializeToString,
         response_deserializer=instrosetta_dot_interfaces_dot_optomechanics_dot_monochromator__pb2.SetGratingResponse.FromString,
         )
@@ -56,6 +61,13 @@ class MonochromatorServicer(object):
   pass
 
   def Connect(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def Disconnect(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -112,6 +124,11 @@ def add_MonochromatorServicer_to_server(servicer, server):
           request_deserializer=instrosetta_dot_interfaces_dot_optomechanics_dot_monochromator__pb2.ConnectRequest.FromString,
           response_serializer=instrosetta_dot_interfaces_dot_optomechanics_dot_monochromator__pb2.ConnectResponse.SerializeToString,
       ),
+      'Disconnect': grpc.unary_unary_rpc_method_handler(
+          servicer.Disconnect,
+          request_deserializer=instrosetta_dot_interfaces_dot_optomechanics_dot_monochromator__pb2.DisconnectRequest.FromString,
+          response_serializer=instrosetta_dot_interfaces_dot_optomechanics_dot_monochromator__pb2.DisconnectResponse.SerializeToString,
+      ),
       'GetWavelengthRange': grpc.unary_unary_rpc_method_handler(
           servicer.GetWavelengthRange,
           request_deserializer=instrosetta_dot_interfaces_dot_optomechanics_dot_monochromator__pb2.GetWavelengthRangeRequest.FromString,
@@ -144,5 +161,5 @@ def add_MonochromatorServicer_to_server(servicer, server):
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'devices.optomechanics.monochromator.Monochromator', rpc_method_handlers)
+      'interfaces.optomechanics.monochromator.Monochromator', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))
