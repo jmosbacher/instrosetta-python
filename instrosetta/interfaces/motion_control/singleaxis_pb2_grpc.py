@@ -15,47 +15,47 @@ class SingleAxisStub(object):
       channel: A grpc.Channel.
     """
     self.Echo = channel.unary_unary(
-        '/interfaces.motion_control.singleaxis.SingleAxis/Echo',
+        '/instrosetta.interfaces.motion_control.singleaxis.SingleAxis/Echo',
         request_serializer=instrosetta_dot_interfaces_dot_motion__control_dot_singleaxis__pb2.TextMessage.SerializeToString,
         response_deserializer=instrosetta_dot_interfaces_dot_motion__control_dot_singleaxis__pb2.TextMessage.FromString,
         )
     self.ScanDevices = channel.unary_stream(
-        '/interfaces.motion_control.singleaxis.SingleAxis/ScanDevices',
+        '/instrosetta.interfaces.motion_control.singleaxis.SingleAxis/ScanDevices',
         request_serializer=instrosetta_dot_interfaces_dot_motion__control_dot_singleaxis__pb2.ScanDevicesRequest.SerializeToString,
         response_deserializer=instrosetta_dot_interfaces_dot_motion__control_dot_singleaxis__pb2.Device.FromString,
         )
     self.Connect = channel.unary_unary(
-        '/interfaces.motion_control.singleaxis.SingleAxis/Connect',
+        '/instrosetta.interfaces.motion_control.singleaxis.SingleAxis/Connect',
         request_serializer=instrosetta_dot_interfaces_dot_motion__control_dot_singleaxis__pb2.ConnectRequest.SerializeToString,
         response_deserializer=instrosetta_dot_interfaces_dot_motion__control_dot_singleaxis__pb2.Device.FromString,
         )
     self.Disconnect = channel.unary_unary(
-        '/interfaces.motion_control.singleaxis.SingleAxis/Disconnect',
+        '/instrosetta.interfaces.motion_control.singleaxis.SingleAxis/Disconnect',
         request_serializer=instrosetta_dot_interfaces_dot_motion__control_dot_singleaxis__pb2.DisconnectRequest.SerializeToString,
         response_deserializer=instrosetta_dot_interfaces_dot_motion__control_dot_singleaxis__pb2.Device.FromString,
         )
     self.HomeMotor = channel.unary_unary(
-        '/interfaces.motion_control.singleaxis.SingleAxis/HomeMotor',
+        '/instrosetta.interfaces.motion_control.singleaxis.SingleAxis/HomeMotor',
         request_serializer=instrosetta_dot_interfaces_dot_motion__control_dot_singleaxis__pb2.HomeMotorRequest.SerializeToString,
         response_deserializer=instrosetta_dot_interfaces_dot_motion__control_dot_singleaxis__pb2.Position.FromString,
         )
     self.GetRange = channel.unary_unary(
-        '/interfaces.motion_control.singleaxis.SingleAxis/GetRange',
+        '/instrosetta.interfaces.motion_control.singleaxis.SingleAxis/GetRange',
         request_serializer=instrosetta_dot_interfaces_dot_motion__control_dot_singleaxis__pb2.GetRangeRequest.SerializeToString,
         response_deserializer=instrosetta_dot_interfaces_dot_motion__control_dot_singleaxis__pb2.StageRange.FromString,
         )
     self.GetPosition = channel.unary_unary(
-        '/interfaces.motion_control.singleaxis.SingleAxis/GetPosition',
+        '/instrosetta.interfaces.motion_control.singleaxis.SingleAxis/GetPosition',
         request_serializer=instrosetta_dot_interfaces_dot_motion__control_dot_singleaxis__pb2.GetPositionRequest.SerializeToString,
         response_deserializer=instrosetta_dot_interfaces_dot_motion__control_dot_singleaxis__pb2.Position.FromString,
         )
     self.MoveAbsolute = channel.unary_stream(
-        '/interfaces.motion_control.singleaxis.SingleAxis/MoveAbsolute',
+        '/instrosetta.interfaces.motion_control.singleaxis.SingleAxis/MoveAbsolute',
         request_serializer=instrosetta_dot_interfaces_dot_motion__control_dot_singleaxis__pb2.MoveAbsoluteRequest.SerializeToString,
         response_deserializer=instrosetta_dot_interfaces_dot_motion__control_dot_singleaxis__pb2.Position.FromString,
         )
     self.MoveRelative = channel.unary_stream(
-        '/interfaces.motion_control.singleaxis.SingleAxis/MoveRelative',
+        '/instrosetta.interfaces.motion_control.singleaxis.SingleAxis/MoveRelative',
         request_serializer=instrosetta_dot_interfaces_dot_motion__control_dot_singleaxis__pb2.MoveRelativeRequest.SerializeToString,
         response_deserializer=instrosetta_dot_interfaces_dot_motion__control_dot_singleaxis__pb2.Position.FromString,
         )
@@ -178,5 +178,5 @@ def add_SingleAxisServicer_to_server(servicer, server):
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'interfaces.motion_control.singleaxis.SingleAxis', rpc_method_handlers)
+      'instrosetta.interfaces.motion_control.singleaxis.SingleAxis', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))

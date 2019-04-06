@@ -16,17 +16,17 @@ _sym_db = _symbol_database.Default()
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='instrosetta/interfaces/motion_control/singleaxis.proto',
-  package='interfaces.motion_control.singleaxis',
+  package='instrosetta.interfaces.motion_control.singleaxis',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n6instrosetta/interfaces/motion_control/singleaxis.proto\x12$interfaces.motion_control.singleaxis\",\n\x0bTextMessage\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x02 \x01(\t\"=\n\x12ScanDevicesRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x19\n\x11include_simulated\x18\x02 \x01(\x08\"\xc8\x01\n\x06\x44\x65vice\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x15\n\rserial_number\x18\x02 \x01(\t\x12\x10\n\x08\x63om_port\x18\x03 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x04 \x01(\t\x12J\n\nmotor_type\x18\x05 \x01(\x0e\x32\x36.interfaces.motion_control.singleaxis.Device.MotorType\"&\n\tMotorType\x12\x0c\n\x08\x44\x43_SERVO\x10\x00\x12\x0b\n\x07STEPPER\x10\x01\"\x87\x01\n\x0e\x43onnectRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12<\n\x06\x64\x65vice\x18\x02 \x01(\x0b\x32,.interfaces.motion_control.singleaxis.Device\x12\x0f\n\x07timeout\x18\x03 \x01(\x02\x12\x18\n\x10polling_interval\x18\x04 \x01(\x02\"2\n\x11\x44isconnectRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07timeout\x18\x02 \x01(\x02\" \n\x10HomeMotorRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\".\n\x0fGetRangeRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"W\n\nStageRange\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\x12\x0b\n\x03min\x18\x03 \x01(\x01\x12\x0b\n\x03max\x18\x04 \x01(\x01\x12\x12\n\nresolution\x18\x05 \x01(\x01\"#\n\x12GetPositionRequest\x12\r\n\x05units\x18\x01 \x01(\t\"\xac\x01\n\x08\x44istance\x12\r\n\x05value\x18\x01 \x01(\x01\x12\r\n\x05units\x18\x02 \x01(\t\x12K\n\tdirection\x18\x03 \x01(\x0e\x32\x38.interfaces.motion_control.singleaxis.Distance.Direction\"5\n\tDirection\x12\r\n\tundefined\x10\x00\x12\x0b\n\x07\x66orward\x10\x01\x12\x0c\n\x08\x62\x61\x63kward\x10\x02\"(\n\x08Position\x12\r\n\x05value\x18\x01 \x01(\x01\x12\r\n\x05units\x18\x02 \x01(\t\"e\n\x13MoveAbsoluteRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12@\n\x08position\x18\x02 \x01(\x0b\x32..interfaces.motion_control.singleaxis.Position\"e\n\x13MoveRelativeRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12@\n\x08\x64istance\x18\x02 \x01(\x0b\x32..interfaces.motion_control.singleaxis.Distance2\xc6\x08\n\nSingleAxis\x12n\n\x04\x45\x63ho\x12\x31.interfaces.motion_control.singleaxis.TextMessage\x1a\x31.interfaces.motion_control.singleaxis.TextMessage\"\x00\x12y\n\x0bScanDevices\x12\x38.interfaces.motion_control.singleaxis.ScanDevicesRequest\x1a,.interfaces.motion_control.singleaxis.Device\"\x00\x30\x01\x12o\n\x07\x43onnect\x12\x34.interfaces.motion_control.singleaxis.ConnectRequest\x1a,.interfaces.motion_control.singleaxis.Device\"\x00\x12u\n\nDisconnect\x12\x37.interfaces.motion_control.singleaxis.DisconnectRequest\x1a,.interfaces.motion_control.singleaxis.Device\"\x00\x12u\n\tHomeMotor\x12\x36.interfaces.motion_control.singleaxis.HomeMotorRequest\x1a..interfaces.motion_control.singleaxis.Position\"\x00\x12u\n\x08GetRange\x12\x35.interfaces.motion_control.singleaxis.GetRangeRequest\x1a\x30.interfaces.motion_control.singleaxis.StageRange\"\x00\x12y\n\x0bGetPosition\x12\x38.interfaces.motion_control.singleaxis.GetPositionRequest\x1a..interfaces.motion_control.singleaxis.Position\"\x00\x12}\n\x0cMoveAbsolute\x12\x39.interfaces.motion_control.singleaxis.MoveAbsoluteRequest\x1a..interfaces.motion_control.singleaxis.Position\"\x00\x30\x01\x12}\n\x0cMoveRelative\x12\x39.interfaces.motion_control.singleaxis.MoveRelativeRequest\x1a..interfaces.motion_control.singleaxis.Position\"\x00\x30\x01\x62\x06proto3')
+  serialized_pb=_b('\n6instrosetta/interfaces/motion_control/singleaxis.proto\x12\x30instrosetta.interfaces.motion_control.singleaxis\",\n\x0bTextMessage\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x02 \x01(\t\"=\n\x12ScanDevicesRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x19\n\x11include_simulated\x18\x02 \x01(\x08\"\xd4\x01\n\x06\x44\x65vice\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x15\n\rserial_number\x18\x02 \x01(\t\x12\x10\n\x08\x63om_port\x18\x03 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x04 \x01(\t\x12V\n\nmotor_type\x18\x05 \x01(\x0e\x32\x42.instrosetta.interfaces.motion_control.singleaxis.Device.MotorType\"&\n\tMotorType\x12\x0c\n\x08\x44\x43_SERVO\x10\x00\x12\x0b\n\x07STEPPER\x10\x01\"\x93\x01\n\x0e\x43onnectRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12H\n\x06\x64\x65vice\x18\x02 \x01(\x0b\x32\x38.instrosetta.interfaces.motion_control.singleaxis.Device\x12\x0f\n\x07timeout\x18\x03 \x01(\x02\x12\x18\n\x10polling_interval\x18\x04 \x01(\x02\"2\n\x11\x44isconnectRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07timeout\x18\x02 \x01(\x02\" \n\x10HomeMotorRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\".\n\x0fGetRangeRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"W\n\nStageRange\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\x12\x0b\n\x03min\x18\x03 \x01(\x01\x12\x0b\n\x03max\x18\x04 \x01(\x01\x12\x12\n\nresolution\x18\x05 \x01(\x01\"#\n\x12GetPositionRequest\x12\r\n\x05units\x18\x01 \x01(\t\"\xb8\x01\n\x08\x44istance\x12\r\n\x05value\x18\x01 \x01(\x01\x12\r\n\x05units\x18\x02 \x01(\t\x12W\n\tdirection\x18\x03 \x01(\x0e\x32\x44.instrosetta.interfaces.motion_control.singleaxis.Distance.Direction\"5\n\tDirection\x12\r\n\tundefined\x10\x00\x12\x0b\n\x07\x66orward\x10\x01\x12\x0c\n\x08\x62\x61\x63kward\x10\x02\"(\n\x08Position\x12\r\n\x05value\x18\x01 \x01(\x01\x12\r\n\x05units\x18\x02 \x01(\t\"q\n\x13MoveAbsoluteRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12L\n\x08position\x18\x02 \x01(\x0b\x32:.instrosetta.interfaces.motion_control.singleaxis.Position\"q\n\x13MoveRelativeRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12L\n\x08\x64istance\x18\x02 \x01(\x0b\x32:.instrosetta.interfaces.motion_control.singleaxis.Distance2\xa7\n\n\nSingleAxis\x12\x86\x01\n\x04\x45\x63ho\x12=.instrosetta.interfaces.motion_control.singleaxis.TextMessage\x1a=.instrosetta.interfaces.motion_control.singleaxis.TextMessage\"\x00\x12\x91\x01\n\x0bScanDevices\x12\x44.instrosetta.interfaces.motion_control.singleaxis.ScanDevicesRequest\x1a\x38.instrosetta.interfaces.motion_control.singleaxis.Device\"\x00\x30\x01\x12\x87\x01\n\x07\x43onnect\x12@.instrosetta.interfaces.motion_control.singleaxis.ConnectRequest\x1a\x38.instrosetta.interfaces.motion_control.singleaxis.Device\"\x00\x12\x8d\x01\n\nDisconnect\x12\x43.instrosetta.interfaces.motion_control.singleaxis.DisconnectRequest\x1a\x38.instrosetta.interfaces.motion_control.singleaxis.Device\"\x00\x12\x8d\x01\n\tHomeMotor\x12\x42.instrosetta.interfaces.motion_control.singleaxis.HomeMotorRequest\x1a:.instrosetta.interfaces.motion_control.singleaxis.Position\"\x00\x12\x8d\x01\n\x08GetRange\x12\x41.instrosetta.interfaces.motion_control.singleaxis.GetRangeRequest\x1a<.instrosetta.interfaces.motion_control.singleaxis.StageRange\"\x00\x12\x91\x01\n\x0bGetPosition\x12\x44.instrosetta.interfaces.motion_control.singleaxis.GetPositionRequest\x1a:.instrosetta.interfaces.motion_control.singleaxis.Position\"\x00\x12\x95\x01\n\x0cMoveAbsolute\x12\x45.instrosetta.interfaces.motion_control.singleaxis.MoveAbsoluteRequest\x1a:.instrosetta.interfaces.motion_control.singleaxis.Position\"\x00\x30\x01\x12\x95\x01\n\x0cMoveRelative\x12\x45.instrosetta.interfaces.motion_control.singleaxis.MoveRelativeRequest\x1a:.instrosetta.interfaces.motion_control.singleaxis.Position\"\x00\x30\x01\x62\x06proto3')
 )
 
 
 
 _DEVICE_MOTORTYPE = _descriptor.EnumDescriptor(
   name='MotorType',
-  full_name='interfaces.motion_control.singleaxis.Device.MotorType',
+  full_name='instrosetta.interfaces.motion_control.singleaxis.Device.MotorType',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -41,14 +41,14 @@ _DEVICE_MOTORTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=368,
-  serialized_end=406,
+  serialized_start=392,
+  serialized_end=430,
 )
 _sym_db.RegisterEnumDescriptor(_DEVICE_MOTORTYPE)
 
 _DISTANCE_DIRECTION = _descriptor.EnumDescriptor(
   name='Direction',
-  full_name='interfaces.motion_control.singleaxis.Distance.Direction',
+  full_name='instrosetta.interfaces.motion_control.singleaxis.Distance.Direction',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -67,28 +67,28 @@ _DISTANCE_DIRECTION = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=926,
-  serialized_end=979,
+  serialized_start=974,
+  serialized_end=1027,
 )
 _sym_db.RegisterEnumDescriptor(_DISTANCE_DIRECTION)
 
 
 _TEXTMESSAGE = _descriptor.Descriptor(
   name='TextMessage',
-  full_name='interfaces.motion_control.singleaxis.TextMessage',
+  full_name='instrosetta.interfaces.motion_control.singleaxis.TextMessage',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='interfaces.motion_control.singleaxis.TextMessage.name', index=0,
+      name='name', full_name='instrosetta.interfaces.motion_control.singleaxis.TextMessage.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='content', full_name='interfaces.motion_control.singleaxis.TextMessage.content', index=1,
+      name='content', full_name='instrosetta.interfaces.motion_control.singleaxis.TextMessage.content', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -106,27 +106,27 @@ _TEXTMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=96,
-  serialized_end=140,
+  serialized_start=108,
+  serialized_end=152,
 )
 
 
 _SCANDEVICESREQUEST = _descriptor.Descriptor(
   name='ScanDevicesRequest',
-  full_name='interfaces.motion_control.singleaxis.ScanDevicesRequest',
+  full_name='instrosetta.interfaces.motion_control.singleaxis.ScanDevicesRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='interfaces.motion_control.singleaxis.ScanDevicesRequest.name', index=0,
+      name='name', full_name='instrosetta.interfaces.motion_control.singleaxis.ScanDevicesRequest.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='include_simulated', full_name='interfaces.motion_control.singleaxis.ScanDevicesRequest.include_simulated', index=1,
+      name='include_simulated', full_name='instrosetta.interfaces.motion_control.singleaxis.ScanDevicesRequest.include_simulated', index=1,
       number=2, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -144,48 +144,48 @@ _SCANDEVICESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=142,
-  serialized_end=203,
+  serialized_start=154,
+  serialized_end=215,
 )
 
 
 _DEVICE = _descriptor.Descriptor(
   name='Device',
-  full_name='interfaces.motion_control.singleaxis.Device',
+  full_name='instrosetta.interfaces.motion_control.singleaxis.Device',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='interfaces.motion_control.singleaxis.Device.name', index=0,
+      name='name', full_name='instrosetta.interfaces.motion_control.singleaxis.Device.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='serial_number', full_name='interfaces.motion_control.singleaxis.Device.serial_number', index=1,
+      name='serial_number', full_name='instrosetta.interfaces.motion_control.singleaxis.Device.serial_number', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='com_port', full_name='interfaces.motion_control.singleaxis.Device.com_port', index=2,
+      name='com_port', full_name='instrosetta.interfaces.motion_control.singleaxis.Device.com_port', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='description', full_name='interfaces.motion_control.singleaxis.Device.description', index=3,
+      name='description', full_name='instrosetta.interfaces.motion_control.singleaxis.Device.description', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='motor_type', full_name='interfaces.motion_control.singleaxis.Device.motor_type', index=4,
+      name='motor_type', full_name='instrosetta.interfaces.motion_control.singleaxis.Device.motor_type', index=4,
       number=5, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -204,41 +204,41 @@ _DEVICE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=206,
-  serialized_end=406,
+  serialized_start=218,
+  serialized_end=430,
 )
 
 
 _CONNECTREQUEST = _descriptor.Descriptor(
   name='ConnectRequest',
-  full_name='interfaces.motion_control.singleaxis.ConnectRequest',
+  full_name='instrosetta.interfaces.motion_control.singleaxis.ConnectRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='interfaces.motion_control.singleaxis.ConnectRequest.name', index=0,
+      name='name', full_name='instrosetta.interfaces.motion_control.singleaxis.ConnectRequest.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='device', full_name='interfaces.motion_control.singleaxis.ConnectRequest.device', index=1,
+      name='device', full_name='instrosetta.interfaces.motion_control.singleaxis.ConnectRequest.device', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='timeout', full_name='interfaces.motion_control.singleaxis.ConnectRequest.timeout', index=2,
+      name='timeout', full_name='instrosetta.interfaces.motion_control.singleaxis.ConnectRequest.timeout', index=2,
       number=3, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='polling_interval', full_name='interfaces.motion_control.singleaxis.ConnectRequest.polling_interval', index=3,
+      name='polling_interval', full_name='instrosetta.interfaces.motion_control.singleaxis.ConnectRequest.polling_interval', index=3,
       number=4, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -256,27 +256,27 @@ _CONNECTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=409,
-  serialized_end=544,
+  serialized_start=433,
+  serialized_end=580,
 )
 
 
 _DISCONNECTREQUEST = _descriptor.Descriptor(
   name='DisconnectRequest',
-  full_name='interfaces.motion_control.singleaxis.DisconnectRequest',
+  full_name='instrosetta.interfaces.motion_control.singleaxis.DisconnectRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='interfaces.motion_control.singleaxis.DisconnectRequest.name', index=0,
+      name='name', full_name='instrosetta.interfaces.motion_control.singleaxis.DisconnectRequest.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='timeout', full_name='interfaces.motion_control.singleaxis.DisconnectRequest.timeout', index=1,
+      name='timeout', full_name='instrosetta.interfaces.motion_control.singleaxis.DisconnectRequest.timeout', index=1,
       number=2, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -294,20 +294,20 @@ _DISCONNECTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=546,
-  serialized_end=596,
+  serialized_start=582,
+  serialized_end=632,
 )
 
 
 _HOMEMOTORREQUEST = _descriptor.Descriptor(
   name='HomeMotorRequest',
-  full_name='interfaces.motion_control.singleaxis.HomeMotorRequest',
+  full_name='instrosetta.interfaces.motion_control.singleaxis.HomeMotorRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='interfaces.motion_control.singleaxis.HomeMotorRequest.name', index=0,
+      name='name', full_name='instrosetta.interfaces.motion_control.singleaxis.HomeMotorRequest.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -325,27 +325,27 @@ _HOMEMOTORREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=598,
-  serialized_end=630,
+  serialized_start=634,
+  serialized_end=666,
 )
 
 
 _GETRANGEREQUEST = _descriptor.Descriptor(
   name='GetRangeRequest',
-  full_name='interfaces.motion_control.singleaxis.GetRangeRequest',
+  full_name='instrosetta.interfaces.motion_control.singleaxis.GetRangeRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='interfaces.motion_control.singleaxis.GetRangeRequest.name', index=0,
+      name='name', full_name='instrosetta.interfaces.motion_control.singleaxis.GetRangeRequest.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='units', full_name='interfaces.motion_control.singleaxis.GetRangeRequest.units', index=1,
+      name='units', full_name='instrosetta.interfaces.motion_control.singleaxis.GetRangeRequest.units', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -363,48 +363,48 @@ _GETRANGEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=632,
-  serialized_end=678,
+  serialized_start=668,
+  serialized_end=714,
 )
 
 
 _STAGERANGE = _descriptor.Descriptor(
   name='StageRange',
-  full_name='interfaces.motion_control.singleaxis.StageRange',
+  full_name='instrosetta.interfaces.motion_control.singleaxis.StageRange',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='interfaces.motion_control.singleaxis.StageRange.name', index=0,
+      name='name', full_name='instrosetta.interfaces.motion_control.singleaxis.StageRange.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='units', full_name='interfaces.motion_control.singleaxis.StageRange.units', index=1,
+      name='units', full_name='instrosetta.interfaces.motion_control.singleaxis.StageRange.units', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='min', full_name='interfaces.motion_control.singleaxis.StageRange.min', index=2,
+      name='min', full_name='instrosetta.interfaces.motion_control.singleaxis.StageRange.min', index=2,
       number=3, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='max', full_name='interfaces.motion_control.singleaxis.StageRange.max', index=3,
+      name='max', full_name='instrosetta.interfaces.motion_control.singleaxis.StageRange.max', index=3,
       number=4, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='resolution', full_name='interfaces.motion_control.singleaxis.StageRange.resolution', index=4,
+      name='resolution', full_name='instrosetta.interfaces.motion_control.singleaxis.StageRange.resolution', index=4,
       number=5, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -422,20 +422,20 @@ _STAGERANGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=680,
-  serialized_end=767,
+  serialized_start=716,
+  serialized_end=803,
 )
 
 
 _GETPOSITIONREQUEST = _descriptor.Descriptor(
   name='GetPositionRequest',
-  full_name='interfaces.motion_control.singleaxis.GetPositionRequest',
+  full_name='instrosetta.interfaces.motion_control.singleaxis.GetPositionRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='units', full_name='interfaces.motion_control.singleaxis.GetPositionRequest.units', index=0,
+      name='units', full_name='instrosetta.interfaces.motion_control.singleaxis.GetPositionRequest.units', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -453,34 +453,34 @@ _GETPOSITIONREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=769,
-  serialized_end=804,
+  serialized_start=805,
+  serialized_end=840,
 )
 
 
 _DISTANCE = _descriptor.Descriptor(
   name='Distance',
-  full_name='interfaces.motion_control.singleaxis.Distance',
+  full_name='instrosetta.interfaces.motion_control.singleaxis.Distance',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='value', full_name='interfaces.motion_control.singleaxis.Distance.value', index=0,
+      name='value', full_name='instrosetta.interfaces.motion_control.singleaxis.Distance.value', index=0,
       number=1, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='units', full_name='interfaces.motion_control.singleaxis.Distance.units', index=1,
+      name='units', full_name='instrosetta.interfaces.motion_control.singleaxis.Distance.units', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='direction', full_name='interfaces.motion_control.singleaxis.Distance.direction', index=2,
+      name='direction', full_name='instrosetta.interfaces.motion_control.singleaxis.Distance.direction', index=2,
       number=3, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -499,27 +499,27 @@ _DISTANCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=807,
-  serialized_end=979,
+  serialized_start=843,
+  serialized_end=1027,
 )
 
 
 _POSITION = _descriptor.Descriptor(
   name='Position',
-  full_name='interfaces.motion_control.singleaxis.Position',
+  full_name='instrosetta.interfaces.motion_control.singleaxis.Position',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='value', full_name='interfaces.motion_control.singleaxis.Position.value', index=0,
+      name='value', full_name='instrosetta.interfaces.motion_control.singleaxis.Position.value', index=0,
       number=1, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='units', full_name='interfaces.motion_control.singleaxis.Position.units', index=1,
+      name='units', full_name='instrosetta.interfaces.motion_control.singleaxis.Position.units', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -537,27 +537,27 @@ _POSITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=981,
-  serialized_end=1021,
+  serialized_start=1029,
+  serialized_end=1069,
 )
 
 
 _MOVEABSOLUTEREQUEST = _descriptor.Descriptor(
   name='MoveAbsoluteRequest',
-  full_name='interfaces.motion_control.singleaxis.MoveAbsoluteRequest',
+  full_name='instrosetta.interfaces.motion_control.singleaxis.MoveAbsoluteRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='interfaces.motion_control.singleaxis.MoveAbsoluteRequest.name', index=0,
+      name='name', full_name='instrosetta.interfaces.motion_control.singleaxis.MoveAbsoluteRequest.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='position', full_name='interfaces.motion_control.singleaxis.MoveAbsoluteRequest.position', index=1,
+      name='position', full_name='instrosetta.interfaces.motion_control.singleaxis.MoveAbsoluteRequest.position', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -575,27 +575,27 @@ _MOVEABSOLUTEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1023,
-  serialized_end=1124,
+  serialized_start=1071,
+  serialized_end=1184,
 )
 
 
 _MOVERELATIVEREQUEST = _descriptor.Descriptor(
   name='MoveRelativeRequest',
-  full_name='interfaces.motion_control.singleaxis.MoveRelativeRequest',
+  full_name='instrosetta.interfaces.motion_control.singleaxis.MoveRelativeRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='interfaces.motion_control.singleaxis.MoveRelativeRequest.name', index=0,
+      name='name', full_name='instrosetta.interfaces.motion_control.singleaxis.MoveRelativeRequest.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='distance', full_name='interfaces.motion_control.singleaxis.MoveRelativeRequest.distance', index=1,
+      name='distance', full_name='instrosetta.interfaces.motion_control.singleaxis.MoveRelativeRequest.distance', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -613,8 +613,8 @@ _MOVERELATIVEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1126,
-  serialized_end=1227,
+  serialized_start=1186,
+  serialized_end=1299,
 )
 
 _DEVICE.fields_by_name['motor_type'].enum_type = _DEVICE_MOTORTYPE
@@ -642,91 +642,91 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 TextMessage = _reflection.GeneratedProtocolMessageType('TextMessage', (_message.Message,), dict(
   DESCRIPTOR = _TEXTMESSAGE,
   __module__ = 'instrosetta.interfaces.motion_control.singleaxis_pb2'
-  # @@protoc_insertion_point(class_scope:interfaces.motion_control.singleaxis.TextMessage)
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.motion_control.singleaxis.TextMessage)
   ))
 _sym_db.RegisterMessage(TextMessage)
 
 ScanDevicesRequest = _reflection.GeneratedProtocolMessageType('ScanDevicesRequest', (_message.Message,), dict(
   DESCRIPTOR = _SCANDEVICESREQUEST,
   __module__ = 'instrosetta.interfaces.motion_control.singleaxis_pb2'
-  # @@protoc_insertion_point(class_scope:interfaces.motion_control.singleaxis.ScanDevicesRequest)
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.motion_control.singleaxis.ScanDevicesRequest)
   ))
 _sym_db.RegisterMessage(ScanDevicesRequest)
 
 Device = _reflection.GeneratedProtocolMessageType('Device', (_message.Message,), dict(
   DESCRIPTOR = _DEVICE,
   __module__ = 'instrosetta.interfaces.motion_control.singleaxis_pb2'
-  # @@protoc_insertion_point(class_scope:interfaces.motion_control.singleaxis.Device)
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.motion_control.singleaxis.Device)
   ))
 _sym_db.RegisterMessage(Device)
 
 ConnectRequest = _reflection.GeneratedProtocolMessageType('ConnectRequest', (_message.Message,), dict(
   DESCRIPTOR = _CONNECTREQUEST,
   __module__ = 'instrosetta.interfaces.motion_control.singleaxis_pb2'
-  # @@protoc_insertion_point(class_scope:interfaces.motion_control.singleaxis.ConnectRequest)
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.motion_control.singleaxis.ConnectRequest)
   ))
 _sym_db.RegisterMessage(ConnectRequest)
 
 DisconnectRequest = _reflection.GeneratedProtocolMessageType('DisconnectRequest', (_message.Message,), dict(
   DESCRIPTOR = _DISCONNECTREQUEST,
   __module__ = 'instrosetta.interfaces.motion_control.singleaxis_pb2'
-  # @@protoc_insertion_point(class_scope:interfaces.motion_control.singleaxis.DisconnectRequest)
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.motion_control.singleaxis.DisconnectRequest)
   ))
 _sym_db.RegisterMessage(DisconnectRequest)
 
 HomeMotorRequest = _reflection.GeneratedProtocolMessageType('HomeMotorRequest', (_message.Message,), dict(
   DESCRIPTOR = _HOMEMOTORREQUEST,
   __module__ = 'instrosetta.interfaces.motion_control.singleaxis_pb2'
-  # @@protoc_insertion_point(class_scope:interfaces.motion_control.singleaxis.HomeMotorRequest)
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.motion_control.singleaxis.HomeMotorRequest)
   ))
 _sym_db.RegisterMessage(HomeMotorRequest)
 
 GetRangeRequest = _reflection.GeneratedProtocolMessageType('GetRangeRequest', (_message.Message,), dict(
   DESCRIPTOR = _GETRANGEREQUEST,
   __module__ = 'instrosetta.interfaces.motion_control.singleaxis_pb2'
-  # @@protoc_insertion_point(class_scope:interfaces.motion_control.singleaxis.GetRangeRequest)
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.motion_control.singleaxis.GetRangeRequest)
   ))
 _sym_db.RegisterMessage(GetRangeRequest)
 
 StageRange = _reflection.GeneratedProtocolMessageType('StageRange', (_message.Message,), dict(
   DESCRIPTOR = _STAGERANGE,
   __module__ = 'instrosetta.interfaces.motion_control.singleaxis_pb2'
-  # @@protoc_insertion_point(class_scope:interfaces.motion_control.singleaxis.StageRange)
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.motion_control.singleaxis.StageRange)
   ))
 _sym_db.RegisterMessage(StageRange)
 
 GetPositionRequest = _reflection.GeneratedProtocolMessageType('GetPositionRequest', (_message.Message,), dict(
   DESCRIPTOR = _GETPOSITIONREQUEST,
   __module__ = 'instrosetta.interfaces.motion_control.singleaxis_pb2'
-  # @@protoc_insertion_point(class_scope:interfaces.motion_control.singleaxis.GetPositionRequest)
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.motion_control.singleaxis.GetPositionRequest)
   ))
 _sym_db.RegisterMessage(GetPositionRequest)
 
 Distance = _reflection.GeneratedProtocolMessageType('Distance', (_message.Message,), dict(
   DESCRIPTOR = _DISTANCE,
   __module__ = 'instrosetta.interfaces.motion_control.singleaxis_pb2'
-  # @@protoc_insertion_point(class_scope:interfaces.motion_control.singleaxis.Distance)
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.motion_control.singleaxis.Distance)
   ))
 _sym_db.RegisterMessage(Distance)
 
 Position = _reflection.GeneratedProtocolMessageType('Position', (_message.Message,), dict(
   DESCRIPTOR = _POSITION,
   __module__ = 'instrosetta.interfaces.motion_control.singleaxis_pb2'
-  # @@protoc_insertion_point(class_scope:interfaces.motion_control.singleaxis.Position)
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.motion_control.singleaxis.Position)
   ))
 _sym_db.RegisterMessage(Position)
 
 MoveAbsoluteRequest = _reflection.GeneratedProtocolMessageType('MoveAbsoluteRequest', (_message.Message,), dict(
   DESCRIPTOR = _MOVEABSOLUTEREQUEST,
   __module__ = 'instrosetta.interfaces.motion_control.singleaxis_pb2'
-  # @@protoc_insertion_point(class_scope:interfaces.motion_control.singleaxis.MoveAbsoluteRequest)
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.motion_control.singleaxis.MoveAbsoluteRequest)
   ))
 _sym_db.RegisterMessage(MoveAbsoluteRequest)
 
 MoveRelativeRequest = _reflection.GeneratedProtocolMessageType('MoveRelativeRequest', (_message.Message,), dict(
   DESCRIPTOR = _MOVERELATIVEREQUEST,
   __module__ = 'instrosetta.interfaces.motion_control.singleaxis_pb2'
-  # @@protoc_insertion_point(class_scope:interfaces.motion_control.singleaxis.MoveRelativeRequest)
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.motion_control.singleaxis.MoveRelativeRequest)
   ))
 _sym_db.RegisterMessage(MoveRelativeRequest)
 
@@ -734,16 +734,16 @@ _sym_db.RegisterMessage(MoveRelativeRequest)
 
 _SINGLEAXIS = _descriptor.ServiceDescriptor(
   name='SingleAxis',
-  full_name='interfaces.motion_control.singleaxis.SingleAxis',
+  full_name='instrosetta.interfaces.motion_control.singleaxis.SingleAxis',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=1230,
-  serialized_end=2324,
+  serialized_start=1302,
+  serialized_end=2621,
   methods=[
   _descriptor.MethodDescriptor(
     name='Echo',
-    full_name='interfaces.motion_control.singleaxis.SingleAxis.Echo',
+    full_name='instrosetta.interfaces.motion_control.singleaxis.SingleAxis.Echo',
     index=0,
     containing_service=None,
     input_type=_TEXTMESSAGE,
@@ -752,7 +752,7 @@ _SINGLEAXIS = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='ScanDevices',
-    full_name='interfaces.motion_control.singleaxis.SingleAxis.ScanDevices',
+    full_name='instrosetta.interfaces.motion_control.singleaxis.SingleAxis.ScanDevices',
     index=1,
     containing_service=None,
     input_type=_SCANDEVICESREQUEST,
@@ -761,7 +761,7 @@ _SINGLEAXIS = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='Connect',
-    full_name='interfaces.motion_control.singleaxis.SingleAxis.Connect',
+    full_name='instrosetta.interfaces.motion_control.singleaxis.SingleAxis.Connect',
     index=2,
     containing_service=None,
     input_type=_CONNECTREQUEST,
@@ -770,7 +770,7 @@ _SINGLEAXIS = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='Disconnect',
-    full_name='interfaces.motion_control.singleaxis.SingleAxis.Disconnect',
+    full_name='instrosetta.interfaces.motion_control.singleaxis.SingleAxis.Disconnect',
     index=3,
     containing_service=None,
     input_type=_DISCONNECTREQUEST,
@@ -779,7 +779,7 @@ _SINGLEAXIS = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='HomeMotor',
-    full_name='interfaces.motion_control.singleaxis.SingleAxis.HomeMotor',
+    full_name='instrosetta.interfaces.motion_control.singleaxis.SingleAxis.HomeMotor',
     index=4,
     containing_service=None,
     input_type=_HOMEMOTORREQUEST,
@@ -788,7 +788,7 @@ _SINGLEAXIS = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetRange',
-    full_name='interfaces.motion_control.singleaxis.SingleAxis.GetRange',
+    full_name='instrosetta.interfaces.motion_control.singleaxis.SingleAxis.GetRange',
     index=5,
     containing_service=None,
     input_type=_GETRANGEREQUEST,
@@ -797,7 +797,7 @@ _SINGLEAXIS = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetPosition',
-    full_name='interfaces.motion_control.singleaxis.SingleAxis.GetPosition',
+    full_name='instrosetta.interfaces.motion_control.singleaxis.SingleAxis.GetPosition',
     index=6,
     containing_service=None,
     input_type=_GETPOSITIONREQUEST,
@@ -806,7 +806,7 @@ _SINGLEAXIS = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='MoveAbsolute',
-    full_name='interfaces.motion_control.singleaxis.SingleAxis.MoveAbsolute',
+    full_name='instrosetta.interfaces.motion_control.singleaxis.SingleAxis.MoveAbsolute',
     index=7,
     containing_service=None,
     input_type=_MOVEABSOLUTEREQUEST,
@@ -815,7 +815,7 @@ _SINGLEAXIS = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='MoveRelative',
-    full_name='interfaces.motion_control.singleaxis.SingleAxis.MoveRelative',
+    full_name='instrosetta.interfaces.motion_control.singleaxis.SingleAxis.MoveRelative',
     index=8,
     containing_service=None,
     input_type=_MOVERELATIVEREQUEST,
