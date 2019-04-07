@@ -1,4 +1,5 @@
 from grpc_tools import protoc
+import subprocess
 import os
 
 proto_files = []
@@ -11,11 +12,14 @@ for dirName, subdirList, fileList in os.walk(rootDir):
 
 for path in proto_files:
     print(path)
-    protoc.main((
-        '',
+
+    subprocess.run((
+        'protoc',
         f'-I{rootDir}',
         '--python_out=./',
-        '--grpc_python_out=./',
+        # '--grpc_python_out=./',
+        f'--csharp_out=../Instrosetta-csharp/instrosetta/src/',
+        # '--csharp_opt=base_namespace=',
         path,
     ))
 
