@@ -13,11 +13,11 @@ for dirName, subdirList, fileList in os.walk(rootDir):
 for path in proto_files:
     print(path)
 
-    subprocess.run((
-        'protoc',
+    protoc.main((
+        '',
         f'-I{rootDir}',
         '--python_out=./',
-        # '--grpc_python_out=./',
+        '--grpc_python_out=./',
         # f'--csharp_out=../Instrosetta-csharp/Instrosetta/src/',
         # '--csharp_opt=base_namespace=',
         path,
