@@ -18,7 +18,7 @@ for path in proto_files:
         f'-I{rootDir}',
         '--python_out=./',
         # '--grpc_python_out=./',
-        f'--csharp_out=../Instrosetta-csharp/Instrosetta/src/',
+        # f'--csharp_out=../Instrosetta-csharp/Instrosetta/src/',
         # '--csharp_opt=base_namespace=',
         path,
     ))
