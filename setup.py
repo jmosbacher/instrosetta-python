@@ -5,7 +5,7 @@ setup(name='instrosetta',
       description='Python implementations of the instrosetta project.',
       url='http://github.com/jmosbacher/instrosetta',
       author='Yossi Mosbacher',
-      author_email='joe.mosbacher@gmail.com',
+      author_email='yossi.mosbacher@gmail.com',
       license='MIT',
       packages=find_packages(where="instrosetta"),
       install_requires=[
@@ -14,6 +14,6 @@ setup(name='instrosetta',
           'protobuf',
       ],
       extra_requires={
-          "server": ['pyserial']
+          
       },
       zip_safe=False)
