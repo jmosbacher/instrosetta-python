@@ -3,7 +3,7 @@ import grpc
 class RpcClient:
     stub_class = lambda channel : None
 
-    def __init__(self, stub_class, addr="localhost:50052"):
+    def __init__(self, addr="localhost:50052"):
         self.addr = addr 
         self._channel = None
         self._stub = None
