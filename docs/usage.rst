@@ -2,6 +2,6 @@
 Usage
 =====
 
-To use instrosetta in a project::
+To use Instrosetta in a project::
 
     import instrosetta

@@ -1,4 +1,4 @@
-Welcome to instrosetta's documentation!
+Welcome to Instrosetta's documentation!
 ======================================
 
 .. toctree::

@@ -1,6 +1,6 @@
-===========
-instrosetta
-===========
+======================================================
+Instrosetta - The Rosetta Stone of instrument control. 
+======================================================
 
 
 .. image:: https://img.shields.io/pypi/v/instrosetta.svg
@@ -20,7 +20,7 @@ instrosetta
 
 
 
-Python implementation of the Instrosetta project.
+A Python implementation of the Instrosetta project.
 
 
 * Free software: MIT license
