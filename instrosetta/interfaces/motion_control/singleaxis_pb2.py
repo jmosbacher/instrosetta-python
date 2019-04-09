@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='instrosetta.interfaces.motion_control.singleaxis',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n6instrosetta/interfaces/motion_control/singleaxis.proto\x12\x30instrosetta.interfaces.motion_control.singleaxis\",\n\x0bTextMessage\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x02 \x01(\t\"=\n\x12ScanDevicesRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x19\n\x11include_simulated\x18\x02 \x01(\x08\"\xd4\x01\n\x06\x44\x65vice\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x15\n\rserial_number\x18\x02 \x01(\t\x12\x10\n\x08\x63om_port\x18\x03 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x04 \x01(\t\x12V\n\nmotor_type\x18\x05 \x01(\x0e\x32\x42.instrosetta.interfaces.motion_control.singleaxis.Device.MotorType\"&\n\tMotorType\x12\x0c\n\x08\x44\x43_SERVO\x10\x00\x12\x0b\n\x07STEPPER\x10\x01\"\x93\x01\n\x0e\x43onnectRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12H\n\x06\x64\x65vice\x18\x02 \x01(\x0b\x32\x38.instrosetta.interfaces.motion_control.singleaxis.Device\x12\x0f\n\x07timeout\x18\x03 \x01(\x02\x12\x18\n\x10polling_interval\x18\x04 \x01(\x02\"2\n\x11\x44isconnectRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07timeout\x18\x02 \x01(\x02\" \n\x10HomeMotorRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\".\n\x0fGetRangeRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"W\n\nStageRange\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\x12\x0b\n\x03min\x18\x03 \x01(\x01\x12\x0b\n\x03max\x18\x04 \x01(\x01\x12\x12\n\nresolution\x18\x05 \x01(\x01\"#\n\x12GetPositionRequest\x12\r\n\x05units\x18\x01 \x01(\t\"\xb8\x01\n\x08\x44istance\x12\r\n\x05value\x18\x01 \x01(\x01\x12\r\n\x05units\x18\x02 \x01(\t\x12W\n\tdirection\x18\x03 \x01(\x0e\x32\x44.instrosetta.interfaces.motion_control.singleaxis.Distance.Direction\"5\n\tDirection\x12\r\n\tundefined\x10\x00\x12\x0b\n\x07\x66orward\x10\x01\x12\x0c\n\x08\x62\x61\x63kward\x10\x02\"(\n\x08Position\x12\r\n\x05value\x18\x01 \x01(\x01\x12\r\n\x05units\x18\x02 \x01(\t\"q\n\x13MoveAbsoluteRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12L\n\x08position\x18\x02 \x01(\x0b\x32:.instrosetta.interfaces.motion_control.singleaxis.Position\"q\n\x13MoveRelativeRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12L\n\x08\x64istance\x18\x02 \x01(\x0b\x32:.instrosetta.interfaces.motion_control.singleaxis.Distance2\xa7\n\n\nSingleAxis\x12\x86\x01\n\x04\x45\x63ho\x12=.instrosetta.interfaces.motion_control.singleaxis.TextMessage\x1a=.instrosetta.interfaces.motion_control.singleaxis.TextMessage\"\x00\x12\x91\x01\n\x0bScanDevices\x12\x44.instrosetta.interfaces.motion_control.singleaxis.ScanDevicesRequest\x1a\x38.instrosetta.interfaces.motion_control.singleaxis.Device\"\x00\x30\x01\x12\x87\x01\n\x07\x43onnect\x12@.instrosetta.interfaces.motion_control.singleaxis.ConnectRequest\x1a\x38.instrosetta.interfaces.motion_control.singleaxis.Device\"\x00\x12\x8d\x01\n\nDisconnect\x12\x43.instrosetta.interfaces.motion_control.singleaxis.DisconnectRequest\x1a\x38.instrosetta.interfaces.motion_control.singleaxis.Device\"\x00\x12\x8d\x01\n\tHomeMotor\x12\x42.instrosetta.interfaces.motion_control.singleaxis.HomeMotorRequest\x1a:.instrosetta.interfaces.motion_control.singleaxis.Position\"\x00\x12\x8d\x01\n\x08GetRange\x12\x41.instrosetta.interfaces.motion_control.singleaxis.GetRangeRequest\x1a<.instrosetta.interfaces.motion_control.singleaxis.StageRange\"\x00\x12\x91\x01\n\x0bGetPosition\x12\x44.instrosetta.interfaces.motion_control.singleaxis.GetPositionRequest\x1a:.instrosetta.interfaces.motion_control.singleaxis.Position\"\x00\x12\x95\x01\n\x0cMoveAbsolute\x12\x45.instrosetta.interfaces.motion_control.singleaxis.MoveAbsoluteRequest\x1a:.instrosetta.interfaces.motion_control.singleaxis.Position\"\x00\x30\x01\x12\x95\x01\n\x0cMoveRelative\x12\x45.instrosetta.interfaces.motion_control.singleaxis.MoveRelativeRequest\x1a:.instrosetta.interfaces.motion_control.singleaxis.Position\"\x00\x30\x01\x62\x06proto3')
+  serialized_pb=_b('\n6instrosetta/interfaces/motion_control/singleaxis.proto\x12\x30instrosetta.interfaces.motion_control.singleaxis\",\n\x0bTextMessage\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x02 \x01(\t\"=\n\x12ScanDevicesRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x19\n\x11include_simulated\x18\x02 \x01(\x08\"\xe0\x01\n\x06\x44\x65vice\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x15\n\rserial_number\x18\x02 \x01(\t\x12\x10\n\x08\x63om_port\x18\x03 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x04 \x01(\t\x12V\n\nmotor_type\x18\x05 \x01(\x0e\x32\x42.instrosetta.interfaces.motion_control.singleaxis.Device.MotorType\"2\n\tMotorType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0b\n\x07\x44\x43SERVO\x10\x01\x12\x0b\n\x07STEPPER\x10\x02\"\x93\x01\n\x0e\x43onnectRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12H\n\x06\x64\x65vice\x18\x02 \x01(\x0b\x32\x38.instrosetta.interfaces.motion_control.singleaxis.Device\x12\x0f\n\x07timeout\x18\x03 \x01(\x02\x12\x18\n\x10polling_interval\x18\x04 \x01(\x02\"2\n\x11\x44isconnectRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07timeout\x18\x02 \x01(\x02\" \n\x10HomeMotorRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\".\n\x0fGetRangeRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"W\n\nStageRange\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\x12\x0b\n\x03min\x18\x03 \x01(\x01\x12\x0b\n\x03max\x18\x04 \x01(\x01\x12\x12\n\nresolution\x18\x05 \x01(\x01\"#\n\x12GetPositionRequest\x12\r\n\x05units\x18\x01 \x01(\t\"\xb8\x01\n\x08\x44istance\x12\r\n\x05value\x18\x01 \x01(\x01\x12\r\n\x05units\x18\x02 \x01(\t\x12W\n\tdirection\x18\x03 \x01(\x0e\x32\x44.instrosetta.interfaces.motion_control.singleaxis.Distance.Direction\"5\n\tDirection\x12\r\n\tundefined\x10\x00\x12\x0b\n\x07\x66orward\x10\x01\x12\x0c\n\x08\x62\x61\x63kward\x10\x02\"(\n\x08Position\x12\r\n\x05value\x18\x01 \x01(\x01\x12\r\n\x05units\x18\x02 \x01(\t\"q\n\x13MoveAbsoluteRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12L\n\x08position\x18\x02 \x01(\x0b\x32:.instrosetta.interfaces.motion_control.singleaxis.Position\"q\n\x13MoveRelativeRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12L\n\x08\x64istance\x18\x02 \x01(\x0b\x32:.instrosetta.interfaces.motion_control.singleaxis.Distance2\xa7\n\n\nSingleAxis\x12\x86\x01\n\x04\x45\x63ho\x12=.instrosetta.interfaces.motion_control.singleaxis.TextMessage\x1a=.instrosetta.interfaces.motion_control.singleaxis.TextMessage\"\x00\x12\x91\x01\n\x0bScanDevices\x12\x44.instrosetta.interfaces.motion_control.singleaxis.ScanDevicesRequest\x1a\x38.instrosetta.interfaces.motion_control.singleaxis.Device\"\x00\x30\x01\x12\x87\x01\n\x07\x43onnect\x12@.instrosetta.interfaces.motion_control.singleaxis.ConnectRequest\x1a\x38.instrosetta.interfaces.motion_control.singleaxis.Device\"\x00\x12\x8d\x01\n\nDisconnect\x12\x43.instrosetta.interfaces.motion_control.singleaxis.DisconnectRequest\x1a\x38.instrosetta.interfaces.motion_control.singleaxis.Device\"\x00\x12\x8d\x01\n\tHomeMotor\x12\x42.instrosetta.interfaces.motion_control.singleaxis.HomeMotorRequest\x1a:.instrosetta.interfaces.motion_control.singleaxis.Position\"\x00\x12\x8d\x01\n\x08GetRange\x12\x41.instrosetta.interfaces.motion_control.singleaxis.GetRangeRequest\x1a<.instrosetta.interfaces.motion_control.singleaxis.StageRange\"\x00\x12\x91\x01\n\x0bGetPosition\x12\x44.instrosetta.interfaces.motion_control.singleaxis.GetPositionRequest\x1a:.instrosetta.interfaces.motion_control.singleaxis.Position\"\x00\x12\x95\x01\n\x0cMoveAbsolute\x12\x45.instrosetta.interfaces.motion_control.singleaxis.MoveAbsoluteRequest\x1a:.instrosetta.interfaces.motion_control.singleaxis.Position\"\x00\x30\x01\x12\x95\x01\n\x0cMoveRelative\x12\x45.instrosetta.interfaces.motion_control.singleaxis.MoveRelativeRequest\x1a:.instrosetta.interfaces.motion_control.singleaxis.Position\"\x00\x30\x01\x62\x06proto3')
 )
 
 
@@ -31,18 +31,22 @@ _DEVICE_MOTORTYPE = _descriptor.EnumDescriptor(
   file=DESCRIPTOR,
   values=[
     _descriptor.EnumValueDescriptor(
-      name='DC_SERVO', index=0, number=0,
+      name='UNKNOWN', index=0, number=0,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='STEPPER', index=1, number=1,
+      name='DCSERVO', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='STEPPER', index=2, number=2,
       serialized_options=None,
       type=None),
   ],
   containing_type=None,
   serialized_options=None,
   serialized_start=392,
-  serialized_end=430,
+  serialized_end=442,
 )
 _sym_db.RegisterEnumDescriptor(_DEVICE_MOTORTYPE)
 
@@ -67,8 +71,8 @@ _DISTANCE_DIRECTION = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=974,
-  serialized_end=1027,
+  serialized_start=986,
+  serialized_end=1039,
 )
 _sym_db.RegisterEnumDescriptor(_DISTANCE_DIRECTION)
 
@@ -205,7 +209,7 @@ _DEVICE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=218,
-  serialized_end=430,
+  serialized_end=442,
 )
 
 
@@ -256,8 +260,8 @@ _CONNECTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=433,
-  serialized_end=580,
+  serialized_start=445,
+  serialized_end=592,
 )
 
 
@@ -294,8 +298,8 @@ _DISCONNECTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=582,
-  serialized_end=632,
+  serialized_start=594,
+  serialized_end=644,
 )
 
 
@@ -325,8 +329,8 @@ _HOMEMOTORREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=634,
-  serialized_end=666,
+  serialized_start=646,
+  serialized_end=678,
 )
 
 
@@ -363,8 +367,8 @@ _GETRANGEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=668,
-  serialized_end=714,
+  serialized_start=680,
+  serialized_end=726,
 )
 
 
@@ -422,8 +426,8 @@ _STAGERANGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=716,
-  serialized_end=803,
+  serialized_start=728,
+  serialized_end=815,
 )
 
 
@@ -453,8 +457,8 @@ _GETPOSITIONREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=805,
-  serialized_end=840,
+  serialized_start=817,
+  serialized_end=852,
 )
 
 
@@ -499,8 +503,8 @@ _DISTANCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=843,
-  serialized_end=1027,
+  serialized_start=855,
+  serialized_end=1039,
 )
 
 
@@ -537,8 +541,8 @@ _POSITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1029,
-  serialized_end=1069,
+  serialized_start=1041,
+  serialized_end=1081,
 )
 
 
@@ -575,8 +579,8 @@ _MOVEABSOLUTEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1071,
-  serialized_end=1184,
+  serialized_start=1083,
+  serialized_end=1196,
 )
 
 
@@ -613,8 +617,8 @@ _MOVERELATIVEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1186,
-  serialized_end=1299,
+  serialized_start=1198,
+  serialized_end=1311,
 )
 
 _DEVICE.fields_by_name['motor_type'].enum_type = _DEVICE_MOTORTYPE
@@ -738,8 +742,8 @@ _SINGLEAXIS = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=1302,
-  serialized_end=2621,
+  serialized_start=1314,
+  serialized_end=2633,
   methods=[
   _descriptor.MethodDescriptor(
     name='Echo',
