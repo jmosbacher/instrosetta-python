@@ -1,5 +1,6 @@
-Welcome to Instrosetta's documentation!
+Welcome to Instrosetta-python's documentation!
 ======================================
+The python implementation of the Instrosetta hardware interface protocols.
 
 .. toctree::
    :maxdepth: 2

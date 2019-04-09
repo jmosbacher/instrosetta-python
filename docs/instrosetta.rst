@@ -1,4 +1,4 @@
-Instrosetta package
+instrosetta package
 ===================
 
 Submodules
