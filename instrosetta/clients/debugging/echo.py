@@ -5,7 +5,7 @@ from instrosetta.client import RpcClient
 
 
 class EchoClient(RpcClient):
-    stub_class = pb2_grpc.EchoStub
+    stub_class = pb2_grpc.EchoServiceStub
 
     def echo(self, text):
         req = pb2.EchoRequest(message=text)
