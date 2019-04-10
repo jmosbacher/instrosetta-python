@@ -12,10 +12,6 @@ Q_ = ureg.Quantity
 class SingleAxis(RpcClient):
     stub_class = pb2_grpc.SingleAxisStub
 
-    def echo(self, text):
-        req = pb2.EchoRequest(message=text)
-        return self.single_rpc("Echo", req).message
-
     def scan_devices(self):
         req = pb2.ScanDevicesRequest()
         return [resp.device_id for resp in self.streaming_rpc('ScanDevices', req)]
