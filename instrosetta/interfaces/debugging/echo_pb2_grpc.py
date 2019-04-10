@@ -18,7 +18,7 @@ class EchoServiceStub(object):
       channel: A grpc.Channel.
     """
     self.Echo = channel.unary_unary(
-        '/instrosetta.common.messages.v1.EchoService/Echo',
+        '/instrosetta.interfaces.debugging.echo.v1.EchoService/Echo',
         request_serializer=instrosetta_dot_interfaces_dot_debugging_dot_echo__pb2.EchoRequest.SerializeToString,
         response_deserializer=instrosetta_dot_interfaces_dot_debugging_dot_echo__pb2.EchoResponse.FromString,
         )
@@ -48,5 +48,5 @@ def add_EchoServiceServicer_to_server(servicer, server):
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'instrosetta.common.messages.v1.EchoService', rpc_method_handlers)
+      'instrosetta.interfaces.debugging.echo.v1.EchoService', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))

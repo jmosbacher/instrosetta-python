@@ -15,6 +15,11 @@ class BasicDaqStub(object):
     Args:
       channel: A grpc.Channel.
     """
+    self.GetAvailbleDevices = channel.unary_stream(
+        '/instrosetta.interfaces.data_aquisition.basic_daq.v1.BasicDaq/GetAvailbleDevices',
+        request_serializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.GetAvailbleDevicesRequest.SerializeToString,
+        response_deserializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.GetAvailbleDevicesResponse.FromString,
+        )
     self.Connect = channel.unary_unary(
         '/instrosetta.interfaces.data_aquisition.basic_daq.v1.BasicDaq/Connect',
         request_serializer=instrosetta_dot_common_dot_connection__pb2.ConnectRequest.SerializeToString,
@@ -50,56 +55,38 @@ class BasicDaqStub(object):
         request_serializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.GetDeviceDetailsRequest.SerializeToString,
         response_deserializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.GetDeviceDetailsResponse.FromString,
         )
-    self.SetDeviceDetails = channel.unary_unary(
-        '/instrosetta.interfaces.data_aquisition.basic_daq.v1.BasicDaq/SetDeviceDetails',
-        request_serializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.SetDeviceDetailsRequest.SerializeToString,
-        response_deserializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.SetDeviceDetailsResponse.FromString,
-        )
     self.GetDigitalOutputs = channel.unary_unary(
         '/instrosetta.interfaces.data_aquisition.basic_daq.v1.BasicDaq/GetDigitalOutputs',
         request_serializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.GetDigitalOutputsRequest.SerializeToString,
         response_deserializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.GetDigitalOutputsResponse.FromString,
-        )
-    self.SetDigitalOutputs = channel.unary_unary(
-        '/instrosetta.interfaces.data_aquisition.basic_daq.v1.BasicDaq/SetDigitalOutputs',
-        request_serializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.SetDigitalOutputsRequest.SerializeToString,
-        response_deserializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.SetDigitalOutputsResponse.FromString,
         )
     self.GetDigitalInputs = channel.unary_unary(
         '/instrosetta.interfaces.data_aquisition.basic_daq.v1.BasicDaq/GetDigitalInputs',
         request_serializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.GetDigitalInputsRequest.SerializeToString,
         response_deserializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.GetDigitalInputsResponse.FromString,
         )
-    self.SetDigitalInputs = channel.unary_unary(
-        '/instrosetta.interfaces.data_aquisition.basic_daq.v1.BasicDaq/SetDigitalInputs',
-        request_serializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.SetDigitalInputsRequest.SerializeToString,
-        response_deserializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.SetDigitalInputsResponse.FromString,
-        )
     self.GetAnalogOutputs = channel.unary_unary(
         '/instrosetta.interfaces.data_aquisition.basic_daq.v1.BasicDaq/GetAnalogOutputs',
         request_serializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.GetAnalogOutputsRequest.SerializeToString,
         response_deserializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.GetAnalogOutputsResponse.FromString,
-        )
-    self.SetAnalogOutputs = channel.unary_unary(
-        '/instrosetta.interfaces.data_aquisition.basic_daq.v1.BasicDaq/SetAnalogOutputs',
-        request_serializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.SetAnalogOutputsRequest.SerializeToString,
-        response_deserializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.SetAnalogOutputsResponse.FromString,
         )
     self.GetAnalogInputs = channel.unary_unary(
         '/instrosetta.interfaces.data_aquisition.basic_daq.v1.BasicDaq/GetAnalogInputs',
         request_serializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.GetAnalogInputsRequest.SerializeToString,
         response_deserializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.GetAnalogInputsResponse.FromString,
         )
-    self.SetAnalogInputs = channel.unary_unary(
-        '/instrosetta.interfaces.data_aquisition.basic_daq.v1.BasicDaq/SetAnalogInputs',
-        request_serializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.SetAnalogInputsRequest.SerializeToString,
-        response_deserializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.SetAnalogInputsResponse.FromString,
-        )
 
 
 class BasicDaqServicer(object):
   # missing associated documentation comment in .proto file
   pass
+
+  def GetAvailbleDevices(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
 
   def Connect(self, request, context):
     # missing associated documentation comment in .proto file
@@ -150,21 +137,7 @@ class BasicDaqServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def SetDeviceDetails(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
   def GetDigitalOutputs(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
-  def SetDigitalOutputs(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -178,21 +151,7 @@ class BasicDaqServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def SetDigitalInputs(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
   def GetAnalogOutputs(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
-  def SetAnalogOutputs(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -206,16 +165,14 @@ class BasicDaqServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def SetAnalogInputs(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
 
 def add_BasicDaqServicer_to_server(servicer, server):
   rpc_method_handlers = {
+      'GetAvailbleDevices': grpc.unary_stream_rpc_method_handler(
+          servicer.GetAvailbleDevices,
+          request_deserializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.GetAvailbleDevicesRequest.FromString,
+          response_serializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.GetAvailbleDevicesResponse.SerializeToString,
+      ),
       'Connect': grpc.unary_unary_rpc_method_handler(
           servicer.Connect,
           request_deserializer=instrosetta_dot_common_dot_connection__pb2.ConnectRequest.FromString,
@@ -251,50 +208,25 @@ def add_BasicDaqServicer_to_server(servicer, server):
           request_deserializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.GetDeviceDetailsRequest.FromString,
           response_serializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.GetDeviceDetailsResponse.SerializeToString,
       ),
-      'SetDeviceDetails': grpc.unary_unary_rpc_method_handler(
-          servicer.SetDeviceDetails,
-          request_deserializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.SetDeviceDetailsRequest.FromString,
-          response_serializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.SetDeviceDetailsResponse.SerializeToString,
-      ),
       'GetDigitalOutputs': grpc.unary_unary_rpc_method_handler(
           servicer.GetDigitalOutputs,
           request_deserializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.GetDigitalOutputsRequest.FromString,
           response_serializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.GetDigitalOutputsResponse.SerializeToString,
-      ),
-      'SetDigitalOutputs': grpc.unary_unary_rpc_method_handler(
-          servicer.SetDigitalOutputs,
-          request_deserializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.SetDigitalOutputsRequest.FromString,
-          response_serializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.SetDigitalOutputsResponse.SerializeToString,
       ),
       'GetDigitalInputs': grpc.unary_unary_rpc_method_handler(
           servicer.GetDigitalInputs,
           request_deserializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.GetDigitalInputsRequest.FromString,
           response_serializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.GetDigitalInputsResponse.SerializeToString,
       ),
-      'SetDigitalInputs': grpc.unary_unary_rpc_method_handler(
-          servicer.SetDigitalInputs,
-          request_deserializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.SetDigitalInputsRequest.FromString,
-          response_serializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.SetDigitalInputsResponse.SerializeToString,
-      ),
       'GetAnalogOutputs': grpc.unary_unary_rpc_method_handler(
           servicer.GetAnalogOutputs,
           request_deserializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.GetAnalogOutputsRequest.FromString,
           response_serializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.GetAnalogOutputsResponse.SerializeToString,
       ),
-      'SetAnalogOutputs': grpc.unary_unary_rpc_method_handler(
-          servicer.SetAnalogOutputs,
-          request_deserializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.SetAnalogOutputsRequest.FromString,
-          response_serializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.SetAnalogOutputsResponse.SerializeToString,
-      ),
       'GetAnalogInputs': grpc.unary_unary_rpc_method_handler(
           servicer.GetAnalogInputs,
           request_deserializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.GetAnalogInputsRequest.FromString,
           response_serializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.GetAnalogInputsResponse.SerializeToString,
-      ),
-      'SetAnalogInputs': grpc.unary_unary_rpc_method_handler(
-          servicer.SetAnalogInputs,
-          request_deserializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.SetAnalogInputsRequest.FromString,
-          response_serializer=instrosetta_dot_interfaces_dot_data__aquisition_dot_basic__daq__pb2.SetAnalogInputsResponse.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(

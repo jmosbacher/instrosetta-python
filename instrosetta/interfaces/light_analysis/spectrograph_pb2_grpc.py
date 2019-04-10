@@ -50,15 +50,15 @@ class SpectrographStub(object):
         request_serializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.SetGratingRequest.SerializeToString,
         response_deserializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.SetGratingResponse.FromString,
         )
-    self.GetShutter = channel.unary_unary(
-        '/instrosetta.interfaces.light_analysis.spectrograph.v1.Spectrograph/GetShutter',
-        request_serializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.GetShutterRequest.SerializeToString,
-        response_deserializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.GetShutterResponse.FromString,
+    self.GetShutterState = channel.unary_unary(
+        '/instrosetta.interfaces.light_analysis.spectrograph.v1.Spectrograph/GetShutterState',
+        request_serializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.GetShutterStateRequest.SerializeToString,
+        response_deserializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.GetShutterStateResponse.FromString,
         )
-    self.SetShutter = channel.unary_unary(
-        '/instrosetta.interfaces.light_analysis.spectrograph.v1.Spectrograph/SetShutter',
-        request_serializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.SetShutterRequest.SerializeToString,
-        response_deserializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.SetShutterResponse.FromString,
+    self.SetShutterState = channel.unary_unary(
+        '/instrosetta.interfaces.light_analysis.spectrograph.v1.Spectrograph/SetShutterState',
+        request_serializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.SetShutterStateRequest.SerializeToString,
+        response_deserializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.SetShutterStateResponse.FromString,
         )
     self.GetWavelength = channel.unary_unary(
         '/instrosetta.interfaces.light_analysis.spectrograph.v1.Spectrograph/GetWavelength',
@@ -155,14 +155,14 @@ class SpectrographServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def GetShutter(self, request, context):
+  def GetShutterState(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def SetShutter(self, request, context):
+  def SetShutterState(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -263,15 +263,15 @@ def add_SpectrographServicer_to_server(servicer, server):
           request_deserializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.SetGratingRequest.FromString,
           response_serializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.SetGratingResponse.SerializeToString,
       ),
-      'GetShutter': grpc.unary_unary_rpc_method_handler(
-          servicer.GetShutter,
-          request_deserializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.GetShutterRequest.FromString,
-          response_serializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.GetShutterResponse.SerializeToString,
+      'GetShutterState': grpc.unary_unary_rpc_method_handler(
+          servicer.GetShutterState,
+          request_deserializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.GetShutterStateRequest.FromString,
+          response_serializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.GetShutterStateResponse.SerializeToString,
       ),
-      'SetShutter': grpc.unary_unary_rpc_method_handler(
-          servicer.SetShutter,
-          request_deserializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.SetShutterRequest.FromString,
-          response_serializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.SetShutterResponse.SerializeToString,
+      'SetShutterState': grpc.unary_unary_rpc_method_handler(
+          servicer.SetShutterState,
+          request_deserializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.SetShutterStateRequest.FromString,
+          response_serializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.SetShutterStateResponse.SerializeToString,
       ),
       'GetWavelength': grpc.unary_unary_rpc_method_handler(
           servicer.GetWavelength,
