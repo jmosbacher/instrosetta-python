@@ -1,6 +1,6 @@
 import grpc
-from instrosetta.interfaces.debugging.echo import echo_pb2 as pb2 
-from instrosetta.interfaces.debugging.echo import echo_pb2_grpc as pb2_grpc
+from instrosetta.interfaces.debugging import echo_pb2 as pb2 
+from instrosetta.interfaces.debugging import echo_pb2_grpc as pb2_grpc
 from instrosetta.client import RpcClient
 
 
