@@ -6,7 +6,7 @@ proto_files = []
 rootDir = '../instrosetta-proto'
 for dirName, subdirList, fileList in os.walk(rootDir):
     for fname in fileList:
-        if fname.endswith('.proto') and 'interfaces' in dirName:
+        if fname.endswith('.proto'):
             path = os.path.join(dirName, fname)
             proto_files.append(path)
 

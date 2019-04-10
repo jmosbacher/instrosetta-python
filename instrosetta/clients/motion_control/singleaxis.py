@@ -13,16 +13,15 @@ class SingleAxis(RpcClient):
     stub_class = pb2_grpc.SingleAxisStub
 
     def echo(self, text):
-        req = pb2.TextMessage(content=text)
-        return self.single_rpc("Echo", req).content
+        req = pb2.EchoRequest(message=text)
+        return self.single_rpc("Echo", req).message
 
     def scan_devices(self):
         req = pb2.ScanDevicesRequest()
-        return [resp.serial_number for resp in self.streaming_rpc('ScanDevices', req)]
+        return [resp.device_id for resp in self.streaming_rpc('ScanDevices', req)]
 
-    def connect(self, serial_number, motor_type=0, timeout=5, polling_interval=0.25):
-        dev = pb2.Device(serial_number=serial_number, motor_type=motor_type)
-        req = pb2.ConnectRequest(device=dev, timeout=timeout, polling_interval=polling_interval)
+    def connect(self, device_id='', timeout=5):
+        req = pb2.ConnectRequest(device_id=device_id, timeout=timeout)
         self.single_rpc("Connect", req)
 
     def disconnect(self):
