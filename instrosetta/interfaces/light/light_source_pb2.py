@@ -12,6 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+from instrosetta.common import connection_pb2 as instrosetta_dot_common_dot_connection__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -19,196 +20,11 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='instrosetta.interfaces.light.light_source.v1',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n/instrosetta/interfaces/light/light_source.proto\x12,instrosetta.interfaces.light.light_source.v1\"\x1b\n\x0b\x45\x63hoRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"\x1c\n\x0c\x45\x63hoResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\"\x1e\n\x0e\x43onnectRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"\x1f\n\x0f\x43onnectResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\"!\n\x11\x44isconnectRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"\"\n\x12\x44isconnectResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\".\n\x0fGetPowerRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\">\n\x10GetPowerResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"=\n\x0fSetPowerRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\">\n\x10SetPowerResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t2\xc9\x05\n\x0bLightSource\x12\x7f\n\x04\x45\x63ho\x12\x39.instrosetta.interfaces.light.light_source.v1.EchoRequest\x1a:.instrosetta.interfaces.light.light_source.v1.EchoResponse\"\x00\x12\x88\x01\n\x07\x43onnect\x12<.instrosetta.interfaces.light.light_source.v1.ConnectRequest\x1a=.instrosetta.interfaces.light.light_source.v1.ConnectResponse\"\x00\x12\x91\x01\n\nDisconnect\x12?.instrosetta.interfaces.light.light_source.v1.DisconnectRequest\x1a@.instrosetta.interfaces.light.light_source.v1.DisconnectResponse\"\x00\x12\x8b\x01\n\x08GetPower\x12=.instrosetta.interfaces.light.light_source.v1.GetPowerRequest\x1a>.instrosetta.interfaces.light.light_source.v1.GetPowerResponse\"\x00\x12\x8b\x01\n\x08SetPower\x12=.instrosetta.interfaces.light.light_source.v1.SetPowerRequest\x1a>.instrosetta.interfaces.light.light_source.v1.SetPowerResponse\"\x00\x62\x06proto3')
-)
+  serialized_pb=_b('\n/instrosetta/interfaces/light/light_source.proto\x12,instrosetta.interfaces.light.light_source.v1\x1a#instrosetta/common/connection.proto\".\n\x0fGetPowerRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"B\n\x10GetPowerResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"A\n\x0fSetPowerRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"B\n\x10SetPowerResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t2\x92\x03\n\x0bLightSource\x12.\n\x07\x43onnect\x12\x0f.ConnectRequest\x1a\x10.ConnectResponse\"\x00\x12\x37\n\nDisconnect\x12\x12.DisconnectRequest\x1a\x13.DisconnectResponse\"\x00\x12\x8b\x01\n\x08GetPower\x12=.instrosetta.interfaces.light.light_source.v1.GetPowerRequest\x1a>.instrosetta.interfaces.light.light_source.v1.GetPowerResponse\"\x00\x12\x8b\x01\n\x08SetPower\x12=.instrosetta.interfaces.light.light_source.v1.SetPowerRequest\x1a>.instrosetta.interfaces.light.light_source.v1.SetPowerResponse\"\x00\x62\x06proto3')
+  ,
+  dependencies=[instrosetta_dot_common_dot_connection__pb2.DESCRIPTOR,])
 
 
-
-
-_ECHOREQUEST = _descriptor.Descriptor(
-  name='EchoRequest',
-  full_name='instrosetta.interfaces.light.light_source.v1.EchoRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='name', full_name='instrosetta.interfaces.light.light_source.v1.EchoRequest.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=97,
-  serialized_end=124,
-)
-
-
-_ECHORESPONSE = _descriptor.Descriptor(
-  name='EchoResponse',
-  full_name='instrosetta.interfaces.light.light_source.v1.EchoResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='name', full_name='instrosetta.interfaces.light.light_source.v1.EchoResponse.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=126,
-  serialized_end=154,
-)
-
-
-_CONNECTREQUEST = _descriptor.Descriptor(
-  name='ConnectRequest',
-  full_name='instrosetta.interfaces.light.light_source.v1.ConnectRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='name', full_name='instrosetta.interfaces.light.light_source.v1.ConnectRequest.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=156,
-  serialized_end=186,
-)
-
-
-_CONNECTRESPONSE = _descriptor.Descriptor(
-  name='ConnectResponse',
-  full_name='instrosetta.interfaces.light.light_source.v1.ConnectResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='name', full_name='instrosetta.interfaces.light.light_source.v1.ConnectResponse.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=188,
-  serialized_end=219,
-)
-
-
-_DISCONNECTREQUEST = _descriptor.Descriptor(
-  name='DisconnectRequest',
-  full_name='instrosetta.interfaces.light.light_source.v1.DisconnectRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='name', full_name='instrosetta.interfaces.light.light_source.v1.DisconnectRequest.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=221,
-  serialized_end=254,
-)
-
-
-_DISCONNECTRESPONSE = _descriptor.Descriptor(
-  name='DisconnectResponse',
-  full_name='instrosetta.interfaces.light.light_source.v1.DisconnectResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='name', full_name='instrosetta.interfaces.light.light_source.v1.DisconnectResponse.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=256,
-  serialized_end=290,
-)
 
 
 _GETPOWERREQUEST = _descriptor.Descriptor(
@@ -244,8 +60,8 @@ _GETPOWERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=292,
-  serialized_end=338,
+  serialized_start=134,
+  serialized_end=180,
 )
 
 
@@ -264,7 +80,7 @@ _GETPOWERRESPONSE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='value', full_name='instrosetta.interfaces.light.light_source.v1.GetPowerResponse.value', index=1,
+      name='magnitude', full_name='instrosetta.interfaces.light.light_source.v1.GetPowerResponse.magnitude', index=1,
       number=2, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -289,8 +105,8 @@ _GETPOWERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=340,
-  serialized_end=402,
+  serialized_start=182,
+  serialized_end=248,
 )
 
 
@@ -309,7 +125,7 @@ _SETPOWERREQUEST = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='value', full_name='instrosetta.interfaces.light.light_source.v1.SetPowerRequest.value', index=1,
+      name='magnitude', full_name='instrosetta.interfaces.light.light_source.v1.SetPowerRequest.magnitude', index=1,
       number=2, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -334,8 +150,8 @@ _SETPOWERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=404,
-  serialized_end=465,
+  serialized_start=250,
+  serialized_end=315,
 )
 
 
@@ -354,7 +170,7 @@ _SETPOWERRESPONSE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='value', full_name='instrosetta.interfaces.light.light_source.v1.SetPowerResponse.value', index=1,
+      name='magnitude', full_name='instrosetta.interfaces.light.light_source.v1.SetPowerResponse.magnitude', index=1,
       number=2, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -379,63 +195,15 @@ _SETPOWERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=467,
-  serialized_end=529,
+  serialized_start=317,
+  serialized_end=383,
 )
 
-DESCRIPTOR.message_types_by_name['EchoRequest'] = _ECHOREQUEST
-DESCRIPTOR.message_types_by_name['EchoResponse'] = _ECHORESPONSE
-DESCRIPTOR.message_types_by_name['ConnectRequest'] = _CONNECTREQUEST
-DESCRIPTOR.message_types_by_name['ConnectResponse'] = _CONNECTRESPONSE
-DESCRIPTOR.message_types_by_name['DisconnectRequest'] = _DISCONNECTREQUEST
-DESCRIPTOR.message_types_by_name['DisconnectResponse'] = _DISCONNECTRESPONSE
 DESCRIPTOR.message_types_by_name['GetPowerRequest'] = _GETPOWERREQUEST
 DESCRIPTOR.message_types_by_name['GetPowerResponse'] = _GETPOWERRESPONSE
 DESCRIPTOR.message_types_by_name['SetPowerRequest'] = _SETPOWERREQUEST
 DESCRIPTOR.message_types_by_name['SetPowerResponse'] = _SETPOWERRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
-
-EchoRequest = _reflection.GeneratedProtocolMessageType('EchoRequest', (_message.Message,), dict(
-  DESCRIPTOR = _ECHOREQUEST,
-  __module__ = 'instrosetta.interfaces.light.light_source_pb2'
-  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.light.light_source.v1.EchoRequest)
-  ))
-_sym_db.RegisterMessage(EchoRequest)
-
-EchoResponse = _reflection.GeneratedProtocolMessageType('EchoResponse', (_message.Message,), dict(
-  DESCRIPTOR = _ECHORESPONSE,
-  __module__ = 'instrosetta.interfaces.light.light_source_pb2'
-  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.light.light_source.v1.EchoResponse)
-  ))
-_sym_db.RegisterMessage(EchoResponse)
-
-ConnectRequest = _reflection.GeneratedProtocolMessageType('ConnectRequest', (_message.Message,), dict(
-  DESCRIPTOR = _CONNECTREQUEST,
-  __module__ = 'instrosetta.interfaces.light.light_source_pb2'
-  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.light.light_source.v1.ConnectRequest)
-  ))
-_sym_db.RegisterMessage(ConnectRequest)
-
-ConnectResponse = _reflection.GeneratedProtocolMessageType('ConnectResponse', (_message.Message,), dict(
-  DESCRIPTOR = _CONNECTRESPONSE,
-  __module__ = 'instrosetta.interfaces.light.light_source_pb2'
-  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.light.light_source.v1.ConnectResponse)
-  ))
-_sym_db.RegisterMessage(ConnectResponse)
-
-DisconnectRequest = _reflection.GeneratedProtocolMessageType('DisconnectRequest', (_message.Message,), dict(
-  DESCRIPTOR = _DISCONNECTREQUEST,
-  __module__ = 'instrosetta.interfaces.light.light_source_pb2'
-  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.light.light_source.v1.DisconnectRequest)
-  ))
-_sym_db.RegisterMessage(DisconnectRequest)
-
-DisconnectResponse = _reflection.GeneratedProtocolMessageType('DisconnectResponse', (_message.Message,), dict(
-  DESCRIPTOR = _DISCONNECTRESPONSE,
-  __module__ = 'instrosetta.interfaces.light.light_source_pb2'
-  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.light.light_source.v1.DisconnectResponse)
-  ))
-_sym_db.RegisterMessage(DisconnectResponse)
 
 GetPowerRequest = _reflection.GeneratedProtocolMessageType('GetPowerRequest', (_message.Message,), dict(
   DESCRIPTOR = _GETPOWERREQUEST,
@@ -473,40 +241,31 @@ _LIGHTSOURCE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=532,
-  serialized_end=1245,
+  serialized_start=386,
+  serialized_end=788,
   methods=[
-  _descriptor.MethodDescriptor(
-    name='Echo',
-    full_name='instrosetta.interfaces.light.light_source.v1.LightSource.Echo',
-    index=0,
-    containing_service=None,
-    input_type=_ECHOREQUEST,
-    output_type=_ECHORESPONSE,
-    serialized_options=None,
-  ),
   _descriptor.MethodDescriptor(
     name='Connect',
     full_name='instrosetta.interfaces.light.light_source.v1.LightSource.Connect',
-    index=1,
+    index=0,
     containing_service=None,
-    input_type=_CONNECTREQUEST,
-    output_type=_CONNECTRESPONSE,
+    input_type=instrosetta_dot_common_dot_connection__pb2._CONNECTREQUEST,
+    output_type=instrosetta_dot_common_dot_connection__pb2._CONNECTRESPONSE,
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
     name='Disconnect',
     full_name='instrosetta.interfaces.light.light_source.v1.LightSource.Disconnect',
-    index=2,
+    index=1,
     containing_service=None,
-    input_type=_DISCONNECTREQUEST,
-    output_type=_DISCONNECTRESPONSE,
+    input_type=instrosetta_dot_common_dot_connection__pb2._DISCONNECTREQUEST,
+    output_type=instrosetta_dot_common_dot_connection__pb2._DISCONNECTRESPONSE,
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
     name='GetPower',
     full_name='instrosetta.interfaces.light.light_source.v1.LightSource.GetPower',
-    index=3,
+    index=2,
     containing_service=None,
     input_type=_GETPOWERREQUEST,
     output_type=_GETPOWERRESPONSE,
@@ -515,7 +274,7 @@ _LIGHTSOURCE = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='SetPower',
     full_name='instrosetta.interfaces.light.light_source.v1.LightSource.SetPower',
-    index=4,
+    index=3,
     containing_service=None,
     input_type=_SETPOWERREQUEST,
     output_type=_SETPOWERRESPONSE,
