@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='instrosetta.interfaces.optomechanics.filter_wheel.v1',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n7instrosetta/interfaces/optomechanics/filter_wheel.proto\x12\x34instrosetta.interfaces.optomechanics.filter_wheel.v1\x1a#instrosetta/common/connection.proto\"&\n\x16GetSpeedOptionsRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"8\n\x17GetSpeedOptionsResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07options\x18\x02 \x03(\x01\".\n\x0fGetSpeedRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\">\n\x10GetSpeedResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"=\n\x0fSetSpeedRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\">\n\x10SetSpeedResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"(\n\x18GetSensorsOptionsRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\":\n\x19GetSensorsOptionsResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07options\x18\x02 \x03(\x01\"0\n\x11GetSensorsRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"@\n\x12GetSensorsResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"?\n\x11SetSensorsRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"@\n\x12SetSensorsResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"-\n\x0eGetPortRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"=\n\x0fGetPortResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"<\n\x0eSetPortRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"=\n\x0fSetPortResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"\'\n\x17GetFilterOptionsRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"9\n\x18GetFilterOptionsResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07options\x18\x02 \x03(\x01\"/\n\x10GetFilterRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"?\n\x11GetFilterResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\">\n\x10SetFilterRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"?\n\x11SetFilterResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\")\n\x19GetPositionOptionsRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\";\n\x1aGetPositionOptionsResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07options\x18\x02 \x03(\x01\"1\n\x12GetPositionRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"A\n\x13GetPositionResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"@\n\x12SetPositionRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"A\n\x13SetPositionResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t2\x9e\x13\n\x0b\x46ilterWheel\x12.\n\x07\x43onnect\x12\x0f.ConnectRequest\x1a\x10.ConnectResponse\"\x00\x12\x37\n\nDisconnect\x12\x12.DisconnectRequest\x1a\x13.DisconnectResponse\"\x00\x12\xb0\x01\n\x0fGetSpeedOptions\x12L.instrosetta.interfaces.optomechanics.filter_wheel.v1.GetSpeedOptionsRequest\x1aM.instrosetta.interfaces.optomechanics.filter_wheel.v1.GetSpeedOptionsResponse\"\x00\x12\x9b\x01\n\x08GetSpeed\x12\x45.instrosetta.interfaces.optomechanics.filter_wheel.v1.GetSpeedRequest\x1a\x46.instrosetta.interfaces.optomechanics.filter_wheel.v1.GetSpeedResponse\"\x00\x12\x9b\x01\n\x08SetSpeed\x12\x45.instrosetta.interfaces.optomechanics.filter_wheel.v1.SetSpeedRequest\x1a\x46.instrosetta.interfaces.optomechanics.filter_wheel.v1.SetSpeedResponse\"\x00\x12\xb6\x01\n\x11GetSensorsOptions\x12N.instrosetta.interfaces.optomechanics.filter_wheel.v1.GetSensorsOptionsRequest\x1aO.instrosetta.interfaces.optomechanics.filter_wheel.v1.GetSensorsOptionsResponse\"\x00\x12\xa1\x01\n\nGetSensors\x12G.instrosetta.interfaces.optomechanics.filter_wheel.v1.GetSensorsRequest\x1aH.instrosetta.interfaces.optomechanics.filter_wheel.v1.GetSensorsResponse\"\x00\x12\xa1\x01\n\nSetSensors\x12G.instrosetta.interfaces.optomechanics.filter_wheel.v1.SetSensorsRequest\x1aH.instrosetta.interfaces.optomechanics.filter_wheel.v1.SetSensorsResponse\"\x00\x12\x98\x01\n\x07GetPort\x12\x44.instrosetta.interfaces.optomechanics.filter_wheel.v1.GetPortRequest\x1a\x45.instrosetta.interfaces.optomechanics.filter_wheel.v1.GetPortResponse\"\x00\x12\x98\x01\n\x07SetPort\x12\x44.instrosetta.interfaces.optomechanics.filter_wheel.v1.SetPortRequest\x1a\x45.instrosetta.interfaces.optomechanics.filter_wheel.v1.SetPortResponse\"\x00\x12\xb3\x01\n\x10GetFilterOptions\x12M.instrosetta.interfaces.optomechanics.filter_wheel.v1.GetFilterOptionsRequest\x1aN.instrosetta.interfaces.optomechanics.filter_wheel.v1.GetFilterOptionsResponse\"\x00\x12\x9e\x01\n\tGetFilter\x12\x46.instrosetta.interfaces.optomechanics.filter_wheel.v1.GetFilterRequest\x1aG.instrosetta.interfaces.optomechanics.filter_wheel.v1.GetFilterResponse\"\x00\x12\x9e\x01\n\tSetFilter\x12\x46.instrosetta.interfaces.optomechanics.filter_wheel.v1.SetFilterRequest\x1aG.instrosetta.interfaces.optomechanics.filter_wheel.v1.SetFilterResponse\"\x00\x12\xb9\x01\n\x12GetPositionOptions\x12O.instrosetta.interfaces.optomechanics.filter_wheel.v1.GetPositionOptionsRequest\x1aP.instrosetta.interfaces.optomechanics.filter_wheel.v1.GetPositionOptionsResponse\"\x00\x12\xa4\x01\n\x0bGetPosition\x12H.instrosetta.interfaces.optomechanics.filter_wheel.v1.GetPositionRequest\x1aI.instrosetta.interfaces.optomechanics.filter_wheel.v1.GetPositionResponse\"\x00\x12\xa4\x01\n\x0bSetPosition\x12H.instrosetta.interfaces.optomechanics.filter_wheel.v1.SetPositionRequest\x1aI.instrosetta.interfaces.optomechanics.filter_wheel.v1.SetPositionResponse\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n7instrosetta/interfaces/optomechanics/filter_wheel.proto\x12\x34instrosetta.interfaces.optomechanics.filter_wheel.v1\x1a#instrosetta/common/connection.proto\"&\n\x16GetSpeedOptionsRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"8\n\x17GetSpeedOptionsResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07options\x18\x02 \x03(\x01\".\n\x0fGetSpeedRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\">\n\x10GetSpeedResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"=\n\x0fSetSpeedRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\">\n\x10SetSpeedResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"(\n\x18GetSensorsOptionsRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\":\n\x19GetSensorsOptionsResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07options\x18\x02 \x03(\r\"!\n\x11GetSensorsRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"1\n\x12GetSensorsResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\r\"0\n\x11SetSensorsRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\r\"1\n\x12SetSensorsResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\r\"\'\n\x17GetFilterOptionsRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"9\n\x18GetFilterOptionsResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07options\x18\x02 \x03(\x01\"/\n\x10GetFilterRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"?\n\x11GetFilterResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\">\n\x10SetFilterRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"?\n\x11SetFilterResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\")\n\x19GetPositionOptionsRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\";\n\x1aGetPositionOptionsResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07options\x18\x02 \x03(\x01\"1\n\x12GetPositionRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"A\n\x13GetPositionResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"@\n\x12SetPositionRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"A\n\x13SetPositionResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t2\xe8\x10\n\x0b\x46ilterWheel\x12.\n\x07\x43onnect\x12\x0f.ConnectRequest\x1a\x10.ConnectResponse\"\x00\x12\x37\n\nDisconnect\x12\x12.DisconnectRequest\x1a\x13.DisconnectResponse\"\x00\x12\xb0\x01\n\x0fGetSpeedOptions\x12L.instrosetta.interfaces.optomechanics.filter_wheel.v1.GetSpeedOptionsRequest\x1aM.instrosetta.interfaces.optomechanics.filter_wheel.v1.GetSpeedOptionsResponse\"\x00\x12\x9b\x01\n\x08GetSpeed\x12\x45.instrosetta.interfaces.optomechanics.filter_wheel.v1.GetSpeedRequest\x1a\x46.instrosetta.interfaces.optomechanics.filter_wheel.v1.GetSpeedResponse\"\x00\x12\x9b\x01\n\x08SetSpeed\x12\x45.instrosetta.interfaces.optomechanics.filter_wheel.v1.SetSpeedRequest\x1a\x46.instrosetta.interfaces.optomechanics.filter_wheel.v1.SetSpeedResponse\"\x00\x12\xb6\x01\n\x11GetSensorsOptions\x12N.instrosetta.interfaces.optomechanics.filter_wheel.v1.GetSensorsOptionsRequest\x1aO.instrosetta.interfaces.optomechanics.filter_wheel.v1.GetSensorsOptionsResponse\"\x00\x12\xa1\x01\n\nGetSensors\x12G.instrosetta.interfaces.optomechanics.filter_wheel.v1.GetSensorsRequest\x1aH.instrosetta.interfaces.optomechanics.filter_wheel.v1.GetSensorsResponse\"\x00\x12\xa1\x01\n\nSetSensors\x12G.instrosetta.interfaces.optomechanics.filter_wheel.v1.SetSensorsRequest\x1aH.instrosetta.interfaces.optomechanics.filter_wheel.v1.SetSensorsResponse\"\x00\x12\xb3\x01\n\x10GetFilterOptions\x12M.instrosetta.interfaces.optomechanics.filter_wheel.v1.GetFilterOptionsRequest\x1aN.instrosetta.interfaces.optomechanics.filter_wheel.v1.GetFilterOptionsResponse\"\x00\x12\x9e\x01\n\tGetFilter\x12\x46.instrosetta.interfaces.optomechanics.filter_wheel.v1.GetFilterRequest\x1aG.instrosetta.interfaces.optomechanics.filter_wheel.v1.GetFilterResponse\"\x00\x12\x9e\x01\n\tSetFilter\x12\x46.instrosetta.interfaces.optomechanics.filter_wheel.v1.SetFilterRequest\x1aG.instrosetta.interfaces.optomechanics.filter_wheel.v1.SetFilterResponse\"\x00\x12\xb9\x01\n\x12GetPositionOptions\x12O.instrosetta.interfaces.optomechanics.filter_wheel.v1.GetPositionOptionsRequest\x1aP.instrosetta.interfaces.optomechanics.filter_wheel.v1.GetPositionOptionsResponse\"\x00\x12\xa4\x01\n\x0bGetPosition\x12H.instrosetta.interfaces.optomechanics.filter_wheel.v1.GetPositionRequest\x1aI.instrosetta.interfaces.optomechanics.filter_wheel.v1.GetPositionResponse\"\x00\x12\xa4\x01\n\x0bSetPosition\x12H.instrosetta.interfaces.optomechanics.filter_wheel.v1.SetPositionRequest\x1aI.instrosetta.interfaces.optomechanics.filter_wheel.v1.SetPositionResponse\"\x00\x62\x06proto3')
   ,
   dependencies=[instrosetta_dot_common_dot_connection__pb2.DESCRIPTOR,])
 
@@ -316,7 +316,7 @@ _GETSENSORSOPTIONSRESPONSE = _descriptor.Descriptor(
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='options', full_name='instrosetta.interfaces.optomechanics.filter_wheel.v1.GetSensorsOptionsResponse.options', index=1,
-      number=2, type=1, cpp_type=5, label=3,
+      number=2, type=13, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -352,13 +352,6 @@ _GETSENSORSREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='units', full_name='instrosetta.interfaces.optomechanics.filter_wheel.v1.GetSensorsRequest.units', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -372,7 +365,7 @@ _GETSENSORSREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=589,
-  serialized_end=637,
+  serialized_end=622,
 )
 
 
@@ -392,15 +385,8 @@ _GETSENSORSRESPONSE = _descriptor.Descriptor(
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='value', full_name='instrosetta.interfaces.optomechanics.filter_wheel.v1.GetSensorsResponse.value', index=1,
-      number=2, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='units', full_name='instrosetta.interfaces.optomechanics.filter_wheel.v1.GetSensorsResponse.units', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -416,8 +402,8 @@ _GETSENSORSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=639,
-  serialized_end=703,
+  serialized_start=624,
+  serialized_end=673,
 )
 
 
@@ -437,15 +423,8 @@ _SETSENSORSREQUEST = _descriptor.Descriptor(
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='value', full_name='instrosetta.interfaces.optomechanics.filter_wheel.v1.SetSensorsRequest.value', index=1,
-      number=2, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='units', full_name='instrosetta.interfaces.optomechanics.filter_wheel.v1.SetSensorsRequest.units', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -461,8 +440,8 @@ _SETSENSORSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=705,
-  serialized_end=768,
+  serialized_start=675,
+  serialized_end=723,
 )
 
 
@@ -482,15 +461,8 @@ _SETSENSORSRESPONSE = _descriptor.Descriptor(
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='value', full_name='instrosetta.interfaces.optomechanics.filter_wheel.v1.SetSensorsResponse.value', index=1,
-      number=2, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='units', full_name='instrosetta.interfaces.optomechanics.filter_wheel.v1.SetSensorsResponse.units', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -506,181 +478,8 @@ _SETSENSORSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=770,
-  serialized_end=834,
-)
-
-
-_GETPORTREQUEST = _descriptor.Descriptor(
-  name='GetPortRequest',
-  full_name='instrosetta.interfaces.optomechanics.filter_wheel.v1.GetPortRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='name', full_name='instrosetta.interfaces.optomechanics.filter_wheel.v1.GetPortRequest.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='units', full_name='instrosetta.interfaces.optomechanics.filter_wheel.v1.GetPortRequest.units', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=836,
-  serialized_end=881,
-)
-
-
-_GETPORTRESPONSE = _descriptor.Descriptor(
-  name='GetPortResponse',
-  full_name='instrosetta.interfaces.optomechanics.filter_wheel.v1.GetPortResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='name', full_name='instrosetta.interfaces.optomechanics.filter_wheel.v1.GetPortResponse.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='value', full_name='instrosetta.interfaces.optomechanics.filter_wheel.v1.GetPortResponse.value', index=1,
-      number=2, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='units', full_name='instrosetta.interfaces.optomechanics.filter_wheel.v1.GetPortResponse.units', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=883,
-  serialized_end=944,
-)
-
-
-_SETPORTREQUEST = _descriptor.Descriptor(
-  name='SetPortRequest',
-  full_name='instrosetta.interfaces.optomechanics.filter_wheel.v1.SetPortRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='name', full_name='instrosetta.interfaces.optomechanics.filter_wheel.v1.SetPortRequest.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='value', full_name='instrosetta.interfaces.optomechanics.filter_wheel.v1.SetPortRequest.value', index=1,
-      number=2, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='units', full_name='instrosetta.interfaces.optomechanics.filter_wheel.v1.SetPortRequest.units', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=946,
-  serialized_end=1006,
-)
-
-
-_SETPORTRESPONSE = _descriptor.Descriptor(
-  name='SetPortResponse',
-  full_name='instrosetta.interfaces.optomechanics.filter_wheel.v1.SetPortResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='name', full_name='instrosetta.interfaces.optomechanics.filter_wheel.v1.SetPortResponse.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='value', full_name='instrosetta.interfaces.optomechanics.filter_wheel.v1.SetPortResponse.value', index=1,
-      number=2, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='units', full_name='instrosetta.interfaces.optomechanics.filter_wheel.v1.SetPortResponse.units', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1008,
-  serialized_end=1069,
+  serialized_start=725,
+  serialized_end=774,
 )
 
 
@@ -710,8 +509,8 @@ _GETFILTEROPTIONSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1071,
-  serialized_end=1110,
+  serialized_start=776,
+  serialized_end=815,
 )
 
 
@@ -748,8 +547,8 @@ _GETFILTEROPTIONSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1112,
-  serialized_end=1169,
+  serialized_start=817,
+  serialized_end=874,
 )
 
 
@@ -786,8 +585,8 @@ _GETFILTERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1171,
-  serialized_end=1218,
+  serialized_start=876,
+  serialized_end=923,
 )
 
 
@@ -831,8 +630,8 @@ _GETFILTERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1220,
-  serialized_end=1283,
+  serialized_start=925,
+  serialized_end=988,
 )
 
 
@@ -876,8 +675,8 @@ _SETFILTERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1285,
-  serialized_end=1347,
+  serialized_start=990,
+  serialized_end=1052,
 )
 
 
@@ -921,8 +720,8 @@ _SETFILTERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1349,
-  serialized_end=1412,
+  serialized_start=1054,
+  serialized_end=1117,
 )
 
 
@@ -952,8 +751,8 @@ _GETPOSITIONOPTIONSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1414,
-  serialized_end=1455,
+  serialized_start=1119,
+  serialized_end=1160,
 )
 
 
@@ -990,8 +789,8 @@ _GETPOSITIONOPTIONSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1457,
-  serialized_end=1516,
+  serialized_start=1162,
+  serialized_end=1221,
 )
 
 
@@ -1028,8 +827,8 @@ _GETPOSITIONREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1518,
-  serialized_end=1567,
+  serialized_start=1223,
+  serialized_end=1272,
 )
 
 
@@ -1073,8 +872,8 @@ _GETPOSITIONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1569,
-  serialized_end=1634,
+  serialized_start=1274,
+  serialized_end=1339,
 )
 
 
@@ -1118,8 +917,8 @@ _SETPOSITIONREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1636,
-  serialized_end=1700,
+  serialized_start=1341,
+  serialized_end=1405,
 )
 
 
@@ -1163,8 +962,8 @@ _SETPOSITIONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1702,
-  serialized_end=1767,
+  serialized_start=1407,
+  serialized_end=1472,
 )
 
 DESCRIPTOR.message_types_by_name['GetSpeedOptionsRequest'] = _GETSPEEDOPTIONSREQUEST
@@ -1179,10 +978,6 @@ DESCRIPTOR.message_types_by_name['GetSensorsRequest'] = _GETSENSORSREQUEST
 DESCRIPTOR.message_types_by_name['GetSensorsResponse'] = _GETSENSORSRESPONSE
 DESCRIPTOR.message_types_by_name['SetSensorsRequest'] = _SETSENSORSREQUEST
 DESCRIPTOR.message_types_by_name['SetSensorsResponse'] = _SETSENSORSRESPONSE
-DESCRIPTOR.message_types_by_name['GetPortRequest'] = _GETPORTREQUEST
-DESCRIPTOR.message_types_by_name['GetPortResponse'] = _GETPORTRESPONSE
-DESCRIPTOR.message_types_by_name['SetPortRequest'] = _SETPORTREQUEST
-DESCRIPTOR.message_types_by_name['SetPortResponse'] = _SETPORTRESPONSE
 DESCRIPTOR.message_types_by_name['GetFilterOptionsRequest'] = _GETFILTEROPTIONSREQUEST
 DESCRIPTOR.message_types_by_name['GetFilterOptionsResponse'] = _GETFILTEROPTIONSRESPONSE
 DESCRIPTOR.message_types_by_name['GetFilterRequest'] = _GETFILTERREQUEST
@@ -1281,34 +1076,6 @@ SetSensorsResponse = _reflection.GeneratedProtocolMessageType('SetSensorsRespons
   ))
 _sym_db.RegisterMessage(SetSensorsResponse)
 
-GetPortRequest = _reflection.GeneratedProtocolMessageType('GetPortRequest', (_message.Message,), dict(
-  DESCRIPTOR = _GETPORTREQUEST,
-  __module__ = 'instrosetta.interfaces.optomechanics.filter_wheel_pb2'
-  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.optomechanics.filter_wheel.v1.GetPortRequest)
-  ))
-_sym_db.RegisterMessage(GetPortRequest)
-
-GetPortResponse = _reflection.GeneratedProtocolMessageType('GetPortResponse', (_message.Message,), dict(
-  DESCRIPTOR = _GETPORTRESPONSE,
-  __module__ = 'instrosetta.interfaces.optomechanics.filter_wheel_pb2'
-  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.optomechanics.filter_wheel.v1.GetPortResponse)
-  ))
-_sym_db.RegisterMessage(GetPortResponse)
-
-SetPortRequest = _reflection.GeneratedProtocolMessageType('SetPortRequest', (_message.Message,), dict(
-  DESCRIPTOR = _SETPORTREQUEST,
-  __module__ = 'instrosetta.interfaces.optomechanics.filter_wheel_pb2'
-  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.optomechanics.filter_wheel.v1.SetPortRequest)
-  ))
-_sym_db.RegisterMessage(SetPortRequest)
-
-SetPortResponse = _reflection.GeneratedProtocolMessageType('SetPortResponse', (_message.Message,), dict(
-  DESCRIPTOR = _SETPORTRESPONSE,
-  __module__ = 'instrosetta.interfaces.optomechanics.filter_wheel_pb2'
-  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.optomechanics.filter_wheel.v1.SetPortResponse)
-  ))
-_sym_db.RegisterMessage(SetPortResponse)
-
 GetFilterOptionsRequest = _reflection.GeneratedProtocolMessageType('GetFilterOptionsRequest', (_message.Message,), dict(
   DESCRIPTOR = _GETFILTEROPTIONSREQUEST,
   __module__ = 'instrosetta.interfaces.optomechanics.filter_wheel_pb2'
@@ -1401,8 +1168,8 @@ _FILTERWHEEL = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=1770,
-  serialized_end=4232,
+  serialized_start=1475,
+  serialized_end=3627,
   methods=[
   _descriptor.MethodDescriptor(
     name='Connect',
@@ -1477,27 +1244,9 @@ _FILTERWHEEL = _descriptor.ServiceDescriptor(
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='GetPort',
-    full_name='instrosetta.interfaces.optomechanics.filter_wheel.v1.FilterWheel.GetPort',
-    index=8,
-    containing_service=None,
-    input_type=_GETPORTREQUEST,
-    output_type=_GETPORTRESPONSE,
-    serialized_options=None,
-  ),
-  _descriptor.MethodDescriptor(
-    name='SetPort',
-    full_name='instrosetta.interfaces.optomechanics.filter_wheel.v1.FilterWheel.SetPort',
-    index=9,
-    containing_service=None,
-    input_type=_SETPORTREQUEST,
-    output_type=_SETPORTRESPONSE,
-    serialized_options=None,
-  ),
-  _descriptor.MethodDescriptor(
     name='GetFilterOptions',
     full_name='instrosetta.interfaces.optomechanics.filter_wheel.v1.FilterWheel.GetFilterOptions',
-    index=10,
+    index=8,
     containing_service=None,
     input_type=_GETFILTEROPTIONSREQUEST,
     output_type=_GETFILTEROPTIONSRESPONSE,
@@ -1506,7 +1255,7 @@ _FILTERWHEEL = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='GetFilter',
     full_name='instrosetta.interfaces.optomechanics.filter_wheel.v1.FilterWheel.GetFilter',
-    index=11,
+    index=9,
     containing_service=None,
     input_type=_GETFILTERREQUEST,
     output_type=_GETFILTERRESPONSE,
@@ -1515,7 +1264,7 @@ _FILTERWHEEL = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='SetFilter',
     full_name='instrosetta.interfaces.optomechanics.filter_wheel.v1.FilterWheel.SetFilter',
-    index=12,
+    index=10,
     containing_service=None,
     input_type=_SETFILTERREQUEST,
     output_type=_SETFILTERRESPONSE,
@@ -1524,7 +1273,7 @@ _FILTERWHEEL = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='GetPositionOptions',
     full_name='instrosetta.interfaces.optomechanics.filter_wheel.v1.FilterWheel.GetPositionOptions',
-    index=13,
+    index=11,
     containing_service=None,
     input_type=_GETPOSITIONOPTIONSREQUEST,
     output_type=_GETPOSITIONOPTIONSRESPONSE,
@@ -1533,7 +1282,7 @@ _FILTERWHEEL = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='GetPosition',
     full_name='instrosetta.interfaces.optomechanics.filter_wheel.v1.FilterWheel.GetPosition',
-    index=14,
+    index=12,
     containing_service=None,
     input_type=_GETPOSITIONREQUEST,
     output_type=_GETPOSITIONRESPONSE,
@@ -1542,7 +1291,7 @@ _FILTERWHEEL = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='SetPosition',
     full_name='instrosetta.interfaces.optomechanics.filter_wheel.v1.FilterWheel.SetPosition',
-    index=15,
+    index=13,
     containing_service=None,
     input_type=_SETPOSITIONREQUEST,
     output_type=_SETPOSITIONRESPONSE,

@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='instrosetta.interfaces.light_analysis.spectrograph.v1',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n8instrosetta/interfaces/light_analysis/spectrograph.proto\x12\x35instrosetta.interfaces.light_analysis.spectrograph.v1\x1a#instrosetta/common/connection.proto\".\n\x0bSaveRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tsave_path\x18\x02 \x01(\t\"+\n\x0cSaveResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05saved\x18\x02 \x01(\x08\"\x1a\n\nRunRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\",\n\x0bRunResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07running\x18\x02 \x01(\x08\"k\n\x07Grating\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x10\n\x08position\x18\x02 \x01(\x05\x12\x19\n\x11\x62lazed_wavelength\x18\x03 \x01(\x05\x12\x14\n\x0cline_density\x18\x04 \x01(\x05\x12\x0f\n\x07\x64\x65tails\x18\x05 \x01(\t\"(\n\x18GetGratingOptionsRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"z\n\x19GetGratingOptionsResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12O\n\x07options\x18\x02 \x03(\x0b\x32>.instrosetta.interfaces.light_analysis.spectrograph.v1.Grating\"!\n\x11GetGratingRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"s\n\x12GetGratingResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12O\n\x07grating\x18\x02 \x01(\x0b\x32>.instrosetta.interfaces.light_analysis.spectrograph.v1.Grating\"r\n\x11SetGratingRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12O\n\x07grating\x18\x02 \x01(\x0b\x32>.instrosetta.interfaces.light_analysis.spectrograph.v1.Grating\"s\n\x12SetGratingResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12O\n\x07grating\x18\x02 \x01(\x0b\x32>.instrosetta.interfaces.light_analysis.spectrograph.v1.Grating\"&\n\x16GetShutterStateRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"{\n\x17GetShutterStateResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12R\n\x05state\x18\x02 \x01(\x0e\x32\x43.instrosetta.interfaces.light_analysis.spectrograph.v1.ShutterState\"z\n\x16SetShutterStateRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12R\n\x05state\x18\x02 \x01(\x0e\x32\x43.instrosetta.interfaces.light_analysis.spectrograph.v1.ShutterState\"{\n\x17SetShutterStateResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12R\n\x05state\x18\x02 \x01(\x0e\x32\x43.instrosetta.interfaces.light_analysis.spectrograph.v1.ShutterState\"3\n\x14GetWavelengthRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"C\n\x15GetWavelengthResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"B\n\x14SetWavelengthRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"C\n\x15SetWavelengthResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"1\n\x12GetExposureRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"A\n\x13GetExposureResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"@\n\x12SetExposureRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"A\n\x13SetExposureResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"2\n\x13GetSlitWidthRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"B\n\x14GetSlitWidthResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"A\n\x13SetSlitWidthRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"B\n\x14SetSlitWidthResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\":\n\x1bGetConnectionDetailsRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"J\n\x1cGetConnectionDetailsResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"I\n\x1bSetConnectionDetailsRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"J\n\x1cSetConnectionDetailsResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t*J\n\x0cShutterState\x12\r\n\tUNDEFINED\x10\x00\x12\x08\n\x04\x41UTO\x10\x01\x12\n\n\x06\x43LOSED\x10\x02\x12\x08\n\x04OPEN\x10\x03\x12\x0b\n\x07UNKNOWN\x10\x63\x32\x9d\x15\n\x0cSpectrograph\x12.\n\x07\x43onnect\x12\x0f.ConnectRequest\x1a\x10.ConnectResponse\"\x00\x12\x37\n\nDisconnect\x12\x12.DisconnectRequest\x1a\x13.DisconnectResponse\"\x00\x12\x91\x01\n\x04Save\x12\x42.instrosetta.interfaces.light_analysis.spectrograph.v1.SaveRequest\x1a\x43.instrosetta.interfaces.light_analysis.spectrograph.v1.SaveResponse\"\x00\x12\x8e\x01\n\x03Run\x12\x41.instrosetta.interfaces.light_analysis.spectrograph.v1.RunRequest\x1a\x42.instrosetta.interfaces.light_analysis.spectrograph.v1.RunResponse\"\x00\x12\xa3\x01\n\nGetGrating\x12H.instrosetta.interfaces.light_analysis.spectrograph.v1.GetGratingRequest\x1aI.instrosetta.interfaces.light_analysis.spectrograph.v1.GetGratingResponse\"\x00\x12\xb8\x01\n\x11GetGratingOptions\x12O.instrosetta.interfaces.light_analysis.spectrograph.v1.GetGratingOptionsRequest\x1aP.instrosetta.interfaces.light_analysis.spectrograph.v1.GetGratingOptionsResponse\"\x00\x12\xa3\x01\n\nSetGrating\x12H.instrosetta.interfaces.light_analysis.spectrograph.v1.SetGratingRequest\x1aI.instrosetta.interfaces.light_analysis.spectrograph.v1.SetGratingResponse\"\x00\x12\xb2\x01\n\x0fGetShutterState\x12M.instrosetta.interfaces.light_analysis.spectrograph.v1.GetShutterStateRequest\x1aN.instrosetta.interfaces.light_analysis.spectrograph.v1.GetShutterStateResponse\"\x00\x12\xb2\x01\n\x0fSetShutterState\x12M.instrosetta.interfaces.light_analysis.spectrograph.v1.SetShutterStateRequest\x1aN.instrosetta.interfaces.light_analysis.spectrograph.v1.SetShutterStateResponse\"\x00\x12\xac\x01\n\rGetWavelength\x12K.instrosetta.interfaces.light_analysis.spectrograph.v1.GetWavelengthRequest\x1aL.instrosetta.interfaces.light_analysis.spectrograph.v1.GetWavelengthResponse\"\x00\x12\xac\x01\n\rSetWavelength\x12K.instrosetta.interfaces.light_analysis.spectrograph.v1.SetWavelengthRequest\x1aL.instrosetta.interfaces.light_analysis.spectrograph.v1.SetWavelengthResponse\"\x00\x12\xa6\x01\n\x0bGetExposure\x12I.instrosetta.interfaces.light_analysis.spectrograph.v1.GetExposureRequest\x1aJ.instrosetta.interfaces.light_analysis.spectrograph.v1.GetExposureResponse\"\x00\x12\xa6\x01\n\x0bSetExposure\x12I.instrosetta.interfaces.light_analysis.spectrograph.v1.SetExposureRequest\x1aJ.instrosetta.interfaces.light_analysis.spectrograph.v1.SetExposureResponse\"\x00\x12\xa9\x01\n\x0cGetSlitWidth\x12J.instrosetta.interfaces.light_analysis.spectrograph.v1.GetSlitWidthRequest\x1aK.instrosetta.interfaces.light_analysis.spectrograph.v1.GetSlitWidthResponse\"\x00\x12\xa9\x01\n\x0cSetSlitWidth\x12J.instrosetta.interfaces.light_analysis.spectrograph.v1.SetSlitWidthRequest\x1aK.instrosetta.interfaces.light_analysis.spectrograph.v1.SetSlitWidthResponse\"\x00\x12\xc1\x01\n\x14GetConnectionDetails\x12R.instrosetta.interfaces.light_analysis.spectrograph.v1.GetConnectionDetailsRequest\x1aS.instrosetta.interfaces.light_analysis.spectrograph.v1.GetConnectionDetailsResponse\"\x00\x12\xc1\x01\n\x14SetConnectionDetails\x12R.instrosetta.interfaces.light_analysis.spectrograph.v1.SetConnectionDetailsRequest\x1aS.instrosetta.interfaces.light_analysis.spectrograph.v1.SetConnectionDetailsResponse\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n8instrosetta/interfaces/light_analysis/spectrograph.proto\x12\x35instrosetta.interfaces.light_analysis.spectrograph.v1\x1a#instrosetta/common/connection.proto\".\n\x0bSaveRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tsave_path\x18\x02 \x01(\t\"+\n\x0cSaveResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05saved\x18\x02 \x01(\x08\"\x1a\n\nRunRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\",\n\x0bRunResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07running\x18\x02 \x01(\x08\"k\n\x07Grating\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x10\n\x08position\x18\x02 \x01(\x05\x12\x19\n\x11\x62lazed_wavelength\x18\x03 \x01(\x05\x12\x14\n\x0cline_density\x18\x04 \x01(\x05\x12\x0f\n\x07\x64\x65tails\x18\x05 \x01(\t\"(\n\x18GetGratingOptionsRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"z\n\x19GetGratingOptionsResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12O\n\x07options\x18\x02 \x03(\x0b\x32>.instrosetta.interfaces.light_analysis.spectrograph.v1.Grating\"!\n\x11GetGratingRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"s\n\x12GetGratingResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12O\n\x07grating\x18\x02 \x01(\x0b\x32>.instrosetta.interfaces.light_analysis.spectrograph.v1.Grating\"r\n\x11SetGratingRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12O\n\x07grating\x18\x02 \x01(\x0b\x32>.instrosetta.interfaces.light_analysis.spectrograph.v1.Grating\"s\n\x12SetGratingResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12O\n\x07grating\x18\x02 \x01(\x0b\x32>.instrosetta.interfaces.light_analysis.spectrograph.v1.Grating\"&\n\x16GetShutterStateRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"{\n\x17GetShutterStateResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12R\n\x05state\x18\x02 \x01(\x0e\x32\x43.instrosetta.interfaces.light_analysis.spectrograph.v1.ShutterState\"z\n\x16SetShutterStateRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12R\n\x05state\x18\x02 \x01(\x0e\x32\x43.instrosetta.interfaces.light_analysis.spectrograph.v1.ShutterState\"{\n\x17SetShutterStateResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12R\n\x05state\x18\x02 \x01(\x0e\x32\x43.instrosetta.interfaces.light_analysis.spectrograph.v1.ShutterState\"3\n\x14GetWavelengthRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"G\n\x15GetWavelengthResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"F\n\x14SetWavelengthRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"G\n\x15SetWavelengthResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"1\n\x12GetExposureRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"E\n\x13GetExposureResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"D\n\x12SetExposureRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"E\n\x13SetExposureResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"2\n\x13GetSlitWidthRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"F\n\x14GetSlitWidthResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"E\n\x13SetSlitWidthRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"F\n\x14SetSlitWidthResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\":\n\x1bGetConnectionDetailsRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"N\n\x1cGetConnectionDetailsResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t*J\n\x0cShutterState\x12\r\n\tUNDEFINED\x10\x00\x12\x08\n\x04\x41UTO\x10\x01\x12\n\n\x06\x43LOSED\x10\x02\x12\x08\n\x04OPEN\x10\x03\x12\x0b\n\x07UNKNOWN\x10\x63\x32\x95\x12\n\x0cSpectrograph\x12.\n\x07\x43onnect\x12\x0f.ConnectRequest\x1a\x10.ConnectResponse\"\x00\x12\x37\n\nDisconnect\x12\x12.DisconnectRequest\x1a\x13.DisconnectResponse\"\x00\x12\x91\x01\n\x04Save\x12\x42.instrosetta.interfaces.light_analysis.spectrograph.v1.SaveRequest\x1a\x43.instrosetta.interfaces.light_analysis.spectrograph.v1.SaveResponse\"\x00\x12\x8e\x01\n\x03Run\x12\x41.instrosetta.interfaces.light_analysis.spectrograph.v1.RunRequest\x1a\x42.instrosetta.interfaces.light_analysis.spectrograph.v1.RunResponse\"\x00\x12\xa3\x01\n\nGetGrating\x12H.instrosetta.interfaces.light_analysis.spectrograph.v1.GetGratingRequest\x1aI.instrosetta.interfaces.light_analysis.spectrograph.v1.GetGratingResponse\"\x00\x12\xb8\x01\n\x11GetGratingOptions\x12O.instrosetta.interfaces.light_analysis.spectrograph.v1.GetGratingOptionsRequest\x1aP.instrosetta.interfaces.light_analysis.spectrograph.v1.GetGratingOptionsResponse\"\x00\x12\xa3\x01\n\nSetGrating\x12H.instrosetta.interfaces.light_analysis.spectrograph.v1.SetGratingRequest\x1aI.instrosetta.interfaces.light_analysis.spectrograph.v1.SetGratingResponse\"\x00\x12\xb2\x01\n\x0fGetShutterState\x12M.instrosetta.interfaces.light_analysis.spectrograph.v1.GetShutterStateRequest\x1aN.instrosetta.interfaces.light_analysis.spectrograph.v1.GetShutterStateResponse\"\x00\x12\xb2\x01\n\x0fSetShutterState\x12M.instrosetta.interfaces.light_analysis.spectrograph.v1.SetShutterStateRequest\x1aN.instrosetta.interfaces.light_analysis.spectrograph.v1.SetShutterStateResponse\"\x00\x12\xac\x01\n\rGetWavelength\x12K.instrosetta.interfaces.light_analysis.spectrograph.v1.GetWavelengthRequest\x1aL.instrosetta.interfaces.light_analysis.spectrograph.v1.GetWavelengthResponse\"\x00\x12\xac\x01\n\rSetWavelength\x12K.instrosetta.interfaces.light_analysis.spectrograph.v1.SetWavelengthRequest\x1aL.instrosetta.interfaces.light_analysis.spectrograph.v1.SetWavelengthResponse\"\x00\x12\xa6\x01\n\x0bGetExposure\x12I.instrosetta.interfaces.light_analysis.spectrograph.v1.GetExposureRequest\x1aJ.instrosetta.interfaces.light_analysis.spectrograph.v1.GetExposureResponse\"\x00\x12\xa6\x01\n\x0bSetExposure\x12I.instrosetta.interfaces.light_analysis.spectrograph.v1.SetExposureRequest\x1aJ.instrosetta.interfaces.light_analysis.spectrograph.v1.SetExposureResponse\"\x00\x12\xa9\x01\n\x0cGetSlitWidth\x12J.instrosetta.interfaces.light_analysis.spectrograph.v1.GetSlitWidthRequest\x1aK.instrosetta.interfaces.light_analysis.spectrograph.v1.GetSlitWidthResponse\"\x00\x12\xa9\x01\n\x0cSetSlitWidth\x12J.instrosetta.interfaces.light_analysis.spectrograph.v1.SetSlitWidthRequest\x1aK.instrosetta.interfaces.light_analysis.spectrograph.v1.SetSlitWidthResponse\"\x00\x62\x06proto3')
   ,
   dependencies=[instrosetta_dot_common_dot_connection__pb2.DESCRIPTOR,])
 
@@ -54,8 +54,8 @@ _SHUTTERSTATE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2445,
-  serialized_end=2519,
+  serialized_start=2334,
+  serialized_end=2408,
 )
 _sym_db.RegisterEnumDescriptor(_SHUTTERSTATE)
 
@@ -684,7 +684,7 @@ _GETWAVELENGTHRESPONSE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='value', full_name='instrosetta.interfaces.light_analysis.spectrograph.v1.GetWavelengthResponse.value', index=1,
+      name='magnitude', full_name='instrosetta.interfaces.light_analysis.spectrograph.v1.GetWavelengthResponse.magnitude', index=1,
       number=2, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -710,7 +710,7 @@ _GETWAVELENGTHRESPONSE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=1446,
-  serialized_end=1513,
+  serialized_end=1517,
 )
 
 
@@ -729,7 +729,7 @@ _SETWAVELENGTHREQUEST = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='value', full_name='instrosetta.interfaces.light_analysis.spectrograph.v1.SetWavelengthRequest.value', index=1,
+      name='magnitude', full_name='instrosetta.interfaces.light_analysis.spectrograph.v1.SetWavelengthRequest.magnitude', index=1,
       number=2, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -754,8 +754,8 @@ _SETWAVELENGTHREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1515,
-  serialized_end=1581,
+  serialized_start=1519,
+  serialized_end=1589,
 )
 
 
@@ -774,7 +774,7 @@ _SETWAVELENGTHRESPONSE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='value', full_name='instrosetta.interfaces.light_analysis.spectrograph.v1.SetWavelengthResponse.value', index=1,
+      name='magnitude', full_name='instrosetta.interfaces.light_analysis.spectrograph.v1.SetWavelengthResponse.magnitude', index=1,
       number=2, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -799,8 +799,8 @@ _SETWAVELENGTHRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1583,
-  serialized_end=1650,
+  serialized_start=1591,
+  serialized_end=1662,
 )
 
 
@@ -837,8 +837,8 @@ _GETEXPOSUREREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1652,
-  serialized_end=1701,
+  serialized_start=1664,
+  serialized_end=1713,
 )
 
 
@@ -857,7 +857,7 @@ _GETEXPOSURERESPONSE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='value', full_name='instrosetta.interfaces.light_analysis.spectrograph.v1.GetExposureResponse.value', index=1,
+      name='magnitude', full_name='instrosetta.interfaces.light_analysis.spectrograph.v1.GetExposureResponse.magnitude', index=1,
       number=2, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -882,8 +882,8 @@ _GETEXPOSURERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1703,
-  serialized_end=1768,
+  serialized_start=1715,
+  serialized_end=1784,
 )
 
 
@@ -902,7 +902,7 @@ _SETEXPOSUREREQUEST = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='value', full_name='instrosetta.interfaces.light_analysis.spectrograph.v1.SetExposureRequest.value', index=1,
+      name='magnitude', full_name='instrosetta.interfaces.light_analysis.spectrograph.v1.SetExposureRequest.magnitude', index=1,
       number=2, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -927,8 +927,8 @@ _SETEXPOSUREREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1770,
-  serialized_end=1834,
+  serialized_start=1786,
+  serialized_end=1854,
 )
 
 
@@ -947,7 +947,7 @@ _SETEXPOSURERESPONSE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='value', full_name='instrosetta.interfaces.light_analysis.spectrograph.v1.SetExposureResponse.value', index=1,
+      name='magnitude', full_name='instrosetta.interfaces.light_analysis.spectrograph.v1.SetExposureResponse.magnitude', index=1,
       number=2, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -972,8 +972,8 @@ _SETEXPOSURERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1836,
-  serialized_end=1901,
+  serialized_start=1856,
+  serialized_end=1925,
 )
 
 
@@ -1010,8 +1010,8 @@ _GETSLITWIDTHREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1903,
-  serialized_end=1953,
+  serialized_start=1927,
+  serialized_end=1977,
 )
 
 
@@ -1030,7 +1030,7 @@ _GETSLITWIDTHRESPONSE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='value', full_name='instrosetta.interfaces.light_analysis.spectrograph.v1.GetSlitWidthResponse.value', index=1,
+      name='magnitude', full_name='instrosetta.interfaces.light_analysis.spectrograph.v1.GetSlitWidthResponse.magnitude', index=1,
       number=2, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -1055,8 +1055,8 @@ _GETSLITWIDTHRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1955,
-  serialized_end=2021,
+  serialized_start=1979,
+  serialized_end=2049,
 )
 
 
@@ -1075,7 +1075,7 @@ _SETSLITWIDTHREQUEST = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='value', full_name='instrosetta.interfaces.light_analysis.spectrograph.v1.SetSlitWidthRequest.value', index=1,
+      name='magnitude', full_name='instrosetta.interfaces.light_analysis.spectrograph.v1.SetSlitWidthRequest.magnitude', index=1,
       number=2, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -1100,8 +1100,8 @@ _SETSLITWIDTHREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2023,
-  serialized_end=2088,
+  serialized_start=2051,
+  serialized_end=2120,
 )
 
 
@@ -1120,7 +1120,7 @@ _SETSLITWIDTHRESPONSE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='value', full_name='instrosetta.interfaces.light_analysis.spectrograph.v1.SetSlitWidthResponse.value', index=1,
+      name='magnitude', full_name='instrosetta.interfaces.light_analysis.spectrograph.v1.SetSlitWidthResponse.magnitude', index=1,
       number=2, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -1145,8 +1145,8 @@ _SETSLITWIDTHRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2090,
-  serialized_end=2156,
+  serialized_start=2122,
+  serialized_end=2192,
 )
 
 
@@ -1183,8 +1183,8 @@ _GETCONNECTIONDETAILSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2158,
-  serialized_end=2216,
+  serialized_start=2194,
+  serialized_end=2252,
 )
 
 
@@ -1203,7 +1203,7 @@ _GETCONNECTIONDETAILSRESPONSE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='value', full_name='instrosetta.interfaces.light_analysis.spectrograph.v1.GetConnectionDetailsResponse.value', index=1,
+      name='magnitude', full_name='instrosetta.interfaces.light_analysis.spectrograph.v1.GetConnectionDetailsResponse.magnitude', index=1,
       number=2, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -1228,98 +1228,8 @@ _GETCONNECTIONDETAILSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2218,
-  serialized_end=2292,
-)
-
-
-_SETCONNECTIONDETAILSREQUEST = _descriptor.Descriptor(
-  name='SetConnectionDetailsRequest',
-  full_name='instrosetta.interfaces.light_analysis.spectrograph.v1.SetConnectionDetailsRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='name', full_name='instrosetta.interfaces.light_analysis.spectrograph.v1.SetConnectionDetailsRequest.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='value', full_name='instrosetta.interfaces.light_analysis.spectrograph.v1.SetConnectionDetailsRequest.value', index=1,
-      number=2, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='units', full_name='instrosetta.interfaces.light_analysis.spectrograph.v1.SetConnectionDetailsRequest.units', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=2294,
-  serialized_end=2367,
-)
-
-
-_SETCONNECTIONDETAILSRESPONSE = _descriptor.Descriptor(
-  name='SetConnectionDetailsResponse',
-  full_name='instrosetta.interfaces.light_analysis.spectrograph.v1.SetConnectionDetailsResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='name', full_name='instrosetta.interfaces.light_analysis.spectrograph.v1.SetConnectionDetailsResponse.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='value', full_name='instrosetta.interfaces.light_analysis.spectrograph.v1.SetConnectionDetailsResponse.value', index=1,
-      number=2, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='units', full_name='instrosetta.interfaces.light_analysis.spectrograph.v1.SetConnectionDetailsResponse.units', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=2369,
-  serialized_end=2443,
+  serialized_start=2254,
+  serialized_end=2332,
 )
 
 _GETGRATINGOPTIONSRESPONSE.fields_by_name['options'].message_type = _GRATING
@@ -1358,8 +1268,6 @@ DESCRIPTOR.message_types_by_name['SetSlitWidthRequest'] = _SETSLITWIDTHREQUEST
 DESCRIPTOR.message_types_by_name['SetSlitWidthResponse'] = _SETSLITWIDTHRESPONSE
 DESCRIPTOR.message_types_by_name['GetConnectionDetailsRequest'] = _GETCONNECTIONDETAILSREQUEST
 DESCRIPTOR.message_types_by_name['GetConnectionDetailsResponse'] = _GETCONNECTIONDETAILSRESPONSE
-DESCRIPTOR.message_types_by_name['SetConnectionDetailsRequest'] = _SETCONNECTIONDETAILSREQUEST
-DESCRIPTOR.message_types_by_name['SetConnectionDetailsResponse'] = _SETCONNECTIONDETAILSRESPONSE
 DESCRIPTOR.enum_types_by_name['ShutterState'] = _SHUTTERSTATE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -1566,20 +1474,6 @@ GetConnectionDetailsResponse = _reflection.GeneratedProtocolMessageType('GetConn
   ))
 _sym_db.RegisterMessage(GetConnectionDetailsResponse)
 
-SetConnectionDetailsRequest = _reflection.GeneratedProtocolMessageType('SetConnectionDetailsRequest', (_message.Message,), dict(
-  DESCRIPTOR = _SETCONNECTIONDETAILSREQUEST,
-  __module__ = 'instrosetta.interfaces.light_analysis.spectrograph_pb2'
-  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.light_analysis.spectrograph.v1.SetConnectionDetailsRequest)
-  ))
-_sym_db.RegisterMessage(SetConnectionDetailsRequest)
-
-SetConnectionDetailsResponse = _reflection.GeneratedProtocolMessageType('SetConnectionDetailsResponse', (_message.Message,), dict(
-  DESCRIPTOR = _SETCONNECTIONDETAILSRESPONSE,
-  __module__ = 'instrosetta.interfaces.light_analysis.spectrograph_pb2'
-  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.light_analysis.spectrograph.v1.SetConnectionDetailsResponse)
-  ))
-_sym_db.RegisterMessage(SetConnectionDetailsResponse)
-
 
 
 _SPECTROGRAPH = _descriptor.ServiceDescriptor(
@@ -1588,8 +1482,8 @@ _SPECTROGRAPH = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=2522,
-  serialized_end=5239,
+  serialized_start=2411,
+  serialized_end=4736,
   methods=[
   _descriptor.MethodDescriptor(
     name='Connect',
@@ -1724,24 +1618,6 @@ _SPECTROGRAPH = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_SETSLITWIDTHREQUEST,
     output_type=_SETSLITWIDTHRESPONSE,
-    serialized_options=None,
-  ),
-  _descriptor.MethodDescriptor(
-    name='GetConnectionDetails',
-    full_name='instrosetta.interfaces.light_analysis.spectrograph.v1.Spectrograph.GetConnectionDetails',
-    index=15,
-    containing_service=None,
-    input_type=_GETCONNECTIONDETAILSREQUEST,
-    output_type=_GETCONNECTIONDETAILSRESPONSE,
-    serialized_options=None,
-  ),
-  _descriptor.MethodDescriptor(
-    name='SetConnectionDetails',
-    full_name='instrosetta.interfaces.light_analysis.spectrograph.v1.Spectrograph.SetConnectionDetails',
-    index=16,
-    containing_service=None,
-    input_type=_SETCONNECTIONDETAILSREQUEST,
-    output_type=_SETCONNECTIONDETAILSRESPONSE,
     serialized_options=None,
   ),
 ])

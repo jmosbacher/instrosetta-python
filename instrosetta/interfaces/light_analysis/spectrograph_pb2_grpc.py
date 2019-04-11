@@ -90,16 +90,6 @@ class SpectrographStub(object):
         request_serializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.SetSlitWidthRequest.SerializeToString,
         response_deserializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.SetSlitWidthResponse.FromString,
         )
-    self.GetConnectionDetails = channel.unary_unary(
-        '/instrosetta.interfaces.light_analysis.spectrograph.v1.Spectrograph/GetConnectionDetails',
-        request_serializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.GetConnectionDetailsRequest.SerializeToString,
-        response_deserializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.GetConnectionDetailsResponse.FromString,
-        )
-    self.SetConnectionDetails = channel.unary_unary(
-        '/instrosetta.interfaces.light_analysis.spectrograph.v1.Spectrograph/SetConnectionDetails',
-        request_serializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.SetConnectionDetailsRequest.SerializeToString,
-        response_deserializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.SetConnectionDetailsResponse.FromString,
-        )
 
 
 class SpectrographServicer(object):
@@ -211,20 +201,6 @@ class SpectrographServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def GetConnectionDetails(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
-  def SetConnectionDetails(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
 
 def add_SpectrographServicer_to_server(servicer, server):
   rpc_method_handlers = {
@@ -302,16 +278,6 @@ def add_SpectrographServicer_to_server(servicer, server):
           servicer.SetSlitWidth,
           request_deserializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.SetSlitWidthRequest.FromString,
           response_serializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.SetSlitWidthResponse.SerializeToString,
-      ),
-      'GetConnectionDetails': grpc.unary_unary_rpc_method_handler(
-          servicer.GetConnectionDetails,
-          request_deserializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.GetConnectionDetailsRequest.FromString,
-          response_serializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.GetConnectionDetailsResponse.SerializeToString,
-      ),
-      'SetConnectionDetails': grpc.unary_unary_rpc_method_handler(
-          servicer.SetConnectionDetails,
-          request_deserializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.SetConnectionDetailsRequest.FromString,
-          response_serializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.SetConnectionDetailsResponse.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(

@@ -55,16 +55,6 @@ class FilterWheelStub(object):
         request_serializer=instrosetta_dot_interfaces_dot_optomechanics_dot_filter__wheel__pb2.SetSensorsRequest.SerializeToString,
         response_deserializer=instrosetta_dot_interfaces_dot_optomechanics_dot_filter__wheel__pb2.SetSensorsResponse.FromString,
         )
-    self.GetPort = channel.unary_unary(
-        '/instrosetta.interfaces.optomechanics.filter_wheel.v1.FilterWheel/GetPort',
-        request_serializer=instrosetta_dot_interfaces_dot_optomechanics_dot_filter__wheel__pb2.GetPortRequest.SerializeToString,
-        response_deserializer=instrosetta_dot_interfaces_dot_optomechanics_dot_filter__wheel__pb2.GetPortResponse.FromString,
-        )
-    self.SetPort = channel.unary_unary(
-        '/instrosetta.interfaces.optomechanics.filter_wheel.v1.FilterWheel/SetPort',
-        request_serializer=instrosetta_dot_interfaces_dot_optomechanics_dot_filter__wheel__pb2.SetPortRequest.SerializeToString,
-        response_deserializer=instrosetta_dot_interfaces_dot_optomechanics_dot_filter__wheel__pb2.SetPortResponse.FromString,
-        )
     self.GetFilterOptions = channel.unary_unary(
         '/instrosetta.interfaces.optomechanics.filter_wheel.v1.FilterWheel/GetFilterOptions',
         request_serializer=instrosetta_dot_interfaces_dot_optomechanics_dot_filter__wheel__pb2.GetFilterOptionsRequest.SerializeToString,
@@ -157,20 +147,6 @@ class FilterWheelServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def GetPort(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
-  def SetPort(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
   def GetFilterOptions(self, request, context):
     # missing associated documentation comment in .proto file
     pass
@@ -255,16 +231,6 @@ def add_FilterWheelServicer_to_server(servicer, server):
           servicer.SetSensors,
           request_deserializer=instrosetta_dot_interfaces_dot_optomechanics_dot_filter__wheel__pb2.SetSensorsRequest.FromString,
           response_serializer=instrosetta_dot_interfaces_dot_optomechanics_dot_filter__wheel__pb2.SetSensorsResponse.SerializeToString,
-      ),
-      'GetPort': grpc.unary_unary_rpc_method_handler(
-          servicer.GetPort,
-          request_deserializer=instrosetta_dot_interfaces_dot_optomechanics_dot_filter__wheel__pb2.GetPortRequest.FromString,
-          response_serializer=instrosetta_dot_interfaces_dot_optomechanics_dot_filter__wheel__pb2.GetPortResponse.SerializeToString,
-      ),
-      'SetPort': grpc.unary_unary_rpc_method_handler(
-          servicer.SetPort,
-          request_deserializer=instrosetta_dot_interfaces_dot_optomechanics_dot_filter__wheel__pb2.SetPortRequest.FromString,
-          response_serializer=instrosetta_dot_interfaces_dot_optomechanics_dot_filter__wheel__pb2.SetPortResponse.SerializeToString,
       ),
       'GetFilterOptions': grpc.unary_unary_rpc_method_handler(
           servicer.GetFilterOptions,
