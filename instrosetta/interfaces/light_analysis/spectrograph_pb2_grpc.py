@@ -35,6 +35,11 @@ class SpectrographStub(object):
         request_serializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.RunRequest.SerializeToString,
         response_deserializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.RunResponse.FromString,
         )
+    self.ClearScreen = channel.unary_unary(
+        '/instrosetta.interfaces.light_analysis.spectrograph.v1.Spectrograph/ClearScreen',
+        request_serializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.ClearScreenRequest.SerializeToString,
+        response_deserializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.ClearScreenResponse.FromString,
+        )
     self.GetGrating = channel.unary_unary(
         '/instrosetta.interfaces.light_analysis.spectrograph.v1.Spectrograph/GetGrating',
         request_serializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.GetGratingRequest.SerializeToString,
@@ -90,6 +95,16 @@ class SpectrographStub(object):
         request_serializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.SetSlitWidthRequest.SerializeToString,
         response_deserializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.SetSlitWidthResponse.FromString,
         )
+    self.GetReadoutMode = channel.unary_unary(
+        '/instrosetta.interfaces.light_analysis.spectrograph.v1.Spectrograph/GetReadoutMode',
+        request_serializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.GetReadoutModeRequest.SerializeToString,
+        response_deserializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.GetReadoutModeResponse.FromString,
+        )
+    self.SetReadoutMode = channel.unary_unary(
+        '/instrosetta.interfaces.light_analysis.spectrograph.v1.Spectrograph/SetReadoutMode',
+        request_serializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.SetReadoutModeRequest.SerializeToString,
+        response_deserializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.SetReadoutModeResponse.FromString,
+        )
 
 
 class SpectrographServicer(object):
@@ -118,6 +133,13 @@ class SpectrographServicer(object):
     raise NotImplementedError('Method not implemented!')
 
   def Run(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def ClearScreen(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -201,6 +223,20 @@ class SpectrographServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def GetReadoutMode(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def SetReadoutMode(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
 
 def add_SpectrographServicer_to_server(servicer, server):
   rpc_method_handlers = {
@@ -223,6 +259,11 @@ def add_SpectrographServicer_to_server(servicer, server):
           servicer.Run,
           request_deserializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.RunRequest.FromString,
           response_serializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.RunResponse.SerializeToString,
+      ),
+      'ClearScreen': grpc.unary_unary_rpc_method_handler(
+          servicer.ClearScreen,
+          request_deserializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.ClearScreenRequest.FromString,
+          response_serializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.ClearScreenResponse.SerializeToString,
       ),
       'GetGrating': grpc.unary_unary_rpc_method_handler(
           servicer.GetGrating,
@@ -278,6 +319,16 @@ def add_SpectrographServicer_to_server(servicer, server):
           servicer.SetSlitWidth,
           request_deserializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.SetSlitWidthRequest.FromString,
           response_serializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.SetSlitWidthResponse.SerializeToString,
+      ),
+      'GetReadoutMode': grpc.unary_unary_rpc_method_handler(
+          servicer.GetReadoutMode,
+          request_deserializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.GetReadoutModeRequest.FromString,
+          response_serializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.GetReadoutModeResponse.SerializeToString,
+      ),
+      'SetReadoutMode': grpc.unary_unary_rpc_method_handler(
+          servicer.SetReadoutMode,
+          request_deserializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.SetReadoutModeRequest.FromString,
+          response_serializer=instrosetta_dot_interfaces_dot_light__analysis_dot_spectrograph__pb2.SetReadoutModeResponse.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
