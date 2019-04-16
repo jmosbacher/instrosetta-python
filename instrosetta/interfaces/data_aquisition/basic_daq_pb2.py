@@ -3,6 +3,7 @@
 
 import sys
 _b=sys.version_info[0]<3 and (lambda x:x) or (lambda x:x.encode('latin1'))
+from google.protobuf.internal import enum_type_wrapper
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
@@ -12,7 +13,6 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from instrosetta.common import connection_pb2 as instrosetta_dot_common_dot_connection__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -20,10 +20,39 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='instrosetta.interfaces.data_aquisition.basic_daq.v1',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n6instrosetta/interfaces/data_aquisition/basic_daq.proto\x12\x33instrosetta.interfaces.data_aquisition.basic_daq.v1\x1a#instrosetta/common/connection.proto\")\n\x19GetAvailbleDevicesRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"*\n\x1aGetAvailbleDevicesResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\"\"\n\x12ReadDigitalRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"2\n\x13ReadDigitalResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x08\"!\n\x11ReadAnalogRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"1\n\x12ReadAnalogResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\"2\n\x13WriteDigitalRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x08\"3\n\x14WriteDigitalResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x08\"1\n\x12WriteAnalogRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\"2\n\x13WriteAnalogResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\"7\n\x17GetDeviceDetailsRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0e\n\x06\x64\x65vice\x18\x02 \x01(\t\"\xc5\x01\n\x18GetDeviceDetailsResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12k\n\x07\x64\x65tails\x18\x02 \x03(\x0b\x32Z.instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDeviceDetailsResponse.DetailsEntry\x1a.\n\x0c\x44\x65tailsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"7\n\x18GetDigitalOutputsRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"H\n\x19GetDigitalOutputsResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0e\n\x06number\x18\x02 \x01(\x05\x12\r\n\x05names\x18\x03 \x03(\t\"\'\n\x17GetDigitalInputsRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"G\n\x18GetDigitalInputsResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0e\n\x06number\x18\x02 \x01(\x05\x12\r\n\x05names\x18\x03 \x03(\t\"\'\n\x17GetAnalogOutputsRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"G\n\x18GetAnalogOutputsResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0e\n\x06number\x18\x02 \x01(\x05\x12\r\n\x05names\x18\x03 \x03(\t\"5\n\x16GetAnalogInputsRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"F\n\x17GetAnalogInputsResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0e\n\x06number\x18\x02 \x01(\x05\x12\r\n\x05names\x18\x03 \x03(\t2\xc7\x0e\n\x08\x42\x61sicDaq\x12\xb9\x01\n\x12GetAvailbleDevices\x12N.instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAvailbleDevicesRequest\x1aO.instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAvailbleDevicesResponse\"\x00\x30\x01\x12.\n\x07\x43onnect\x12\x0f.ConnectRequest\x1a\x10.ConnectResponse\"\x00\x12\x37\n\nDisconnect\x12\x12.DisconnectRequest\x1a\x13.DisconnectResponse\"\x00\x12\xa2\x01\n\x0bReadDigital\x12G.instrosetta.interfaces.data_aquisition.basic_daq.v1.ReadDigitalRequest\x1aH.instrosetta.interfaces.data_aquisition.basic_daq.v1.ReadDigitalResponse\"\x00\x12\x9f\x01\n\nReadAnalog\x12\x46.instrosetta.interfaces.data_aquisition.basic_daq.v1.ReadAnalogRequest\x1aG.instrosetta.interfaces.data_aquisition.basic_daq.v1.ReadAnalogResponse\"\x00\x12\xa5\x01\n\x0cWriteDigital\x12H.instrosetta.interfaces.data_aquisition.basic_daq.v1.WriteDigitalRequest\x1aI.instrosetta.interfaces.data_aquisition.basic_daq.v1.WriteDigitalResponse\"\x00\x12\xa2\x01\n\x0bWriteAnalog\x12G.instrosetta.interfaces.data_aquisition.basic_daq.v1.WriteAnalogRequest\x1aH.instrosetta.interfaces.data_aquisition.basic_daq.v1.WriteAnalogResponse\"\x00\x12\xb1\x01\n\x10GetDeviceDetails\x12L.instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDeviceDetailsRequest\x1aM.instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDeviceDetailsResponse\"\x00\x12\xb4\x01\n\x11GetDigitalOutputs\x12M.instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDigitalOutputsRequest\x1aN.instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDigitalOutputsResponse\"\x00\x12\xb1\x01\n\x10GetDigitalInputs\x12L.instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDigitalInputsRequest\x1aM.instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDigitalInputsResponse\"\x00\x12\xb1\x01\n\x10GetAnalogOutputs\x12L.instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAnalogOutputsRequest\x1aM.instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAnalogOutputsResponse\"\x00\x12\xae\x01\n\x0fGetAnalogInputs\x12K.instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAnalogInputsRequest\x1aL.instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAnalogInputsResponse\"\x00\x62\x06proto3')
-  ,
-  dependencies=[instrosetta_dot_common_dot_connection__pb2.DESCRIPTOR,])
+  serialized_pb=_b('\n6instrosetta/interfaces/data_aquisition/basic_daq.proto\x12\x33instrosetta.interfaces.data_aquisition.basic_daq.v1\")\n\x19GetAvailbleDevicesRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"*\n\x1aGetAvailbleDevicesResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\"\xc0\x01\n\x11InitializeRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12j\n\nproperties\x18\x02 \x03(\x0b\x32V.instrosetta.interfaces.data_aquisition.basic_daq.v1.InitializeRequest.PropertiesEntry\x1a\x31\n\x0fPropertiesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"3\n\x12InitializeResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07success\x18\x02 \x01(\x08\"\x1f\n\x0fShutdownRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"1\n\x10ShutdownResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07success\x18\x02 \x01(\x08\"\"\n\x12ReadDigitalRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"2\n\x13ReadDigitalResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x08\"!\n\x11ReadAnalogRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"1\n\x12ReadAnalogResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\"2\n\x13WriteDigitalRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x08\"3\n\x14WriteDigitalResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x08\"1\n\x12WriteAnalogRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\"2\n\x13WriteAnalogResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\"7\n\x17GetDeviceDetailsRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0e\n\x06\x64\x65vice\x18\x02 \x01(\t\"\xc5\x01\n\x18GetDeviceDetailsResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12k\n\x07\x64\x65tails\x18\x02 \x03(\x0b\x32Z.instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDeviceDetailsResponse.DetailsEntry\x1a.\n\x0c\x44\x65tailsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\")\n\x19GetDigitalChannelsRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"I\n\x1aGetDigitalChannelsResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0e\n\x06number\x18\x02 \x01(\x05\x12\r\n\x05names\x18\x03 \x03(\t\"7\n\x18GetAnalogChannelsRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"H\n\x19GetAnalogChannelsResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0e\n\x06number\x18\x02 \x01(\x05\x12\r\n\x05names\x18\x03 \x03(\t\"\xa0\x01\n\x15SetChannelModeRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x14\n\x0c\x63hannel_name\x18\x02 \x01(\t\x12\x13\n\x0b\x63hannel_uid\x18\x03 \x01(\t\x12N\n\x04mode\x18\x04 \x01(\x0e\x32@.instrosetta.interfaces.data_aquisition.basic_daq.v1.ChannelMode\"\xa1\x01\n\x16SetChannelModeResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x14\n\x0c\x63hannel_name\x18\x02 \x01(\t\x12\x13\n\x0b\x63hannel_uid\x18\x03 \x01(\t\x12N\n\x04mode\x18\x04 \x01(\x0e\x32@.instrosetta.interfaces.data_aquisition.basic_daq.v1.ChannelMode\"P\n\x15GetChannelModeRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x14\n\x0c\x63hannel_name\x18\x02 \x01(\t\x12\x13\n\x0b\x63hannel_uid\x18\x03 \x01(\t\"\xa1\x01\n\x16GetChannelModeResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x14\n\x0c\x63hannel_name\x18\x02 \x01(\t\x12\x13\n\x0b\x63hannel_uid\x18\x03 \x01(\t\x12N\n\x04mode\x18\x04 \x01(\x0e\x32@.instrosetta.interfaces.data_aquisition.basic_daq.v1.ChannelMode*1\n\x0b\x43hannelMode\x12\x0b\n\x07UNKNOWN\x10\x00\x12\t\n\x05INPUT\x10\x01\x12\n\n\x06OUTPUT\x10\x02\x32\xeb\x0e\n\x08\x42\x61sicDaq\x12\xb9\x01\n\x12GetAvailbleDevices\x12N.instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAvailbleDevicesRequest\x1aO.instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAvailbleDevicesResponse\"\x00\x30\x01\x12\x9f\x01\n\nInitialize\x12\x46.instrosetta.interfaces.data_aquisition.basic_daq.v1.InitializeRequest\x1aG.instrosetta.interfaces.data_aquisition.basic_daq.v1.InitializeResponse\"\x00\x12\x99\x01\n\x08Shutdown\x12\x44.instrosetta.interfaces.data_aquisition.basic_daq.v1.ShutdownRequest\x1a\x45.instrosetta.interfaces.data_aquisition.basic_daq.v1.ShutdownResponse\"\x00\x12\xa2\x01\n\x0bReadDigital\x12G.instrosetta.interfaces.data_aquisition.basic_daq.v1.ReadDigitalRequest\x1aH.instrosetta.interfaces.data_aquisition.basic_daq.v1.ReadDigitalResponse\"\x00\x12\x9f\x01\n\nReadAnalog\x12\x46.instrosetta.interfaces.data_aquisition.basic_daq.v1.ReadAnalogRequest\x1aG.instrosetta.interfaces.data_aquisition.basic_daq.v1.ReadAnalogResponse\"\x00\x12\xa5\x01\n\x0cWriteDigital\x12H.instrosetta.interfaces.data_aquisition.basic_daq.v1.WriteDigitalRequest\x1aI.instrosetta.interfaces.data_aquisition.basic_daq.v1.WriteDigitalResponse\"\x00\x12\xa2\x01\n\x0bWriteAnalog\x12G.instrosetta.interfaces.data_aquisition.basic_daq.v1.WriteAnalogRequest\x1aH.instrosetta.interfaces.data_aquisition.basic_daq.v1.WriteAnalogResponse\"\x00\x12\xb1\x01\n\x10GetDeviceDetails\x12L.instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDeviceDetailsRequest\x1aM.instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDeviceDetailsResponse\"\x00\x12\xb7\x01\n\x12GetDigitalChannels\x12N.instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDigitalChannelsRequest\x1aO.instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDigitalChannelsResponse\"\x00\x12\xb4\x01\n\x11GetAnalogChannels\x12M.instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAnalogChannelsRequest\x1aN.instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAnalogChannelsResponse\"\x00\x12\xab\x01\n\x0eSetChannelMode\x12J.instrosetta.interfaces.data_aquisition.basic_daq.v1.SetChannelModeRequest\x1aK.instrosetta.interfaces.data_aquisition.basic_daq.v1.SetChannelModeResponse\"\x00\x62\x06proto3')
+)
 
+_CHANNELMODE = _descriptor.EnumDescriptor(
+  name='ChannelMode',
+  full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.ChannelMode',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNKNOWN', index=0, number=0,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='INPUT', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='OUTPUT', index=2, number=2,
+      serialized_options=None,
+      type=None),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=1991,
+  serialized_end=2040,
+)
+_sym_db.RegisterEnumDescriptor(_CHANNELMODE)
+
+ChannelMode = enum_type_wrapper.EnumTypeWrapper(_CHANNELMODE)
+UNKNOWN = 0
+INPUT = 1
+OUTPUT = 2
 
 
 
@@ -53,8 +82,8 @@ _GETAVAILBLEDEVICESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=148,
-  serialized_end=189,
+  serialized_start=111,
+  serialized_end=152,
 )
 
 
@@ -84,8 +113,190 @@ _GETAVAILBLEDEVICESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=191,
-  serialized_end=233,
+  serialized_start=154,
+  serialized_end=196,
+)
+
+
+_INITIALIZEREQUEST_PROPERTIESENTRY = _descriptor.Descriptor(
+  name='PropertiesEntry',
+  full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.InitializeRequest.PropertiesEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.InitializeRequest.PropertiesEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.InitializeRequest.PropertiesEntry.value', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=_b('8\001'),
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=342,
+  serialized_end=391,
+)
+
+_INITIALIZEREQUEST = _descriptor.Descriptor(
+  name='InitializeRequest',
+  full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.InitializeRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.InitializeRequest.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='properties', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.InitializeRequest.properties', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[_INITIALIZEREQUEST_PROPERTIESENTRY, ],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=199,
+  serialized_end=391,
+)
+
+
+_INITIALIZERESPONSE = _descriptor.Descriptor(
+  name='InitializeResponse',
+  full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.InitializeResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.InitializeResponse.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='success', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.InitializeResponse.success', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=393,
+  serialized_end=444,
+)
+
+
+_SHUTDOWNREQUEST = _descriptor.Descriptor(
+  name='ShutdownRequest',
+  full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.ShutdownRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.ShutdownRequest.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=446,
+  serialized_end=477,
+)
+
+
+_SHUTDOWNRESPONSE = _descriptor.Descriptor(
+  name='ShutdownResponse',
+  full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.ShutdownResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.ShutdownResponse.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='success', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.ShutdownResponse.success', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=479,
+  serialized_end=528,
 )
 
 
@@ -115,8 +326,8 @@ _READDIGITALREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=235,
-  serialized_end=269,
+  serialized_start=530,
+  serialized_end=564,
 )
 
 
@@ -153,8 +364,8 @@ _READDIGITALRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=271,
-  serialized_end=321,
+  serialized_start=566,
+  serialized_end=616,
 )
 
 
@@ -184,8 +395,8 @@ _READANALOGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=323,
-  serialized_end=356,
+  serialized_start=618,
+  serialized_end=651,
 )
 
 
@@ -222,8 +433,8 @@ _READANALOGRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=358,
-  serialized_end=407,
+  serialized_start=653,
+  serialized_end=702,
 )
 
 
@@ -260,8 +471,8 @@ _WRITEDIGITALREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=409,
-  serialized_end=459,
+  serialized_start=704,
+  serialized_end=754,
 )
 
 
@@ -298,8 +509,8 @@ _WRITEDIGITALRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=461,
-  serialized_end=512,
+  serialized_start=756,
+  serialized_end=807,
 )
 
 
@@ -336,8 +547,8 @@ _WRITEANALOGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=514,
-  serialized_end=563,
+  serialized_start=809,
+  serialized_end=858,
 )
 
 
@@ -374,8 +585,8 @@ _WRITEANALOGRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=565,
-  serialized_end=615,
+  serialized_start=860,
+  serialized_end=910,
 )
 
 
@@ -412,8 +623,8 @@ _GETDEVICEDETAILSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=617,
-  serialized_end=672,
+  serialized_start=912,
+  serialized_end=967,
 )
 
 
@@ -450,8 +661,8 @@ _GETDEVICEDETAILSRESPONSE_DETAILSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=826,
-  serialized_end=872,
+  serialized_start=1121,
+  serialized_end=1167,
 )
 
 _GETDEVICEDETAILSRESPONSE = _descriptor.Descriptor(
@@ -487,27 +698,103 @@ _GETDEVICEDETAILSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=675,
-  serialized_end=872,
+  serialized_start=970,
+  serialized_end=1167,
 )
 
 
-_GETDIGITALOUTPUTSREQUEST = _descriptor.Descriptor(
-  name='GetDigitalOutputsRequest',
-  full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDigitalOutputsRequest',
+_GETDIGITALCHANNELSREQUEST = _descriptor.Descriptor(
+  name='GetDigitalChannelsRequest',
+  full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDigitalChannelsRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDigitalOutputsRequest.name', index=0,
+      name='name', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDigitalChannelsRequest.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1169,
+  serialized_end=1210,
+)
+
+
+_GETDIGITALCHANNELSRESPONSE = _descriptor.Descriptor(
+  name='GetDigitalChannelsResponse',
+  full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDigitalChannelsResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDigitalChannelsResponse.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='units', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDigitalOutputsRequest.units', index=1,
+      name='number', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDigitalChannelsResponse.number', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='names', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDigitalChannelsResponse.names', index=2,
+      number=3, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1212,
+  serialized_end=1285,
+)
+
+
+_GETANALOGCHANNELSREQUEST = _descriptor.Descriptor(
+  name='GetAnalogChannelsRequest',
+  full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAnalogChannelsRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAnalogChannelsRequest.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='units', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAnalogChannelsRequest.units', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -525,34 +812,34 @@ _GETDIGITALOUTPUTSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=874,
-  serialized_end=929,
+  serialized_start=1287,
+  serialized_end=1342,
 )
 
 
-_GETDIGITALOUTPUTSRESPONSE = _descriptor.Descriptor(
-  name='GetDigitalOutputsResponse',
-  full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDigitalOutputsResponse',
+_GETANALOGCHANNELSRESPONSE = _descriptor.Descriptor(
+  name='GetAnalogChannelsResponse',
+  full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAnalogChannelsResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDigitalOutputsResponse.name', index=0,
+      name='name', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAnalogChannelsResponse.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='number', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDigitalOutputsResponse.number', index=1,
+      name='number', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAnalogChannelsResponse.number', index=1,
       number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='names', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDigitalOutputsResponse.names', index=2,
+      name='names', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAnalogChannelsResponse.names', index=2,
       number=3, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -570,184 +857,46 @@ _GETDIGITALOUTPUTSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=931,
-  serialized_end=1003,
+  serialized_start=1344,
+  serialized_end=1416,
 )
 
 
-_GETDIGITALINPUTSREQUEST = _descriptor.Descriptor(
-  name='GetDigitalInputsRequest',
-  full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDigitalInputsRequest',
+_SETCHANNELMODEREQUEST = _descriptor.Descriptor(
+  name='SetChannelModeRequest',
+  full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.SetChannelModeRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDigitalInputsRequest.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1005,
-  serialized_end=1044,
-)
-
-
-_GETDIGITALINPUTSRESPONSE = _descriptor.Descriptor(
-  name='GetDigitalInputsResponse',
-  full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDigitalInputsResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='name', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDigitalInputsResponse.name', index=0,
+      name='name', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.SetChannelModeRequest.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='number', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDigitalInputsResponse.number', index=1,
-      number=2, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='names', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDigitalInputsResponse.names', index=2,
-      number=3, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1046,
-  serialized_end=1117,
-)
-
-
-_GETANALOGOUTPUTSREQUEST = _descriptor.Descriptor(
-  name='GetAnalogOutputsRequest',
-  full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAnalogOutputsRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='name', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAnalogOutputsRequest.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1119,
-  serialized_end=1158,
-)
-
-
-_GETANALOGOUTPUTSRESPONSE = _descriptor.Descriptor(
-  name='GetAnalogOutputsResponse',
-  full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAnalogOutputsResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='name', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAnalogOutputsResponse.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='number', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAnalogOutputsResponse.number', index=1,
-      number=2, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='names', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAnalogOutputsResponse.names', index=2,
-      number=3, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1160,
-  serialized_end=1231,
-)
-
-
-_GETANALOGINPUTSREQUEST = _descriptor.Descriptor(
-  name='GetAnalogInputsRequest',
-  full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAnalogInputsRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='name', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAnalogInputsRequest.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='units', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAnalogInputsRequest.units', index=1,
+      name='channel_name', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.SetChannelModeRequest.channel_name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='channel_uid', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.SetChannelModeRequest.channel_uid', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='mode', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.SetChannelModeRequest.mode', index=3,
+      number=4, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -760,36 +909,43 @@ _GETANALOGINPUTSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1233,
-  serialized_end=1286,
+  serialized_start=1419,
+  serialized_end=1579,
 )
 
 
-_GETANALOGINPUTSRESPONSE = _descriptor.Descriptor(
-  name='GetAnalogInputsResponse',
-  full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAnalogInputsResponse',
+_SETCHANNELMODERESPONSE = _descriptor.Descriptor(
+  name='SetChannelModeResponse',
+  full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.SetChannelModeResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAnalogInputsResponse.name', index=0,
+      name='name', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.SetChannelModeResponse.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='number', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAnalogInputsResponse.number', index=1,
-      number=2, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
+      name='channel_name', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.SetChannelModeResponse.channel_name', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='names', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAnalogInputsResponse.names', index=2,
-      number=3, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
+      name='channel_uid', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.SetChannelModeResponse.channel_uid', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='mode', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.SetChannelModeResponse.mode', index=3,
+      number=4, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -805,14 +961,120 @@ _GETANALOGINPUTSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1288,
-  serialized_end=1358,
+  serialized_start=1582,
+  serialized_end=1743,
 )
 
+
+_GETCHANNELMODEREQUEST = _descriptor.Descriptor(
+  name='GetChannelModeRequest',
+  full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetChannelModeRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetChannelModeRequest.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='channel_name', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetChannelModeRequest.channel_name', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='channel_uid', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetChannelModeRequest.channel_uid', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1745,
+  serialized_end=1825,
+)
+
+
+_GETCHANNELMODERESPONSE = _descriptor.Descriptor(
+  name='GetChannelModeResponse',
+  full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetChannelModeResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetChannelModeResponse.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='channel_name', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetChannelModeResponse.channel_name', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='channel_uid', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetChannelModeResponse.channel_uid', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='mode', full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.GetChannelModeResponse.mode', index=3,
+      number=4, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1828,
+  serialized_end=1989,
+)
+
+_INITIALIZEREQUEST_PROPERTIESENTRY.containing_type = _INITIALIZEREQUEST
+_INITIALIZEREQUEST.fields_by_name['properties'].message_type = _INITIALIZEREQUEST_PROPERTIESENTRY
 _GETDEVICEDETAILSRESPONSE_DETAILSENTRY.containing_type = _GETDEVICEDETAILSRESPONSE
 _GETDEVICEDETAILSRESPONSE.fields_by_name['details'].message_type = _GETDEVICEDETAILSRESPONSE_DETAILSENTRY
+_SETCHANNELMODEREQUEST.fields_by_name['mode'].enum_type = _CHANNELMODE
+_SETCHANNELMODERESPONSE.fields_by_name['mode'].enum_type = _CHANNELMODE
+_GETCHANNELMODERESPONSE.fields_by_name['mode'].enum_type = _CHANNELMODE
 DESCRIPTOR.message_types_by_name['GetAvailbleDevicesRequest'] = _GETAVAILBLEDEVICESREQUEST
 DESCRIPTOR.message_types_by_name['GetAvailbleDevicesResponse'] = _GETAVAILBLEDEVICESRESPONSE
+DESCRIPTOR.message_types_by_name['InitializeRequest'] = _INITIALIZEREQUEST
+DESCRIPTOR.message_types_by_name['InitializeResponse'] = _INITIALIZERESPONSE
+DESCRIPTOR.message_types_by_name['ShutdownRequest'] = _SHUTDOWNREQUEST
+DESCRIPTOR.message_types_by_name['ShutdownResponse'] = _SHUTDOWNRESPONSE
 DESCRIPTOR.message_types_by_name['ReadDigitalRequest'] = _READDIGITALREQUEST
 DESCRIPTOR.message_types_by_name['ReadDigitalResponse'] = _READDIGITALRESPONSE
 DESCRIPTOR.message_types_by_name['ReadAnalogRequest'] = _READANALOGREQUEST
@@ -823,14 +1085,15 @@ DESCRIPTOR.message_types_by_name['WriteAnalogRequest'] = _WRITEANALOGREQUEST
 DESCRIPTOR.message_types_by_name['WriteAnalogResponse'] = _WRITEANALOGRESPONSE
 DESCRIPTOR.message_types_by_name['GetDeviceDetailsRequest'] = _GETDEVICEDETAILSREQUEST
 DESCRIPTOR.message_types_by_name['GetDeviceDetailsResponse'] = _GETDEVICEDETAILSRESPONSE
-DESCRIPTOR.message_types_by_name['GetDigitalOutputsRequest'] = _GETDIGITALOUTPUTSREQUEST
-DESCRIPTOR.message_types_by_name['GetDigitalOutputsResponse'] = _GETDIGITALOUTPUTSRESPONSE
-DESCRIPTOR.message_types_by_name['GetDigitalInputsRequest'] = _GETDIGITALINPUTSREQUEST
-DESCRIPTOR.message_types_by_name['GetDigitalInputsResponse'] = _GETDIGITALINPUTSRESPONSE
-DESCRIPTOR.message_types_by_name['GetAnalogOutputsRequest'] = _GETANALOGOUTPUTSREQUEST
-DESCRIPTOR.message_types_by_name['GetAnalogOutputsResponse'] = _GETANALOGOUTPUTSRESPONSE
-DESCRIPTOR.message_types_by_name['GetAnalogInputsRequest'] = _GETANALOGINPUTSREQUEST
-DESCRIPTOR.message_types_by_name['GetAnalogInputsResponse'] = _GETANALOGINPUTSRESPONSE
+DESCRIPTOR.message_types_by_name['GetDigitalChannelsRequest'] = _GETDIGITALCHANNELSREQUEST
+DESCRIPTOR.message_types_by_name['GetDigitalChannelsResponse'] = _GETDIGITALCHANNELSRESPONSE
+DESCRIPTOR.message_types_by_name['GetAnalogChannelsRequest'] = _GETANALOGCHANNELSREQUEST
+DESCRIPTOR.message_types_by_name['GetAnalogChannelsResponse'] = _GETANALOGCHANNELSRESPONSE
+DESCRIPTOR.message_types_by_name['SetChannelModeRequest'] = _SETCHANNELMODEREQUEST
+DESCRIPTOR.message_types_by_name['SetChannelModeResponse'] = _SETCHANNELMODERESPONSE
+DESCRIPTOR.message_types_by_name['GetChannelModeRequest'] = _GETCHANNELMODEREQUEST
+DESCRIPTOR.message_types_by_name['GetChannelModeResponse'] = _GETCHANNELMODERESPONSE
+DESCRIPTOR.enum_types_by_name['ChannelMode'] = _CHANNELMODE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 GetAvailbleDevicesRequest = _reflection.GeneratedProtocolMessageType('GetAvailbleDevicesRequest', (_message.Message,), dict(
@@ -846,6 +1109,42 @@ GetAvailbleDevicesResponse = _reflection.GeneratedProtocolMessageType('GetAvailb
   # @@protoc_insertion_point(class_scope:instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAvailbleDevicesResponse)
   ))
 _sym_db.RegisterMessage(GetAvailbleDevicesResponse)
+
+InitializeRequest = _reflection.GeneratedProtocolMessageType('InitializeRequest', (_message.Message,), dict(
+
+  PropertiesEntry = _reflection.GeneratedProtocolMessageType('PropertiesEntry', (_message.Message,), dict(
+    DESCRIPTOR = _INITIALIZEREQUEST_PROPERTIESENTRY,
+    __module__ = 'instrosetta.interfaces.data_aquisition.basic_daq_pb2'
+    # @@protoc_insertion_point(class_scope:instrosetta.interfaces.data_aquisition.basic_daq.v1.InitializeRequest.PropertiesEntry)
+    ))
+  ,
+  DESCRIPTOR = _INITIALIZEREQUEST,
+  __module__ = 'instrosetta.interfaces.data_aquisition.basic_daq_pb2'
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.data_aquisition.basic_daq.v1.InitializeRequest)
+  ))
+_sym_db.RegisterMessage(InitializeRequest)
+_sym_db.RegisterMessage(InitializeRequest.PropertiesEntry)
+
+InitializeResponse = _reflection.GeneratedProtocolMessageType('InitializeResponse', (_message.Message,), dict(
+  DESCRIPTOR = _INITIALIZERESPONSE,
+  __module__ = 'instrosetta.interfaces.data_aquisition.basic_daq_pb2'
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.data_aquisition.basic_daq.v1.InitializeResponse)
+  ))
+_sym_db.RegisterMessage(InitializeResponse)
+
+ShutdownRequest = _reflection.GeneratedProtocolMessageType('ShutdownRequest', (_message.Message,), dict(
+  DESCRIPTOR = _SHUTDOWNREQUEST,
+  __module__ = 'instrosetta.interfaces.data_aquisition.basic_daq_pb2'
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.data_aquisition.basic_daq.v1.ShutdownRequest)
+  ))
+_sym_db.RegisterMessage(ShutdownRequest)
+
+ShutdownResponse = _reflection.GeneratedProtocolMessageType('ShutdownResponse', (_message.Message,), dict(
+  DESCRIPTOR = _SHUTDOWNRESPONSE,
+  __module__ = 'instrosetta.interfaces.data_aquisition.basic_daq_pb2'
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.data_aquisition.basic_daq.v1.ShutdownResponse)
+  ))
+_sym_db.RegisterMessage(ShutdownResponse)
 
 ReadDigitalRequest = _reflection.GeneratedProtocolMessageType('ReadDigitalRequest', (_message.Message,), dict(
   DESCRIPTOR = _READDIGITALREQUEST,
@@ -925,63 +1224,64 @@ GetDeviceDetailsResponse = _reflection.GeneratedProtocolMessageType('GetDeviceDe
 _sym_db.RegisterMessage(GetDeviceDetailsResponse)
 _sym_db.RegisterMessage(GetDeviceDetailsResponse.DetailsEntry)
 
-GetDigitalOutputsRequest = _reflection.GeneratedProtocolMessageType('GetDigitalOutputsRequest', (_message.Message,), dict(
-  DESCRIPTOR = _GETDIGITALOUTPUTSREQUEST,
+GetDigitalChannelsRequest = _reflection.GeneratedProtocolMessageType('GetDigitalChannelsRequest', (_message.Message,), dict(
+  DESCRIPTOR = _GETDIGITALCHANNELSREQUEST,
   __module__ = 'instrosetta.interfaces.data_aquisition.basic_daq_pb2'
-  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDigitalOutputsRequest)
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDigitalChannelsRequest)
   ))
-_sym_db.RegisterMessage(GetDigitalOutputsRequest)
+_sym_db.RegisterMessage(GetDigitalChannelsRequest)
 
-GetDigitalOutputsResponse = _reflection.GeneratedProtocolMessageType('GetDigitalOutputsResponse', (_message.Message,), dict(
-  DESCRIPTOR = _GETDIGITALOUTPUTSRESPONSE,
+GetDigitalChannelsResponse = _reflection.GeneratedProtocolMessageType('GetDigitalChannelsResponse', (_message.Message,), dict(
+  DESCRIPTOR = _GETDIGITALCHANNELSRESPONSE,
   __module__ = 'instrosetta.interfaces.data_aquisition.basic_daq_pb2'
-  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDigitalOutputsResponse)
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDigitalChannelsResponse)
   ))
-_sym_db.RegisterMessage(GetDigitalOutputsResponse)
+_sym_db.RegisterMessage(GetDigitalChannelsResponse)
 
-GetDigitalInputsRequest = _reflection.GeneratedProtocolMessageType('GetDigitalInputsRequest', (_message.Message,), dict(
-  DESCRIPTOR = _GETDIGITALINPUTSREQUEST,
+GetAnalogChannelsRequest = _reflection.GeneratedProtocolMessageType('GetAnalogChannelsRequest', (_message.Message,), dict(
+  DESCRIPTOR = _GETANALOGCHANNELSREQUEST,
   __module__ = 'instrosetta.interfaces.data_aquisition.basic_daq_pb2'
-  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDigitalInputsRequest)
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAnalogChannelsRequest)
   ))
-_sym_db.RegisterMessage(GetDigitalInputsRequest)
+_sym_db.RegisterMessage(GetAnalogChannelsRequest)
 
-GetDigitalInputsResponse = _reflection.GeneratedProtocolMessageType('GetDigitalInputsResponse', (_message.Message,), dict(
-  DESCRIPTOR = _GETDIGITALINPUTSRESPONSE,
+GetAnalogChannelsResponse = _reflection.GeneratedProtocolMessageType('GetAnalogChannelsResponse', (_message.Message,), dict(
+  DESCRIPTOR = _GETANALOGCHANNELSRESPONSE,
   __module__ = 'instrosetta.interfaces.data_aquisition.basic_daq_pb2'
-  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.data_aquisition.basic_daq.v1.GetDigitalInputsResponse)
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAnalogChannelsResponse)
   ))
-_sym_db.RegisterMessage(GetDigitalInputsResponse)
+_sym_db.RegisterMessage(GetAnalogChannelsResponse)
 
-GetAnalogOutputsRequest = _reflection.GeneratedProtocolMessageType('GetAnalogOutputsRequest', (_message.Message,), dict(
-  DESCRIPTOR = _GETANALOGOUTPUTSREQUEST,
+SetChannelModeRequest = _reflection.GeneratedProtocolMessageType('SetChannelModeRequest', (_message.Message,), dict(
+  DESCRIPTOR = _SETCHANNELMODEREQUEST,
   __module__ = 'instrosetta.interfaces.data_aquisition.basic_daq_pb2'
-  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAnalogOutputsRequest)
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.data_aquisition.basic_daq.v1.SetChannelModeRequest)
   ))
-_sym_db.RegisterMessage(GetAnalogOutputsRequest)
+_sym_db.RegisterMessage(SetChannelModeRequest)
 
-GetAnalogOutputsResponse = _reflection.GeneratedProtocolMessageType('GetAnalogOutputsResponse', (_message.Message,), dict(
-  DESCRIPTOR = _GETANALOGOUTPUTSRESPONSE,
+SetChannelModeResponse = _reflection.GeneratedProtocolMessageType('SetChannelModeResponse', (_message.Message,), dict(
+  DESCRIPTOR = _SETCHANNELMODERESPONSE,
   __module__ = 'instrosetta.interfaces.data_aquisition.basic_daq_pb2'
-  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAnalogOutputsResponse)
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.data_aquisition.basic_daq.v1.SetChannelModeResponse)
   ))
-_sym_db.RegisterMessage(GetAnalogOutputsResponse)
+_sym_db.RegisterMessage(SetChannelModeResponse)
 
-GetAnalogInputsRequest = _reflection.GeneratedProtocolMessageType('GetAnalogInputsRequest', (_message.Message,), dict(
-  DESCRIPTOR = _GETANALOGINPUTSREQUEST,
+GetChannelModeRequest = _reflection.GeneratedProtocolMessageType('GetChannelModeRequest', (_message.Message,), dict(
+  DESCRIPTOR = _GETCHANNELMODEREQUEST,
   __module__ = 'instrosetta.interfaces.data_aquisition.basic_daq_pb2'
-  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAnalogInputsRequest)
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.data_aquisition.basic_daq.v1.GetChannelModeRequest)
   ))
-_sym_db.RegisterMessage(GetAnalogInputsRequest)
+_sym_db.RegisterMessage(GetChannelModeRequest)
 
-GetAnalogInputsResponse = _reflection.GeneratedProtocolMessageType('GetAnalogInputsResponse', (_message.Message,), dict(
-  DESCRIPTOR = _GETANALOGINPUTSRESPONSE,
+GetChannelModeResponse = _reflection.GeneratedProtocolMessageType('GetChannelModeResponse', (_message.Message,), dict(
+  DESCRIPTOR = _GETCHANNELMODERESPONSE,
   __module__ = 'instrosetta.interfaces.data_aquisition.basic_daq_pb2'
-  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.data_aquisition.basic_daq.v1.GetAnalogInputsResponse)
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.data_aquisition.basic_daq.v1.GetChannelModeResponse)
   ))
-_sym_db.RegisterMessage(GetAnalogInputsResponse)
+_sym_db.RegisterMessage(GetChannelModeResponse)
 
 
+_INITIALIZEREQUEST_PROPERTIESENTRY._options = None
 _GETDEVICEDETAILSRESPONSE_DETAILSENTRY._options = None
 
 _BASICDAQ = _descriptor.ServiceDescriptor(
@@ -990,8 +1290,8 @@ _BASICDAQ = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=1361,
-  serialized_end=3224,
+  serialized_start=2043,
+  serialized_end=3942,
   methods=[
   _descriptor.MethodDescriptor(
     name='GetAvailbleDevices',
@@ -1003,21 +1303,21 @@ _BASICDAQ = _descriptor.ServiceDescriptor(
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='Connect',
-    full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.BasicDaq.Connect',
+    name='Initialize',
+    full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.BasicDaq.Initialize',
     index=1,
     containing_service=None,
-    input_type=instrosetta_dot_common_dot_connection__pb2._CONNECTREQUEST,
-    output_type=instrosetta_dot_common_dot_connection__pb2._CONNECTRESPONSE,
+    input_type=_INITIALIZEREQUEST,
+    output_type=_INITIALIZERESPONSE,
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='Disconnect',
-    full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.BasicDaq.Disconnect',
+    name='Shutdown',
+    full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.BasicDaq.Shutdown',
     index=2,
     containing_service=None,
-    input_type=instrosetta_dot_common_dot_connection__pb2._DISCONNECTREQUEST,
-    output_type=instrosetta_dot_common_dot_connection__pb2._DISCONNECTRESPONSE,
+    input_type=_SHUTDOWNREQUEST,
+    output_type=_SHUTDOWNRESPONSE,
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
@@ -1066,39 +1366,30 @@ _BASICDAQ = _descriptor.ServiceDescriptor(
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='GetDigitalOutputs',
-    full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.BasicDaq.GetDigitalOutputs',
+    name='GetDigitalChannels',
+    full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.BasicDaq.GetDigitalChannels',
     index=8,
     containing_service=None,
-    input_type=_GETDIGITALOUTPUTSREQUEST,
-    output_type=_GETDIGITALOUTPUTSRESPONSE,
+    input_type=_GETDIGITALCHANNELSREQUEST,
+    output_type=_GETDIGITALCHANNELSRESPONSE,
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='GetDigitalInputs',
-    full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.BasicDaq.GetDigitalInputs',
+    name='GetAnalogChannels',
+    full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.BasicDaq.GetAnalogChannels',
     index=9,
     containing_service=None,
-    input_type=_GETDIGITALINPUTSREQUEST,
-    output_type=_GETDIGITALINPUTSRESPONSE,
+    input_type=_GETANALOGCHANNELSREQUEST,
+    output_type=_GETANALOGCHANNELSRESPONSE,
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='GetAnalogOutputs',
-    full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.BasicDaq.GetAnalogOutputs',
+    name='SetChannelMode',
+    full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.BasicDaq.SetChannelMode',
     index=10,
     containing_service=None,
-    input_type=_GETANALOGOUTPUTSREQUEST,
-    output_type=_GETANALOGOUTPUTSRESPONSE,
-    serialized_options=None,
-  ),
-  _descriptor.MethodDescriptor(
-    name='GetAnalogInputs',
-    full_name='instrosetta.interfaces.data_aquisition.basic_daq.v1.BasicDaq.GetAnalogInputs',
-    index=11,
-    containing_service=None,
-    input_type=_GETANALOGINPUTSREQUEST,
-    output_type=_GETANALOGINPUTSRESPONSE,
+    input_type=_SETCHANNELMODEREQUEST,
+    output_type=_SETCHANNELMODERESPONSE,
     serialized_options=None,
   ),
 ])

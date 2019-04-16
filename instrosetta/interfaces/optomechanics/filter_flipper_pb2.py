@@ -19,21 +19,134 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='instrosetta.interfaces.optomechanics.filter_flipper.v1',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n9instrosetta/interfaces/optomechanics/filter_flipper.proto\x12\x36instrosetta.interfaces.optomechanics.filter_flipper.v1\"\x1b\n\x0b\x45\x63hoRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"\x1c\n\x0c\x45\x63hoResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\"\x1e\n\x0e\x43onnectRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"\x1f\n\x0f\x43onnectResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\"!\n\x11\x44isconnectRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"\"\n\x12\x44isconnectResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\"1\n\x12GetPositionRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"A\n\x13GetPositionResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"@\n\x12SetPositionRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"A\n\x13SetPositionResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"-\n\x0eGetInfoRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"=\n\x0fGetInfoResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"<\n\x0eSetInfoRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"=\n\x0fSetInfoResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t2\x80\t\n\rFilterFlipper\x12\x93\x01\n\x04\x45\x63ho\x12\x43.instrosetta.interfaces.optomechanics.filter_flipper.v1.EchoRequest\x1a\x44.instrosetta.interfaces.optomechanics.filter_flipper.v1.EchoResponse\"\x00\x12\x9c\x01\n\x07\x43onnect\x12\x46.instrosetta.interfaces.optomechanics.filter_flipper.v1.ConnectRequest\x1aG.instrosetta.interfaces.optomechanics.filter_flipper.v1.ConnectResponse\"\x00\x12\xa5\x01\n\nDisconnect\x12I.instrosetta.interfaces.optomechanics.filter_flipper.v1.DisconnectRequest\x1aJ.instrosetta.interfaces.optomechanics.filter_flipper.v1.DisconnectResponse\"\x00\x12\xa8\x01\n\x0bGetPosition\x12J.instrosetta.interfaces.optomechanics.filter_flipper.v1.GetPositionRequest\x1aK.instrosetta.interfaces.optomechanics.filter_flipper.v1.GetPositionResponse\"\x00\x12\xa8\x01\n\x0bSetPosition\x12J.instrosetta.interfaces.optomechanics.filter_flipper.v1.SetPositionRequest\x1aK.instrosetta.interfaces.optomechanics.filter_flipper.v1.SetPositionResponse\"\x00\x12\x9c\x01\n\x07GetInfo\x12\x46.instrosetta.interfaces.optomechanics.filter_flipper.v1.GetInfoRequest\x1aG.instrosetta.interfaces.optomechanics.filter_flipper.v1.GetInfoResponse\"\x00\x12\x9c\x01\n\x07SetInfo\x12\x46.instrosetta.interfaces.optomechanics.filter_flipper.v1.SetInfoRequest\x1aG.instrosetta.interfaces.optomechanics.filter_flipper.v1.SetInfoResponse\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n9instrosetta/interfaces/optomechanics/filter_flipper.proto\x12\x36instrosetta.interfaces.optomechanics.filter_flipper.v1\"\xc3\x01\n\x11InitializeRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12m\n\nproperties\x18\x02 \x03(\x0b\x32Y.instrosetta.interfaces.optomechanics.filter_flipper.v1.InitializeRequest.PropertiesEntry\x1a\x31\n\x0fPropertiesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"3\n\x12InitializeResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07success\x18\x02 \x01(\x08\"\x1f\n\x0fShutdownRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"1\n\x10ShutdownResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07success\x18\x02 \x01(\x08\"1\n\x12GetPositionRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"A\n\x13GetPositionResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"@\n\x12SetPositionRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"A\n\x13SetPositionResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"-\n\x0eGetInfoRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"=\n\x0fGetInfoResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"<\n\x0eSetInfoRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"=\n\x0fSetInfoResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t2\xed\x07\n\rFilterFlipper\x12\xa5\x01\n\nInitialize\x12I.instrosetta.interfaces.optomechanics.filter_flipper.v1.InitializeRequest\x1aJ.instrosetta.interfaces.optomechanics.filter_flipper.v1.InitializeResponse\"\x00\x12\x9f\x01\n\x08Shutdown\x12G.instrosetta.interfaces.optomechanics.filter_flipper.v1.ShutdownRequest\x1aH.instrosetta.interfaces.optomechanics.filter_flipper.v1.ShutdownResponse\"\x00\x12\xa8\x01\n\x0bGetPosition\x12J.instrosetta.interfaces.optomechanics.filter_flipper.v1.GetPositionRequest\x1aK.instrosetta.interfaces.optomechanics.filter_flipper.v1.GetPositionResponse\"\x00\x12\xa8\x01\n\x0bSetPosition\x12J.instrosetta.interfaces.optomechanics.filter_flipper.v1.SetPositionRequest\x1aK.instrosetta.interfaces.optomechanics.filter_flipper.v1.SetPositionResponse\"\x00\x12\x9c\x01\n\x07GetInfo\x12\x46.instrosetta.interfaces.optomechanics.filter_flipper.v1.GetInfoRequest\x1aG.instrosetta.interfaces.optomechanics.filter_flipper.v1.GetInfoResponse\"\x00\x12\x9c\x01\n\x07SetInfo\x12\x46.instrosetta.interfaces.optomechanics.filter_flipper.v1.SetInfoRequest\x1aG.instrosetta.interfaces.optomechanics.filter_flipper.v1.SetInfoResponse\"\x00\x62\x06proto3')
 )
 
 
 
 
-_ECHOREQUEST = _descriptor.Descriptor(
-  name='EchoRequest',
-  full_name='instrosetta.interfaces.optomechanics.filter_flipper.v1.EchoRequest',
+_INITIALIZEREQUEST_PROPERTIESENTRY = _descriptor.Descriptor(
+  name='PropertiesEntry',
+  full_name='instrosetta.interfaces.optomechanics.filter_flipper.v1.InitializeRequest.PropertiesEntry',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='instrosetta.interfaces.optomechanics.filter_flipper.v1.EchoRequest.name', index=0,
+      name='key', full_name='instrosetta.interfaces.optomechanics.filter_flipper.v1.InitializeRequest.PropertiesEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='instrosetta.interfaces.optomechanics.filter_flipper.v1.InitializeRequest.PropertiesEntry.value', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=_b('8\001'),
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=264,
+  serialized_end=313,
+)
+
+_INITIALIZEREQUEST = _descriptor.Descriptor(
+  name='InitializeRequest',
+  full_name='instrosetta.interfaces.optomechanics.filter_flipper.v1.InitializeRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='instrosetta.interfaces.optomechanics.filter_flipper.v1.InitializeRequest.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='properties', full_name='instrosetta.interfaces.optomechanics.filter_flipper.v1.InitializeRequest.properties', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[_INITIALIZEREQUEST_PROPERTIESENTRY, ],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=118,
+  serialized_end=313,
+)
+
+
+_INITIALIZERESPONSE = _descriptor.Descriptor(
+  name='InitializeResponse',
+  full_name='instrosetta.interfaces.optomechanics.filter_flipper.v1.InitializeResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='instrosetta.interfaces.optomechanics.filter_flipper.v1.InitializeResponse.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='success', full_name='instrosetta.interfaces.optomechanics.filter_flipper.v1.InitializeResponse.success', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=315,
+  serialized_end=366,
+)
+
+
+_SHUTDOWNREQUEST = _descriptor.Descriptor(
+  name='ShutdownRequest',
+  full_name='instrosetta.interfaces.optomechanics.filter_flipper.v1.ShutdownRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='instrosetta.interfaces.optomechanics.filter_flipper.v1.ShutdownRequest.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -51,22 +164,29 @@ _ECHOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=117,
-  serialized_end=144,
+  serialized_start=368,
+  serialized_end=399,
 )
 
 
-_ECHORESPONSE = _descriptor.Descriptor(
-  name='EchoResponse',
-  full_name='instrosetta.interfaces.optomechanics.filter_flipper.v1.EchoResponse',
+_SHUTDOWNRESPONSE = _descriptor.Descriptor(
+  name='ShutdownResponse',
+  full_name='instrosetta.interfaces.optomechanics.filter_flipper.v1.ShutdownResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='instrosetta.interfaces.optomechanics.filter_flipper.v1.EchoResponse.name', index=0,
+      name='name', full_name='instrosetta.interfaces.optomechanics.filter_flipper.v1.ShutdownResponse.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='success', full_name='instrosetta.interfaces.optomechanics.filter_flipper.v1.ShutdownResponse.success', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -82,132 +202,8 @@ _ECHORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=146,
-  serialized_end=174,
-)
-
-
-_CONNECTREQUEST = _descriptor.Descriptor(
-  name='ConnectRequest',
-  full_name='instrosetta.interfaces.optomechanics.filter_flipper.v1.ConnectRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='name', full_name='instrosetta.interfaces.optomechanics.filter_flipper.v1.ConnectRequest.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=176,
-  serialized_end=206,
-)
-
-
-_CONNECTRESPONSE = _descriptor.Descriptor(
-  name='ConnectResponse',
-  full_name='instrosetta.interfaces.optomechanics.filter_flipper.v1.ConnectResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='name', full_name='instrosetta.interfaces.optomechanics.filter_flipper.v1.ConnectResponse.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=208,
-  serialized_end=239,
-)
-
-
-_DISCONNECTREQUEST = _descriptor.Descriptor(
-  name='DisconnectRequest',
-  full_name='instrosetta.interfaces.optomechanics.filter_flipper.v1.DisconnectRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='name', full_name='instrosetta.interfaces.optomechanics.filter_flipper.v1.DisconnectRequest.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=241,
-  serialized_end=274,
-)
-
-
-_DISCONNECTRESPONSE = _descriptor.Descriptor(
-  name='DisconnectResponse',
-  full_name='instrosetta.interfaces.optomechanics.filter_flipper.v1.DisconnectResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='name', full_name='instrosetta.interfaces.optomechanics.filter_flipper.v1.DisconnectResponse.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=276,
-  serialized_end=310,
+  serialized_start=401,
+  serialized_end=450,
 )
 
 
@@ -244,8 +240,8 @@ _GETPOSITIONREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=312,
-  serialized_end=361,
+  serialized_start=452,
+  serialized_end=501,
 )
 
 
@@ -289,8 +285,8 @@ _GETPOSITIONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=363,
-  serialized_end=428,
+  serialized_start=503,
+  serialized_end=568,
 )
 
 
@@ -334,8 +330,8 @@ _SETPOSITIONREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=430,
-  serialized_end=494,
+  serialized_start=570,
+  serialized_end=634,
 )
 
 
@@ -379,8 +375,8 @@ _SETPOSITIONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=496,
-  serialized_end=561,
+  serialized_start=636,
+  serialized_end=701,
 )
 
 
@@ -417,8 +413,8 @@ _GETINFOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=563,
-  serialized_end=608,
+  serialized_start=703,
+  serialized_end=748,
 )
 
 
@@ -462,8 +458,8 @@ _GETINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=610,
-  serialized_end=671,
+  serialized_start=750,
+  serialized_end=811,
 )
 
 
@@ -507,8 +503,8 @@ _SETINFOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=673,
-  serialized_end=733,
+  serialized_start=813,
+  serialized_end=873,
 )
 
 
@@ -552,16 +548,16 @@ _SETINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=735,
-  serialized_end=796,
+  serialized_start=875,
+  serialized_end=936,
 )
 
-DESCRIPTOR.message_types_by_name['EchoRequest'] = _ECHOREQUEST
-DESCRIPTOR.message_types_by_name['EchoResponse'] = _ECHORESPONSE
-DESCRIPTOR.message_types_by_name['ConnectRequest'] = _CONNECTREQUEST
-DESCRIPTOR.message_types_by_name['ConnectResponse'] = _CONNECTRESPONSE
-DESCRIPTOR.message_types_by_name['DisconnectRequest'] = _DISCONNECTREQUEST
-DESCRIPTOR.message_types_by_name['DisconnectResponse'] = _DISCONNECTRESPONSE
+_INITIALIZEREQUEST_PROPERTIESENTRY.containing_type = _INITIALIZEREQUEST
+_INITIALIZEREQUEST.fields_by_name['properties'].message_type = _INITIALIZEREQUEST_PROPERTIESENTRY
+DESCRIPTOR.message_types_by_name['InitializeRequest'] = _INITIALIZEREQUEST
+DESCRIPTOR.message_types_by_name['InitializeResponse'] = _INITIALIZERESPONSE
+DESCRIPTOR.message_types_by_name['ShutdownRequest'] = _SHUTDOWNREQUEST
+DESCRIPTOR.message_types_by_name['ShutdownResponse'] = _SHUTDOWNRESPONSE
 DESCRIPTOR.message_types_by_name['GetPositionRequest'] = _GETPOSITIONREQUEST
 DESCRIPTOR.message_types_by_name['GetPositionResponse'] = _GETPOSITIONRESPONSE
 DESCRIPTOR.message_types_by_name['SetPositionRequest'] = _SETPOSITIONREQUEST
@@ -572,47 +568,41 @@ DESCRIPTOR.message_types_by_name['SetInfoRequest'] = _SETINFOREQUEST
 DESCRIPTOR.message_types_by_name['SetInfoResponse'] = _SETINFORESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
-EchoRequest = _reflection.GeneratedProtocolMessageType('EchoRequest', (_message.Message,), dict(
-  DESCRIPTOR = _ECHOREQUEST,
-  __module__ = 'instrosetta.interfaces.optomechanics.filter_flipper_pb2'
-  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.optomechanics.filter_flipper.v1.EchoRequest)
-  ))
-_sym_db.RegisterMessage(EchoRequest)
+InitializeRequest = _reflection.GeneratedProtocolMessageType('InitializeRequest', (_message.Message,), dict(
 
-EchoResponse = _reflection.GeneratedProtocolMessageType('EchoResponse', (_message.Message,), dict(
-  DESCRIPTOR = _ECHORESPONSE,
+  PropertiesEntry = _reflection.GeneratedProtocolMessageType('PropertiesEntry', (_message.Message,), dict(
+    DESCRIPTOR = _INITIALIZEREQUEST_PROPERTIESENTRY,
+    __module__ = 'instrosetta.interfaces.optomechanics.filter_flipper_pb2'
+    # @@protoc_insertion_point(class_scope:instrosetta.interfaces.optomechanics.filter_flipper.v1.InitializeRequest.PropertiesEntry)
+    ))
+  ,
+  DESCRIPTOR = _INITIALIZEREQUEST,
   __module__ = 'instrosetta.interfaces.optomechanics.filter_flipper_pb2'
-  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.optomechanics.filter_flipper.v1.EchoResponse)
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.optomechanics.filter_flipper.v1.InitializeRequest)
   ))
-_sym_db.RegisterMessage(EchoResponse)
+_sym_db.RegisterMessage(InitializeRequest)
+_sym_db.RegisterMessage(InitializeRequest.PropertiesEntry)
 
-ConnectRequest = _reflection.GeneratedProtocolMessageType('ConnectRequest', (_message.Message,), dict(
-  DESCRIPTOR = _CONNECTREQUEST,
+InitializeResponse = _reflection.GeneratedProtocolMessageType('InitializeResponse', (_message.Message,), dict(
+  DESCRIPTOR = _INITIALIZERESPONSE,
   __module__ = 'instrosetta.interfaces.optomechanics.filter_flipper_pb2'
-  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.optomechanics.filter_flipper.v1.ConnectRequest)
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.optomechanics.filter_flipper.v1.InitializeResponse)
   ))
-_sym_db.RegisterMessage(ConnectRequest)
+_sym_db.RegisterMessage(InitializeResponse)
 
-ConnectResponse = _reflection.GeneratedProtocolMessageType('ConnectResponse', (_message.Message,), dict(
-  DESCRIPTOR = _CONNECTRESPONSE,
+ShutdownRequest = _reflection.GeneratedProtocolMessageType('ShutdownRequest', (_message.Message,), dict(
+  DESCRIPTOR = _SHUTDOWNREQUEST,
   __module__ = 'instrosetta.interfaces.optomechanics.filter_flipper_pb2'
-  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.optomechanics.filter_flipper.v1.ConnectResponse)
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.optomechanics.filter_flipper.v1.ShutdownRequest)
   ))
-_sym_db.RegisterMessage(ConnectResponse)
+_sym_db.RegisterMessage(ShutdownRequest)
 
-DisconnectRequest = _reflection.GeneratedProtocolMessageType('DisconnectRequest', (_message.Message,), dict(
-  DESCRIPTOR = _DISCONNECTREQUEST,
+ShutdownResponse = _reflection.GeneratedProtocolMessageType('ShutdownResponse', (_message.Message,), dict(
+  DESCRIPTOR = _SHUTDOWNRESPONSE,
   __module__ = 'instrosetta.interfaces.optomechanics.filter_flipper_pb2'
-  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.optomechanics.filter_flipper.v1.DisconnectRequest)
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.optomechanics.filter_flipper.v1.ShutdownResponse)
   ))
-_sym_db.RegisterMessage(DisconnectRequest)
-
-DisconnectResponse = _reflection.GeneratedProtocolMessageType('DisconnectResponse', (_message.Message,), dict(
-  DESCRIPTOR = _DISCONNECTRESPONSE,
-  __module__ = 'instrosetta.interfaces.optomechanics.filter_flipper_pb2'
-  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.optomechanics.filter_flipper.v1.DisconnectResponse)
-  ))
-_sym_db.RegisterMessage(DisconnectResponse)
+_sym_db.RegisterMessage(ShutdownResponse)
 
 GetPositionRequest = _reflection.GeneratedProtocolMessageType('GetPositionRequest', (_message.Message,), dict(
   DESCRIPTOR = _GETPOSITIONREQUEST,
@@ -671,6 +661,7 @@ SetInfoResponse = _reflection.GeneratedProtocolMessageType('SetInfoResponse', (_
 _sym_db.RegisterMessage(SetInfoResponse)
 
 
+_INITIALIZEREQUEST_PROPERTIESENTRY._options = None
 
 _FILTERFLIPPER = _descriptor.ServiceDescriptor(
   name='FilterFlipper',
@@ -678,40 +669,31 @@ _FILTERFLIPPER = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=799,
-  serialized_end=1951,
+  serialized_start=939,
+  serialized_end=1944,
   methods=[
   _descriptor.MethodDescriptor(
-    name='Echo',
-    full_name='instrosetta.interfaces.optomechanics.filter_flipper.v1.FilterFlipper.Echo',
+    name='Initialize',
+    full_name='instrosetta.interfaces.optomechanics.filter_flipper.v1.FilterFlipper.Initialize',
     index=0,
     containing_service=None,
-    input_type=_ECHOREQUEST,
-    output_type=_ECHORESPONSE,
+    input_type=_INITIALIZEREQUEST,
+    output_type=_INITIALIZERESPONSE,
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='Connect',
-    full_name='instrosetta.interfaces.optomechanics.filter_flipper.v1.FilterFlipper.Connect',
+    name='Shutdown',
+    full_name='instrosetta.interfaces.optomechanics.filter_flipper.v1.FilterFlipper.Shutdown',
     index=1,
     containing_service=None,
-    input_type=_CONNECTREQUEST,
-    output_type=_CONNECTRESPONSE,
-    serialized_options=None,
-  ),
-  _descriptor.MethodDescriptor(
-    name='Disconnect',
-    full_name='instrosetta.interfaces.optomechanics.filter_flipper.v1.FilterFlipper.Disconnect',
-    index=2,
-    containing_service=None,
-    input_type=_DISCONNECTREQUEST,
-    output_type=_DISCONNECTRESPONSE,
+    input_type=_SHUTDOWNREQUEST,
+    output_type=_SHUTDOWNRESPONSE,
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
     name='GetPosition',
     full_name='instrosetta.interfaces.optomechanics.filter_flipper.v1.FilterFlipper.GetPosition',
-    index=3,
+    index=2,
     containing_service=None,
     input_type=_GETPOSITIONREQUEST,
     output_type=_GETPOSITIONRESPONSE,
@@ -720,7 +702,7 @@ _FILTERFLIPPER = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='SetPosition',
     full_name='instrosetta.interfaces.optomechanics.filter_flipper.v1.FilterFlipper.SetPosition',
-    index=4,
+    index=3,
     containing_service=None,
     input_type=_SETPOSITIONREQUEST,
     output_type=_SETPOSITIONRESPONSE,
@@ -729,7 +711,7 @@ _FILTERFLIPPER = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='GetInfo',
     full_name='instrosetta.interfaces.optomechanics.filter_flipper.v1.FilterFlipper.GetInfo',
-    index=5,
+    index=4,
     containing_service=None,
     input_type=_GETINFOREQUEST,
     output_type=_GETINFORESPONSE,
@@ -738,7 +720,7 @@ _FILTERFLIPPER = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='SetInfo',
     full_name='instrosetta.interfaces.optomechanics.filter_flipper.v1.FilterFlipper.SetInfo',
-    index=6,
+    index=5,
     containing_service=None,
     input_type=_SETINFOREQUEST,
     output_type=_SETINFORESPONSE,

@@ -12,7 +12,6 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from instrosetta.common import connection_pb2 as instrosetta_dot_common_dot_connection__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -20,11 +19,192 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='instrosetta.interfaces.light_analysis.power_meter.v1',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n7instrosetta/interfaces/light_analysis/power_meter.proto\x12\x34instrosetta.interfaces.light_analysis.power_meter.v1\x1a#instrosetta/common/connection.proto\".\n\x0fGetPowerRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"B\n\x10GetPowerResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"A\n\x0fSetPowerRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"B\n\x10SetPowerResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\".\n\x0fGetCountRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"B\n\x10GetCountResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"A\n\x0fSetCountRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"B\n\x10SetCountResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"3\n\x14GetWavelengthRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"G\n\x15GetWavelengthResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"F\n\x14SetWavelengthRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"G\n\x15SetWavelengthResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"-\n\x0eGetModeRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"A\n\x0fGetModeResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"@\n\x0eSetModeRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"A\n\x0fSetModeResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"2\n\x13GetAutorangeRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"F\n\x14GetAutorangeResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"E\n\x13SetAutorangeRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"F\n\x14SetAutorangeResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t2\xd1\r\n\nPowerMeter\x12.\n\x07\x43onnect\x12\x0f.ConnectRequest\x1a\x10.ConnectResponse\"\x00\x12\x37\n\nDisconnect\x12\x12.DisconnectRequest\x1a\x13.DisconnectResponse\"\x00\x12\x9b\x01\n\x08GetPower\x12\x45.instrosetta.interfaces.light_analysis.power_meter.v1.GetPowerRequest\x1a\x46.instrosetta.interfaces.light_analysis.power_meter.v1.GetPowerResponse\"\x00\x12\x9b\x01\n\x08SetPower\x12\x45.instrosetta.interfaces.light_analysis.power_meter.v1.SetPowerRequest\x1a\x46.instrosetta.interfaces.light_analysis.power_meter.v1.SetPowerResponse\"\x00\x12\x9b\x01\n\x08GetCount\x12\x45.instrosetta.interfaces.light_analysis.power_meter.v1.GetCountRequest\x1a\x46.instrosetta.interfaces.light_analysis.power_meter.v1.GetCountResponse\"\x00\x12\x9b\x01\n\x08SetCount\x12\x45.instrosetta.interfaces.light_analysis.power_meter.v1.SetCountRequest\x1a\x46.instrosetta.interfaces.light_analysis.power_meter.v1.SetCountResponse\"\x00\x12\xaa\x01\n\rGetWavelength\x12J.instrosetta.interfaces.light_analysis.power_meter.v1.GetWavelengthRequest\x1aK.instrosetta.interfaces.light_analysis.power_meter.v1.GetWavelengthResponse\"\x00\x12\xaa\x01\n\rSetWavelength\x12J.instrosetta.interfaces.light_analysis.power_meter.v1.SetWavelengthRequest\x1aK.instrosetta.interfaces.light_analysis.power_meter.v1.SetWavelengthResponse\"\x00\x12\x98\x01\n\x07GetMode\x12\x44.instrosetta.interfaces.light_analysis.power_meter.v1.GetModeRequest\x1a\x45.instrosetta.interfaces.light_analysis.power_meter.v1.GetModeResponse\"\x00\x12\x98\x01\n\x07SetMode\x12\x44.instrosetta.interfaces.light_analysis.power_meter.v1.SetModeRequest\x1a\x45.instrosetta.interfaces.light_analysis.power_meter.v1.SetModeResponse\"\x00\x12\xa7\x01\n\x0cGetAutorange\x12I.instrosetta.interfaces.light_analysis.power_meter.v1.GetAutorangeRequest\x1aJ.instrosetta.interfaces.light_analysis.power_meter.v1.GetAutorangeResponse\"\x00\x12\xa7\x01\n\x0cSetAutorange\x12I.instrosetta.interfaces.light_analysis.power_meter.v1.SetAutorangeRequest\x1aJ.instrosetta.interfaces.light_analysis.power_meter.v1.SetAutorangeResponse\"\x00\x62\x06proto3')
-  ,
-  dependencies=[instrosetta_dot_common_dot_connection__pb2.DESCRIPTOR,])
+  serialized_pb=_b('\n7instrosetta/interfaces/light_analysis/power_meter.proto\x12\x34instrosetta.interfaces.light_analysis.power_meter.v1\"\xc1\x01\n\x11InitializeRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12k\n\nproperties\x18\x02 \x03(\x0b\x32W.instrosetta.interfaces.light_analysis.power_meter.v1.InitializeRequest.PropertiesEntry\x1a\x31\n\x0fPropertiesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"3\n\x12InitializeResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07success\x18\x02 \x01(\x08\"\x1f\n\x0fShutdownRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"1\n\x10ShutdownResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07success\x18\x02 \x01(\x08\".\n\x0fGetPowerRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"B\n\x10GetPowerResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"A\n\x0fSetPowerRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"B\n\x10SetPowerResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\".\n\x0fGetCountRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"B\n\x10GetCountResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"A\n\x0fSetCountRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"B\n\x10SetCountResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"3\n\x14GetWavelengthRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"G\n\x15GetWavelengthResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"F\n\x14SetWavelengthRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"G\n\x15SetWavelengthResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"-\n\x0eGetModeRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"A\n\x0fGetModeResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"@\n\x0eSetModeRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"A\n\x0fSetModeResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"2\n\x13GetAutorangeRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"F\n\x14GetAutorangeResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"E\n\x13SetAutorangeRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"F\n\x14SetAutorangeResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t2\xaa\x0f\n\nPowerMeter\x12\xa1\x01\n\nInitialize\x12G.instrosetta.interfaces.light_analysis.power_meter.v1.InitializeRequest\x1aH.instrosetta.interfaces.light_analysis.power_meter.v1.InitializeResponse\"\x00\x12\x9b\x01\n\x08Shutdown\x12\x45.instrosetta.interfaces.light_analysis.power_meter.v1.ShutdownRequest\x1a\x46.instrosetta.interfaces.light_analysis.power_meter.v1.ShutdownResponse\"\x00\x12\x9b\x01\n\x08GetPower\x12\x45.instrosetta.interfaces.light_analysis.power_meter.v1.GetPowerRequest\x1a\x46.instrosetta.interfaces.light_analysis.power_meter.v1.GetPowerResponse\"\x00\x12\x9b\x01\n\x08SetPower\x12\x45.instrosetta.interfaces.light_analysis.power_meter.v1.SetPowerRequest\x1a\x46.instrosetta.interfaces.light_analysis.power_meter.v1.SetPowerResponse\"\x00\x12\x9b\x01\n\x08GetCount\x12\x45.instrosetta.interfaces.light_analysis.power_meter.v1.GetCountRequest\x1a\x46.instrosetta.interfaces.light_analysis.power_meter.v1.GetCountResponse\"\x00\x12\x9b\x01\n\x08SetCount\x12\x45.instrosetta.interfaces.light_analysis.power_meter.v1.SetCountRequest\x1a\x46.instrosetta.interfaces.light_analysis.power_meter.v1.SetCountResponse\"\x00\x12\xaa\x01\n\rGetWavelength\x12J.instrosetta.interfaces.light_analysis.power_meter.v1.GetWavelengthRequest\x1aK.instrosetta.interfaces.light_analysis.power_meter.v1.GetWavelengthResponse\"\x00\x12\xaa\x01\n\rSetWavelength\x12J.instrosetta.interfaces.light_analysis.power_meter.v1.SetWavelengthRequest\x1aK.instrosetta.interfaces.light_analysis.power_meter.v1.SetWavelengthResponse\"\x00\x12\x98\x01\n\x07GetMode\x12\x44.instrosetta.interfaces.light_analysis.power_meter.v1.GetModeRequest\x1a\x45.instrosetta.interfaces.light_analysis.power_meter.v1.GetModeResponse\"\x00\x12\x98\x01\n\x07SetMode\x12\x44.instrosetta.interfaces.light_analysis.power_meter.v1.SetModeRequest\x1a\x45.instrosetta.interfaces.light_analysis.power_meter.v1.SetModeResponse\"\x00\x12\xa7\x01\n\x0cGetAutorange\x12I.instrosetta.interfaces.light_analysis.power_meter.v1.GetAutorangeRequest\x1aJ.instrosetta.interfaces.light_analysis.power_meter.v1.GetAutorangeResponse\"\x00\x12\xa7\x01\n\x0cSetAutorange\x12I.instrosetta.interfaces.light_analysis.power_meter.v1.SetAutorangeRequest\x1aJ.instrosetta.interfaces.light_analysis.power_meter.v1.SetAutorangeResponse\"\x00\x62\x06proto3')
+)
 
 
+
+
+_INITIALIZEREQUEST_PROPERTIESENTRY = _descriptor.Descriptor(
+  name='PropertiesEntry',
+  full_name='instrosetta.interfaces.light_analysis.power_meter.v1.InitializeRequest.PropertiesEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='instrosetta.interfaces.light_analysis.power_meter.v1.InitializeRequest.PropertiesEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='instrosetta.interfaces.light_analysis.power_meter.v1.InitializeRequest.PropertiesEntry.value', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=_b('8\001'),
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=258,
+  serialized_end=307,
+)
+
+_INITIALIZEREQUEST = _descriptor.Descriptor(
+  name='InitializeRequest',
+  full_name='instrosetta.interfaces.light_analysis.power_meter.v1.InitializeRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='instrosetta.interfaces.light_analysis.power_meter.v1.InitializeRequest.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='properties', full_name='instrosetta.interfaces.light_analysis.power_meter.v1.InitializeRequest.properties', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[_INITIALIZEREQUEST_PROPERTIESENTRY, ],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=114,
+  serialized_end=307,
+)
+
+
+_INITIALIZERESPONSE = _descriptor.Descriptor(
+  name='InitializeResponse',
+  full_name='instrosetta.interfaces.light_analysis.power_meter.v1.InitializeResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='instrosetta.interfaces.light_analysis.power_meter.v1.InitializeResponse.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='success', full_name='instrosetta.interfaces.light_analysis.power_meter.v1.InitializeResponse.success', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=309,
+  serialized_end=360,
+)
+
+
+_SHUTDOWNREQUEST = _descriptor.Descriptor(
+  name='ShutdownRequest',
+  full_name='instrosetta.interfaces.light_analysis.power_meter.v1.ShutdownRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='instrosetta.interfaces.light_analysis.power_meter.v1.ShutdownRequest.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=362,
+  serialized_end=393,
+)
+
+
+_SHUTDOWNRESPONSE = _descriptor.Descriptor(
+  name='ShutdownResponse',
+  full_name='instrosetta.interfaces.light_analysis.power_meter.v1.ShutdownResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='instrosetta.interfaces.light_analysis.power_meter.v1.ShutdownResponse.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='success', full_name='instrosetta.interfaces.light_analysis.power_meter.v1.ShutdownResponse.success', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=395,
+  serialized_end=444,
+)
 
 
 _GETPOWERREQUEST = _descriptor.Descriptor(
@@ -60,8 +240,8 @@ _GETPOWERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=150,
-  serialized_end=196,
+  serialized_start=446,
+  serialized_end=492,
 )
 
 
@@ -105,8 +285,8 @@ _GETPOWERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=198,
-  serialized_end=264,
+  serialized_start=494,
+  serialized_end=560,
 )
 
 
@@ -150,8 +330,8 @@ _SETPOWERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=266,
-  serialized_end=331,
+  serialized_start=562,
+  serialized_end=627,
 )
 
 
@@ -195,8 +375,8 @@ _SETPOWERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=333,
-  serialized_end=399,
+  serialized_start=629,
+  serialized_end=695,
 )
 
 
@@ -233,8 +413,8 @@ _GETCOUNTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=401,
-  serialized_end=447,
+  serialized_start=697,
+  serialized_end=743,
 )
 
 
@@ -278,8 +458,8 @@ _GETCOUNTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=449,
-  serialized_end=515,
+  serialized_start=745,
+  serialized_end=811,
 )
 
 
@@ -323,8 +503,8 @@ _SETCOUNTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=517,
-  serialized_end=582,
+  serialized_start=813,
+  serialized_end=878,
 )
 
 
@@ -368,8 +548,8 @@ _SETCOUNTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=584,
-  serialized_end=650,
+  serialized_start=880,
+  serialized_end=946,
 )
 
 
@@ -406,8 +586,8 @@ _GETWAVELENGTHREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=652,
-  serialized_end=703,
+  serialized_start=948,
+  serialized_end=999,
 )
 
 
@@ -451,8 +631,8 @@ _GETWAVELENGTHRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=705,
-  serialized_end=776,
+  serialized_start=1001,
+  serialized_end=1072,
 )
 
 
@@ -496,8 +676,8 @@ _SETWAVELENGTHREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=778,
-  serialized_end=848,
+  serialized_start=1074,
+  serialized_end=1144,
 )
 
 
@@ -541,8 +721,8 @@ _SETWAVELENGTHRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=850,
-  serialized_end=921,
+  serialized_start=1146,
+  serialized_end=1217,
 )
 
 
@@ -579,8 +759,8 @@ _GETMODEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=923,
-  serialized_end=968,
+  serialized_start=1219,
+  serialized_end=1264,
 )
 
 
@@ -624,8 +804,8 @@ _GETMODERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=970,
-  serialized_end=1035,
+  serialized_start=1266,
+  serialized_end=1331,
 )
 
 
@@ -669,8 +849,8 @@ _SETMODEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1037,
-  serialized_end=1101,
+  serialized_start=1333,
+  serialized_end=1397,
 )
 
 
@@ -714,8 +894,8 @@ _SETMODERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1103,
-  serialized_end=1168,
+  serialized_start=1399,
+  serialized_end=1464,
 )
 
 
@@ -752,8 +932,8 @@ _GETAUTORANGEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1170,
-  serialized_end=1220,
+  serialized_start=1466,
+  serialized_end=1516,
 )
 
 
@@ -797,8 +977,8 @@ _GETAUTORANGERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1222,
-  serialized_end=1292,
+  serialized_start=1518,
+  serialized_end=1588,
 )
 
 
@@ -842,8 +1022,8 @@ _SETAUTORANGEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1294,
-  serialized_end=1363,
+  serialized_start=1590,
+  serialized_end=1659,
 )
 
 
@@ -887,10 +1067,16 @@ _SETAUTORANGERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1365,
-  serialized_end=1435,
+  serialized_start=1661,
+  serialized_end=1731,
 )
 
+_INITIALIZEREQUEST_PROPERTIESENTRY.containing_type = _INITIALIZEREQUEST
+_INITIALIZEREQUEST.fields_by_name['properties'].message_type = _INITIALIZEREQUEST_PROPERTIESENTRY
+DESCRIPTOR.message_types_by_name['InitializeRequest'] = _INITIALIZEREQUEST
+DESCRIPTOR.message_types_by_name['InitializeResponse'] = _INITIALIZERESPONSE
+DESCRIPTOR.message_types_by_name['ShutdownRequest'] = _SHUTDOWNREQUEST
+DESCRIPTOR.message_types_by_name['ShutdownResponse'] = _SHUTDOWNRESPONSE
 DESCRIPTOR.message_types_by_name['GetPowerRequest'] = _GETPOWERREQUEST
 DESCRIPTOR.message_types_by_name['GetPowerResponse'] = _GETPOWERRESPONSE
 DESCRIPTOR.message_types_by_name['SetPowerRequest'] = _SETPOWERREQUEST
@@ -912,6 +1098,42 @@ DESCRIPTOR.message_types_by_name['GetAutorangeResponse'] = _GETAUTORANGERESPONSE
 DESCRIPTOR.message_types_by_name['SetAutorangeRequest'] = _SETAUTORANGEREQUEST
 DESCRIPTOR.message_types_by_name['SetAutorangeResponse'] = _SETAUTORANGERESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
+
+InitializeRequest = _reflection.GeneratedProtocolMessageType('InitializeRequest', (_message.Message,), dict(
+
+  PropertiesEntry = _reflection.GeneratedProtocolMessageType('PropertiesEntry', (_message.Message,), dict(
+    DESCRIPTOR = _INITIALIZEREQUEST_PROPERTIESENTRY,
+    __module__ = 'instrosetta.interfaces.light_analysis.power_meter_pb2'
+    # @@protoc_insertion_point(class_scope:instrosetta.interfaces.light_analysis.power_meter.v1.InitializeRequest.PropertiesEntry)
+    ))
+  ,
+  DESCRIPTOR = _INITIALIZEREQUEST,
+  __module__ = 'instrosetta.interfaces.light_analysis.power_meter_pb2'
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.light_analysis.power_meter.v1.InitializeRequest)
+  ))
+_sym_db.RegisterMessage(InitializeRequest)
+_sym_db.RegisterMessage(InitializeRequest.PropertiesEntry)
+
+InitializeResponse = _reflection.GeneratedProtocolMessageType('InitializeResponse', (_message.Message,), dict(
+  DESCRIPTOR = _INITIALIZERESPONSE,
+  __module__ = 'instrosetta.interfaces.light_analysis.power_meter_pb2'
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.light_analysis.power_meter.v1.InitializeResponse)
+  ))
+_sym_db.RegisterMessage(InitializeResponse)
+
+ShutdownRequest = _reflection.GeneratedProtocolMessageType('ShutdownRequest', (_message.Message,), dict(
+  DESCRIPTOR = _SHUTDOWNREQUEST,
+  __module__ = 'instrosetta.interfaces.light_analysis.power_meter_pb2'
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.light_analysis.power_meter.v1.ShutdownRequest)
+  ))
+_sym_db.RegisterMessage(ShutdownRequest)
+
+ShutdownResponse = _reflection.GeneratedProtocolMessageType('ShutdownResponse', (_message.Message,), dict(
+  DESCRIPTOR = _SHUTDOWNRESPONSE,
+  __module__ = 'instrosetta.interfaces.light_analysis.power_meter_pb2'
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.light_analysis.power_meter.v1.ShutdownResponse)
+  ))
+_sym_db.RegisterMessage(ShutdownResponse)
 
 GetPowerRequest = _reflection.GeneratedProtocolMessageType('GetPowerRequest', (_message.Message,), dict(
   DESCRIPTOR = _GETPOWERREQUEST,
@@ -1054,6 +1276,7 @@ SetAutorangeResponse = _reflection.GeneratedProtocolMessageType('SetAutorangeRes
 _sym_db.RegisterMessage(SetAutorangeResponse)
 
 
+_INITIALIZEREQUEST_PROPERTIESENTRY._options = None
 
 _POWERMETER = _descriptor.ServiceDescriptor(
   name='PowerMeter',
@@ -1061,25 +1284,25 @@ _POWERMETER = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=1438,
-  serialized_end=3183,
+  serialized_start=1734,
+  serialized_end=3696,
   methods=[
   _descriptor.MethodDescriptor(
-    name='Connect',
-    full_name='instrosetta.interfaces.light_analysis.power_meter.v1.PowerMeter.Connect',
+    name='Initialize',
+    full_name='instrosetta.interfaces.light_analysis.power_meter.v1.PowerMeter.Initialize',
     index=0,
     containing_service=None,
-    input_type=instrosetta_dot_common_dot_connection__pb2._CONNECTREQUEST,
-    output_type=instrosetta_dot_common_dot_connection__pb2._CONNECTRESPONSE,
+    input_type=_INITIALIZEREQUEST,
+    output_type=_INITIALIZERESPONSE,
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='Disconnect',
-    full_name='instrosetta.interfaces.light_analysis.power_meter.v1.PowerMeter.Disconnect',
+    name='Shutdown',
+    full_name='instrosetta.interfaces.light_analysis.power_meter.v1.PowerMeter.Shutdown',
     index=1,
     containing_service=None,
-    input_type=instrosetta_dot_common_dot_connection__pb2._DISCONNECTREQUEST,
-    output_type=instrosetta_dot_common_dot_connection__pb2._DISCONNECTRESPONSE,
+    input_type=_SHUTDOWNREQUEST,
+    output_type=_SHUTDOWNRESPONSE,
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(

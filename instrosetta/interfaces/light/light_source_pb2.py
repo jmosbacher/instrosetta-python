@@ -12,7 +12,6 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from instrosetta.common import connection_pb2 as instrosetta_dot_common_dot_connection__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -20,11 +19,192 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='instrosetta.interfaces.light.light_source.v1',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n/instrosetta/interfaces/light/light_source.proto\x12,instrosetta.interfaces.light.light_source.v1\x1a#instrosetta/common/connection.proto\".\n\x0fGetPowerRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"B\n\x10GetPowerResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"A\n\x0fSetPowerRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"B\n\x10SetPowerResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t2\x92\x03\n\x0bLightSource\x12.\n\x07\x43onnect\x12\x0f.ConnectRequest\x1a\x10.ConnectResponse\"\x00\x12\x37\n\nDisconnect\x12\x12.DisconnectRequest\x1a\x13.DisconnectResponse\"\x00\x12\x8b\x01\n\x08GetPower\x12=.instrosetta.interfaces.light.light_source.v1.GetPowerRequest\x1a>.instrosetta.interfaces.light.light_source.v1.GetPowerResponse\"\x00\x12\x8b\x01\n\x08SetPower\x12=.instrosetta.interfaces.light.light_source.v1.SetPowerRequest\x1a>.instrosetta.interfaces.light.light_source.v1.SetPowerResponse\"\x00\x62\x06proto3')
-  ,
-  dependencies=[instrosetta_dot_common_dot_connection__pb2.DESCRIPTOR,])
+  serialized_pb=_b('\n/instrosetta/interfaces/light/light_source.proto\x12,instrosetta.interfaces.light.light_source.v1\"\xb9\x01\n\x11InitializeRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x63\n\nproperties\x18\x02 \x03(\x0b\x32O.instrosetta.interfaces.light.light_source.v1.InitializeRequest.PropertiesEntry\x1a\x31\n\x0fPropertiesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"3\n\x12InitializeResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07success\x18\x02 \x01(\x08\"\x1f\n\x0fShutdownRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"1\n\x10ShutdownResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07success\x18\x02 \x01(\x08\".\n\x0fGetPowerRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\t\"B\n\x10GetPowerResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"A\n\x0fSetPowerRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t\"B\n\x10SetPowerResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x01\x12\r\n\x05units\x18\x03 \x01(\t2\xcb\x04\n\x0bLightSource\x12\x91\x01\n\nInitialize\x12?.instrosetta.interfaces.light.light_source.v1.InitializeRequest\x1a@.instrosetta.interfaces.light.light_source.v1.InitializeResponse\"\x00\x12\x8b\x01\n\x08Shutdown\x12=.instrosetta.interfaces.light.light_source.v1.ShutdownRequest\x1a>.instrosetta.interfaces.light.light_source.v1.ShutdownResponse\"\x00\x12\x8b\x01\n\x08GetPower\x12=.instrosetta.interfaces.light.light_source.v1.GetPowerRequest\x1a>.instrosetta.interfaces.light.light_source.v1.GetPowerResponse\"\x00\x12\x8b\x01\n\x08SetPower\x12=.instrosetta.interfaces.light.light_source.v1.SetPowerRequest\x1a>.instrosetta.interfaces.light.light_source.v1.SetPowerResponse\"\x00\x62\x06proto3')
+)
 
 
+
+
+_INITIALIZEREQUEST_PROPERTIESENTRY = _descriptor.Descriptor(
+  name='PropertiesEntry',
+  full_name='instrosetta.interfaces.light.light_source.v1.InitializeRequest.PropertiesEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='instrosetta.interfaces.light.light_source.v1.InitializeRequest.PropertiesEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='instrosetta.interfaces.light.light_source.v1.InitializeRequest.PropertiesEntry.value', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=_b('8\001'),
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=234,
+  serialized_end=283,
+)
+
+_INITIALIZEREQUEST = _descriptor.Descriptor(
+  name='InitializeRequest',
+  full_name='instrosetta.interfaces.light.light_source.v1.InitializeRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='instrosetta.interfaces.light.light_source.v1.InitializeRequest.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='properties', full_name='instrosetta.interfaces.light.light_source.v1.InitializeRequest.properties', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[_INITIALIZEREQUEST_PROPERTIESENTRY, ],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=98,
+  serialized_end=283,
+)
+
+
+_INITIALIZERESPONSE = _descriptor.Descriptor(
+  name='InitializeResponse',
+  full_name='instrosetta.interfaces.light.light_source.v1.InitializeResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='instrosetta.interfaces.light.light_source.v1.InitializeResponse.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='success', full_name='instrosetta.interfaces.light.light_source.v1.InitializeResponse.success', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=285,
+  serialized_end=336,
+)
+
+
+_SHUTDOWNREQUEST = _descriptor.Descriptor(
+  name='ShutdownRequest',
+  full_name='instrosetta.interfaces.light.light_source.v1.ShutdownRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='instrosetta.interfaces.light.light_source.v1.ShutdownRequest.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=338,
+  serialized_end=369,
+)
+
+
+_SHUTDOWNRESPONSE = _descriptor.Descriptor(
+  name='ShutdownResponse',
+  full_name='instrosetta.interfaces.light.light_source.v1.ShutdownResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='instrosetta.interfaces.light.light_source.v1.ShutdownResponse.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='success', full_name='instrosetta.interfaces.light.light_source.v1.ShutdownResponse.success', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=371,
+  serialized_end=420,
+)
 
 
 _GETPOWERREQUEST = _descriptor.Descriptor(
@@ -60,8 +240,8 @@ _GETPOWERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=134,
-  serialized_end=180,
+  serialized_start=422,
+  serialized_end=468,
 )
 
 
@@ -105,8 +285,8 @@ _GETPOWERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=182,
-  serialized_end=248,
+  serialized_start=470,
+  serialized_end=536,
 )
 
 
@@ -150,8 +330,8 @@ _SETPOWERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=250,
-  serialized_end=315,
+  serialized_start=538,
+  serialized_end=603,
 )
 
 
@@ -195,15 +375,57 @@ _SETPOWERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=317,
-  serialized_end=383,
+  serialized_start=605,
+  serialized_end=671,
 )
 
+_INITIALIZEREQUEST_PROPERTIESENTRY.containing_type = _INITIALIZEREQUEST
+_INITIALIZEREQUEST.fields_by_name['properties'].message_type = _INITIALIZEREQUEST_PROPERTIESENTRY
+DESCRIPTOR.message_types_by_name['InitializeRequest'] = _INITIALIZEREQUEST
+DESCRIPTOR.message_types_by_name['InitializeResponse'] = _INITIALIZERESPONSE
+DESCRIPTOR.message_types_by_name['ShutdownRequest'] = _SHUTDOWNREQUEST
+DESCRIPTOR.message_types_by_name['ShutdownResponse'] = _SHUTDOWNRESPONSE
 DESCRIPTOR.message_types_by_name['GetPowerRequest'] = _GETPOWERREQUEST
 DESCRIPTOR.message_types_by_name['GetPowerResponse'] = _GETPOWERRESPONSE
 DESCRIPTOR.message_types_by_name['SetPowerRequest'] = _SETPOWERREQUEST
 DESCRIPTOR.message_types_by_name['SetPowerResponse'] = _SETPOWERRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
+
+InitializeRequest = _reflection.GeneratedProtocolMessageType('InitializeRequest', (_message.Message,), dict(
+
+  PropertiesEntry = _reflection.GeneratedProtocolMessageType('PropertiesEntry', (_message.Message,), dict(
+    DESCRIPTOR = _INITIALIZEREQUEST_PROPERTIESENTRY,
+    __module__ = 'instrosetta.interfaces.light.light_source_pb2'
+    # @@protoc_insertion_point(class_scope:instrosetta.interfaces.light.light_source.v1.InitializeRequest.PropertiesEntry)
+    ))
+  ,
+  DESCRIPTOR = _INITIALIZEREQUEST,
+  __module__ = 'instrosetta.interfaces.light.light_source_pb2'
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.light.light_source.v1.InitializeRequest)
+  ))
+_sym_db.RegisterMessage(InitializeRequest)
+_sym_db.RegisterMessage(InitializeRequest.PropertiesEntry)
+
+InitializeResponse = _reflection.GeneratedProtocolMessageType('InitializeResponse', (_message.Message,), dict(
+  DESCRIPTOR = _INITIALIZERESPONSE,
+  __module__ = 'instrosetta.interfaces.light.light_source_pb2'
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.light.light_source.v1.InitializeResponse)
+  ))
+_sym_db.RegisterMessage(InitializeResponse)
+
+ShutdownRequest = _reflection.GeneratedProtocolMessageType('ShutdownRequest', (_message.Message,), dict(
+  DESCRIPTOR = _SHUTDOWNREQUEST,
+  __module__ = 'instrosetta.interfaces.light.light_source_pb2'
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.light.light_source.v1.ShutdownRequest)
+  ))
+_sym_db.RegisterMessage(ShutdownRequest)
+
+ShutdownResponse = _reflection.GeneratedProtocolMessageType('ShutdownResponse', (_message.Message,), dict(
+  DESCRIPTOR = _SHUTDOWNRESPONSE,
+  __module__ = 'instrosetta.interfaces.light.light_source_pb2'
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.light.light_source.v1.ShutdownResponse)
+  ))
+_sym_db.RegisterMessage(ShutdownResponse)
 
 GetPowerRequest = _reflection.GeneratedProtocolMessageType('GetPowerRequest', (_message.Message,), dict(
   DESCRIPTOR = _GETPOWERREQUEST,
@@ -234,6 +456,7 @@ SetPowerResponse = _reflection.GeneratedProtocolMessageType('SetPowerResponse', 
 _sym_db.RegisterMessage(SetPowerResponse)
 
 
+_INITIALIZEREQUEST_PROPERTIESENTRY._options = None
 
 _LIGHTSOURCE = _descriptor.ServiceDescriptor(
   name='LightSource',
@@ -241,25 +464,25 @@ _LIGHTSOURCE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=386,
-  serialized_end=788,
+  serialized_start=674,
+  serialized_end=1261,
   methods=[
   _descriptor.MethodDescriptor(
-    name='Connect',
-    full_name='instrosetta.interfaces.light.light_source.v1.LightSource.Connect',
+    name='Initialize',
+    full_name='instrosetta.interfaces.light.light_source.v1.LightSource.Initialize',
     index=0,
     containing_service=None,
-    input_type=instrosetta_dot_common_dot_connection__pb2._CONNECTREQUEST,
-    output_type=instrosetta_dot_common_dot_connection__pb2._CONNECTRESPONSE,
+    input_type=_INITIALIZEREQUEST,
+    output_type=_INITIALIZERESPONSE,
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='Disconnect',
-    full_name='instrosetta.interfaces.light.light_source.v1.LightSource.Disconnect',
+    name='Shutdown',
+    full_name='instrosetta.interfaces.light.light_source.v1.LightSource.Shutdown',
     index=1,
     containing_service=None,
-    input_type=instrosetta_dot_common_dot_connection__pb2._DISCONNECTREQUEST,
-    output_type=instrosetta_dot_common_dot_connection__pb2._DISCONNECTRESPONSE,
+    input_type=_SHUTDOWNREQUEST,
+    output_type=_SHUTDOWNRESPONSE,
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(

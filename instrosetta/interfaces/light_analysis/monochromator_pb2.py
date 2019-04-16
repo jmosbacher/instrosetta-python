@@ -12,7 +12,6 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from instrosetta.common import connection_pb2 as instrosetta_dot_common_dot_connection__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -20,11 +19,192 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='instrosetta.interfaces.light_analysis.monochromator',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n9instrosetta/interfaces/light_analysis/monochromator.proto\x12\x33instrosetta.interfaces.light_analysis.monochromator\x1a#instrosetta/common/connection.proto\")\n\x19GetWavelengthRangeRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"[\n\x1aGetWavelengthRangeResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07minimum\x18\x02 \x01(\x02\x12\x0f\n\x07maximum\x18\x03 \x01(\x02\x12\r\n\x05units\x18\x04 \x01(\t\"$\n\x14GetWavelengthRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"G\n\x15GetWavelengthResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x02\x12\r\n\x05units\x18\x03 \x01(\t\"F\n\x14SetWavelengthRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x02\x12\r\n\x05units\x18\x03 \x01(\t\"G\n\x15SetWavelengthResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x02\x12\r\n\x05units\x18\x03 \x01(\t\"(\n\x18GetGratingOptionsRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\">\n\x19GetGratingOptionsResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0bgrating_ids\x18\x02 \x03(\r\"!\n\x11GetGratingRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"6\n\x12GetGratingResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x12\n\ngrating_id\x18\x02 \x01(\r\"5\n\x11SetGratingRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x12\n\ngrating_id\x18\x02 \x01(\r\"6\n\x12SetGratingResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x12\n\ngrating_id\x18\x02 \x01(\r\"(\n\x18GetSlitWidthRangeRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"Z\n\x19GetSlitWidthRangeResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07minimum\x18\x02 \x01(\x02\x12\x0f\n\x07maximum\x18\x03 \x01(\x02\x12\r\n\x05units\x18\x04 \x01(\t\"#\n\x13GetSlitWidthRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"F\n\x14GetSlitWidthResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x02\x12\r\n\x05units\x18\x03 \x01(\t\"E\n\x13SetSlitWidthRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x02\x12\r\n\x05units\x18\x03 \x01(\t\"F\n\x14SetSlitWidthResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x02\x12\r\n\x05units\x18\x03 \x01(\t2\x8a\r\n\rMonochromator\x12.\n\x07\x43onnect\x12\x0f.ConnectRequest\x1a\x10.ConnectResponse\"\x00\x12\x37\n\nDisconnect\x12\x12.DisconnectRequest\x1a\x13.DisconnectResponse\"\x00\x12\xb7\x01\n\x12GetWavelengthRange\x12N.instrosetta.interfaces.light_analysis.monochromator.GetWavelengthRangeRequest\x1aO.instrosetta.interfaces.light_analysis.monochromator.GetWavelengthRangeResponse\"\x00\x12\xa8\x01\n\rGetWavelength\x12I.instrosetta.interfaces.light_analysis.monochromator.GetWavelengthRequest\x1aJ.instrosetta.interfaces.light_analysis.monochromator.GetWavelengthResponse\"\x00\x12\xa8\x01\n\rSetWavelength\x12I.instrosetta.interfaces.light_analysis.monochromator.SetWavelengthRequest\x1aJ.instrosetta.interfaces.light_analysis.monochromator.SetWavelengthResponse\"\x00\x12\xb4\x01\n\x11GetGratingOptions\x12M.instrosetta.interfaces.light_analysis.monochromator.GetGratingOptionsRequest\x1aN.instrosetta.interfaces.light_analysis.monochromator.GetGratingOptionsResponse\"\x00\x12\x9f\x01\n\nGetGrating\x12\x46.instrosetta.interfaces.light_analysis.monochromator.GetGratingRequest\x1aG.instrosetta.interfaces.light_analysis.monochromator.GetGratingResponse\"\x00\x12\x9f\x01\n\nSetGrating\x12\x46.instrosetta.interfaces.light_analysis.monochromator.SetGratingRequest\x1aG.instrosetta.interfaces.light_analysis.monochromator.SetGratingResponse\"\x00\x12\xb4\x01\n\x11GetSlitWidthRange\x12M.instrosetta.interfaces.light_analysis.monochromator.GetSlitWidthRangeRequest\x1aN.instrosetta.interfaces.light_analysis.monochromator.GetSlitWidthRangeResponse\"\x00\x12\xa5\x01\n\x0cGetSlitWidth\x12H.instrosetta.interfaces.light_analysis.monochromator.GetSlitWidthRequest\x1aI.instrosetta.interfaces.light_analysis.monochromator.GetSlitWidthResponse\"\x00\x12\xa5\x01\n\x0cSetSlitWidth\x12H.instrosetta.interfaces.light_analysis.monochromator.SetSlitWidthRequest\x1aI.instrosetta.interfaces.light_analysis.monochromator.SetSlitWidthResponse\"\x00\x62\x06proto3')
-  ,
-  dependencies=[instrosetta_dot_common_dot_connection__pb2.DESCRIPTOR,])
+  serialized_pb=_b('\n9instrosetta/interfaces/light_analysis/monochromator.proto\x12\x33instrosetta.interfaces.light_analysis.monochromator\"\xc0\x01\n\x11InitializeRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12j\n\nproperties\x18\x02 \x03(\x0b\x32V.instrosetta.interfaces.light_analysis.monochromator.InitializeRequest.PropertiesEntry\x1a\x31\n\x0fPropertiesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"3\n\x12InitializeResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07success\x18\x02 \x01(\x08\"\x1f\n\x0fShutdownRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"1\n\x10ShutdownResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07success\x18\x02 \x01(\x08\")\n\x19GetWavelengthRangeRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"[\n\x1aGetWavelengthRangeResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07minimum\x18\x02 \x01(\x02\x12\x0f\n\x07maximum\x18\x03 \x01(\x02\x12\r\n\x05units\x18\x04 \x01(\t\"$\n\x14GetWavelengthRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"G\n\x15GetWavelengthResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x02\x12\r\n\x05units\x18\x03 \x01(\t\"F\n\x14SetWavelengthRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x02\x12\r\n\x05units\x18\x03 \x01(\t\"G\n\x15SetWavelengthResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x02\x12\r\n\x05units\x18\x03 \x01(\t\"(\n\x18GetGratingOptionsRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\">\n\x19GetGratingOptionsResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0bgrating_ids\x18\x02 \x03(\r\"!\n\x11GetGratingRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"6\n\x12GetGratingResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x12\n\ngrating_id\x18\x02 \x01(\r\"5\n\x11SetGratingRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x12\n\ngrating_id\x18\x02 \x01(\r\"6\n\x12SetGratingResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x12\n\ngrating_id\x18\x02 \x01(\r\"(\n\x18GetSlitWidthRangeRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"Z\n\x19GetSlitWidthRangeResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07minimum\x18\x02 \x01(\x02\x12\x0f\n\x07maximum\x18\x03 \x01(\x02\x12\r\n\x05units\x18\x04 \x01(\t\"#\n\x13GetSlitWidthRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"F\n\x14GetSlitWidthResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x02\x12\r\n\x05units\x18\x03 \x01(\t\"E\n\x13SetSlitWidthRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x02\x12\r\n\x05units\x18\x03 \x01(\t\"F\n\x14SetSlitWidthResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tmagnitude\x18\x02 \x01(\x02\x12\r\n\x05units\x18\x03 \x01(\t2\xdf\x0e\n\rMonochromator\x12\x9f\x01\n\nInitialize\x12\x46.instrosetta.interfaces.light_analysis.monochromator.InitializeRequest\x1aG.instrosetta.interfaces.light_analysis.monochromator.InitializeResponse\"\x00\x12\x99\x01\n\x08Shutdown\x12\x44.instrosetta.interfaces.light_analysis.monochromator.ShutdownRequest\x1a\x45.instrosetta.interfaces.light_analysis.monochromator.ShutdownResponse\"\x00\x12\xb7\x01\n\x12GetWavelengthRange\x12N.instrosetta.interfaces.light_analysis.monochromator.GetWavelengthRangeRequest\x1aO.instrosetta.interfaces.light_analysis.monochromator.GetWavelengthRangeResponse\"\x00\x12\xa8\x01\n\rGetWavelength\x12I.instrosetta.interfaces.light_analysis.monochromator.GetWavelengthRequest\x1aJ.instrosetta.interfaces.light_analysis.monochromator.GetWavelengthResponse\"\x00\x12\xa8\x01\n\rSetWavelength\x12I.instrosetta.interfaces.light_analysis.monochromator.SetWavelengthRequest\x1aJ.instrosetta.interfaces.light_analysis.monochromator.SetWavelengthResponse\"\x00\x12\xb4\x01\n\x11GetGratingOptions\x12M.instrosetta.interfaces.light_analysis.monochromator.GetGratingOptionsRequest\x1aN.instrosetta.interfaces.light_analysis.monochromator.GetGratingOptionsResponse\"\x00\x12\x9f\x01\n\nGetGrating\x12\x46.instrosetta.interfaces.light_analysis.monochromator.GetGratingRequest\x1aG.instrosetta.interfaces.light_analysis.monochromator.GetGratingResponse\"\x00\x12\x9f\x01\n\nSetGrating\x12\x46.instrosetta.interfaces.light_analysis.monochromator.SetGratingRequest\x1aG.instrosetta.interfaces.light_analysis.monochromator.SetGratingResponse\"\x00\x12\xb4\x01\n\x11GetSlitWidthRange\x12M.instrosetta.interfaces.light_analysis.monochromator.GetSlitWidthRangeRequest\x1aN.instrosetta.interfaces.light_analysis.monochromator.GetSlitWidthRangeResponse\"\x00\x12\xa5\x01\n\x0cGetSlitWidth\x12H.instrosetta.interfaces.light_analysis.monochromator.GetSlitWidthRequest\x1aI.instrosetta.interfaces.light_analysis.monochromator.GetSlitWidthResponse\"\x00\x12\xa5\x01\n\x0cSetSlitWidth\x12H.instrosetta.interfaces.light_analysis.monochromator.SetSlitWidthRequest\x1aI.instrosetta.interfaces.light_analysis.monochromator.SetSlitWidthResponse\"\x00\x62\x06proto3')
+)
 
 
+
+
+_INITIALIZEREQUEST_PROPERTIESENTRY = _descriptor.Descriptor(
+  name='PropertiesEntry',
+  full_name='instrosetta.interfaces.light_analysis.monochromator.InitializeRequest.PropertiesEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='instrosetta.interfaces.light_analysis.monochromator.InitializeRequest.PropertiesEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='instrosetta.interfaces.light_analysis.monochromator.InitializeRequest.PropertiesEntry.value', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=_b('8\001'),
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=258,
+  serialized_end=307,
+)
+
+_INITIALIZEREQUEST = _descriptor.Descriptor(
+  name='InitializeRequest',
+  full_name='instrosetta.interfaces.light_analysis.monochromator.InitializeRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='instrosetta.interfaces.light_analysis.monochromator.InitializeRequest.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='properties', full_name='instrosetta.interfaces.light_analysis.monochromator.InitializeRequest.properties', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[_INITIALIZEREQUEST_PROPERTIESENTRY, ],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=115,
+  serialized_end=307,
+)
+
+
+_INITIALIZERESPONSE = _descriptor.Descriptor(
+  name='InitializeResponse',
+  full_name='instrosetta.interfaces.light_analysis.monochromator.InitializeResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='instrosetta.interfaces.light_analysis.monochromator.InitializeResponse.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='success', full_name='instrosetta.interfaces.light_analysis.monochromator.InitializeResponse.success', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=309,
+  serialized_end=360,
+)
+
+
+_SHUTDOWNREQUEST = _descriptor.Descriptor(
+  name='ShutdownRequest',
+  full_name='instrosetta.interfaces.light_analysis.monochromator.ShutdownRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='instrosetta.interfaces.light_analysis.monochromator.ShutdownRequest.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=362,
+  serialized_end=393,
+)
+
+
+_SHUTDOWNRESPONSE = _descriptor.Descriptor(
+  name='ShutdownResponse',
+  full_name='instrosetta.interfaces.light_analysis.monochromator.ShutdownResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='instrosetta.interfaces.light_analysis.monochromator.ShutdownResponse.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='success', full_name='instrosetta.interfaces.light_analysis.monochromator.ShutdownResponse.success', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=395,
+  serialized_end=444,
+)
 
 
 _GETWAVELENGTHRANGEREQUEST = _descriptor.Descriptor(
@@ -53,8 +233,8 @@ _GETWAVELENGTHRANGEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=151,
-  serialized_end=192,
+  serialized_start=446,
+  serialized_end=487,
 )
 
 
@@ -105,8 +285,8 @@ _GETWAVELENGTHRANGERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=194,
-  serialized_end=285,
+  serialized_start=489,
+  serialized_end=580,
 )
 
 
@@ -136,8 +316,8 @@ _GETWAVELENGTHREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=287,
-  serialized_end=323,
+  serialized_start=582,
+  serialized_end=618,
 )
 
 
@@ -181,8 +361,8 @@ _GETWAVELENGTHRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=325,
-  serialized_end=396,
+  serialized_start=620,
+  serialized_end=691,
 )
 
 
@@ -226,8 +406,8 @@ _SETWAVELENGTHREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=398,
-  serialized_end=468,
+  serialized_start=693,
+  serialized_end=763,
 )
 
 
@@ -271,8 +451,8 @@ _SETWAVELENGTHRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=470,
-  serialized_end=541,
+  serialized_start=765,
+  serialized_end=836,
 )
 
 
@@ -302,8 +482,8 @@ _GETGRATINGOPTIONSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=543,
-  serialized_end=583,
+  serialized_start=838,
+  serialized_end=878,
 )
 
 
@@ -340,8 +520,8 @@ _GETGRATINGOPTIONSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=585,
-  serialized_end=647,
+  serialized_start=880,
+  serialized_end=942,
 )
 
 
@@ -371,8 +551,8 @@ _GETGRATINGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=649,
-  serialized_end=682,
+  serialized_start=944,
+  serialized_end=977,
 )
 
 
@@ -409,8 +589,8 @@ _GETGRATINGRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=684,
-  serialized_end=738,
+  serialized_start=979,
+  serialized_end=1033,
 )
 
 
@@ -447,8 +627,8 @@ _SETGRATINGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=740,
-  serialized_end=793,
+  serialized_start=1035,
+  serialized_end=1088,
 )
 
 
@@ -485,8 +665,8 @@ _SETGRATINGRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=795,
-  serialized_end=849,
+  serialized_start=1090,
+  serialized_end=1144,
 )
 
 
@@ -516,8 +696,8 @@ _GETSLITWIDTHRANGEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=851,
-  serialized_end=891,
+  serialized_start=1146,
+  serialized_end=1186,
 )
 
 
@@ -568,8 +748,8 @@ _GETSLITWIDTHRANGERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=893,
-  serialized_end=983,
+  serialized_start=1188,
+  serialized_end=1278,
 )
 
 
@@ -599,8 +779,8 @@ _GETSLITWIDTHREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=985,
-  serialized_end=1020,
+  serialized_start=1280,
+  serialized_end=1315,
 )
 
 
@@ -644,8 +824,8 @@ _GETSLITWIDTHRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1022,
-  serialized_end=1092,
+  serialized_start=1317,
+  serialized_end=1387,
 )
 
 
@@ -689,8 +869,8 @@ _SETSLITWIDTHREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1094,
-  serialized_end=1163,
+  serialized_start=1389,
+  serialized_end=1458,
 )
 
 
@@ -734,10 +914,16 @@ _SETSLITWIDTHRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1165,
-  serialized_end=1235,
+  serialized_start=1460,
+  serialized_end=1530,
 )
 
+_INITIALIZEREQUEST_PROPERTIESENTRY.containing_type = _INITIALIZEREQUEST
+_INITIALIZEREQUEST.fields_by_name['properties'].message_type = _INITIALIZEREQUEST_PROPERTIESENTRY
+DESCRIPTOR.message_types_by_name['InitializeRequest'] = _INITIALIZEREQUEST
+DESCRIPTOR.message_types_by_name['InitializeResponse'] = _INITIALIZERESPONSE
+DESCRIPTOR.message_types_by_name['ShutdownRequest'] = _SHUTDOWNREQUEST
+DESCRIPTOR.message_types_by_name['ShutdownResponse'] = _SHUTDOWNRESPONSE
 DESCRIPTOR.message_types_by_name['GetWavelengthRangeRequest'] = _GETWAVELENGTHRANGEREQUEST
 DESCRIPTOR.message_types_by_name['GetWavelengthRangeResponse'] = _GETWAVELENGTHRANGERESPONSE
 DESCRIPTOR.message_types_by_name['GetWavelengthRequest'] = _GETWAVELENGTHREQUEST
@@ -757,6 +943,42 @@ DESCRIPTOR.message_types_by_name['GetSlitWidthResponse'] = _GETSLITWIDTHRESPONSE
 DESCRIPTOR.message_types_by_name['SetSlitWidthRequest'] = _SETSLITWIDTHREQUEST
 DESCRIPTOR.message_types_by_name['SetSlitWidthResponse'] = _SETSLITWIDTHRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
+
+InitializeRequest = _reflection.GeneratedProtocolMessageType('InitializeRequest', (_message.Message,), dict(
+
+  PropertiesEntry = _reflection.GeneratedProtocolMessageType('PropertiesEntry', (_message.Message,), dict(
+    DESCRIPTOR = _INITIALIZEREQUEST_PROPERTIESENTRY,
+    __module__ = 'instrosetta.interfaces.light_analysis.monochromator_pb2'
+    # @@protoc_insertion_point(class_scope:instrosetta.interfaces.light_analysis.monochromator.InitializeRequest.PropertiesEntry)
+    ))
+  ,
+  DESCRIPTOR = _INITIALIZEREQUEST,
+  __module__ = 'instrosetta.interfaces.light_analysis.monochromator_pb2'
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.light_analysis.monochromator.InitializeRequest)
+  ))
+_sym_db.RegisterMessage(InitializeRequest)
+_sym_db.RegisterMessage(InitializeRequest.PropertiesEntry)
+
+InitializeResponse = _reflection.GeneratedProtocolMessageType('InitializeResponse', (_message.Message,), dict(
+  DESCRIPTOR = _INITIALIZERESPONSE,
+  __module__ = 'instrosetta.interfaces.light_analysis.monochromator_pb2'
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.light_analysis.monochromator.InitializeResponse)
+  ))
+_sym_db.RegisterMessage(InitializeResponse)
+
+ShutdownRequest = _reflection.GeneratedProtocolMessageType('ShutdownRequest', (_message.Message,), dict(
+  DESCRIPTOR = _SHUTDOWNREQUEST,
+  __module__ = 'instrosetta.interfaces.light_analysis.monochromator_pb2'
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.light_analysis.monochromator.ShutdownRequest)
+  ))
+_sym_db.RegisterMessage(ShutdownRequest)
+
+ShutdownResponse = _reflection.GeneratedProtocolMessageType('ShutdownResponse', (_message.Message,), dict(
+  DESCRIPTOR = _SHUTDOWNRESPONSE,
+  __module__ = 'instrosetta.interfaces.light_analysis.monochromator_pb2'
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.light_analysis.monochromator.ShutdownResponse)
+  ))
+_sym_db.RegisterMessage(ShutdownResponse)
 
 GetWavelengthRangeRequest = _reflection.GeneratedProtocolMessageType('GetWavelengthRangeRequest', (_message.Message,), dict(
   DESCRIPTOR = _GETWAVELENGTHRANGEREQUEST,
@@ -885,6 +1107,7 @@ SetSlitWidthResponse = _reflection.GeneratedProtocolMessageType('SetSlitWidthRes
 _sym_db.RegisterMessage(SetSlitWidthResponse)
 
 
+_INITIALIZEREQUEST_PROPERTIESENTRY._options = None
 
 _MONOCHROMATOR = _descriptor.ServiceDescriptor(
   name='Monochromator',
@@ -892,25 +1115,25 @@ _MONOCHROMATOR = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=1238,
-  serialized_end=2912,
+  serialized_start=1533,
+  serialized_end=3420,
   methods=[
   _descriptor.MethodDescriptor(
-    name='Connect',
-    full_name='instrosetta.interfaces.light_analysis.monochromator.Monochromator.Connect',
+    name='Initialize',
+    full_name='instrosetta.interfaces.light_analysis.monochromator.Monochromator.Initialize',
     index=0,
     containing_service=None,
-    input_type=instrosetta_dot_common_dot_connection__pb2._CONNECTREQUEST,
-    output_type=instrosetta_dot_common_dot_connection__pb2._CONNECTRESPONSE,
+    input_type=_INITIALIZEREQUEST,
+    output_type=_INITIALIZERESPONSE,
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='Disconnect',
-    full_name='instrosetta.interfaces.light_analysis.monochromator.Monochromator.Disconnect',
+    name='Shutdown',
+    full_name='instrosetta.interfaces.light_analysis.monochromator.Monochromator.Shutdown',
     index=1,
     containing_service=None,
-    input_type=instrosetta_dot_common_dot_connection__pb2._DISCONNECTREQUEST,
-    output_type=instrosetta_dot_common_dot_connection__pb2._DISCONNECTRESPONSE,
+    input_type=_SHUTDOWNREQUEST,
+    output_type=_SHUTDOWNRESPONSE,
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(

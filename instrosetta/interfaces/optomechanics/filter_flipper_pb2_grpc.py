@@ -14,20 +14,15 @@ class FilterFlipperStub(object):
     Args:
       channel: A grpc.Channel.
     """
-    self.Echo = channel.unary_unary(
-        '/instrosetta.interfaces.optomechanics.filter_flipper.v1.FilterFlipper/Echo',
-        request_serializer=instrosetta_dot_interfaces_dot_optomechanics_dot_filter__flipper__pb2.EchoRequest.SerializeToString,
-        response_deserializer=instrosetta_dot_interfaces_dot_optomechanics_dot_filter__flipper__pb2.EchoResponse.FromString,
+    self.Initialize = channel.unary_unary(
+        '/instrosetta.interfaces.optomechanics.filter_flipper.v1.FilterFlipper/Initialize',
+        request_serializer=instrosetta_dot_interfaces_dot_optomechanics_dot_filter__flipper__pb2.InitializeRequest.SerializeToString,
+        response_deserializer=instrosetta_dot_interfaces_dot_optomechanics_dot_filter__flipper__pb2.InitializeResponse.FromString,
         )
-    self.Connect = channel.unary_unary(
-        '/instrosetta.interfaces.optomechanics.filter_flipper.v1.FilterFlipper/Connect',
-        request_serializer=instrosetta_dot_interfaces_dot_optomechanics_dot_filter__flipper__pb2.ConnectRequest.SerializeToString,
-        response_deserializer=instrosetta_dot_interfaces_dot_optomechanics_dot_filter__flipper__pb2.ConnectResponse.FromString,
-        )
-    self.Disconnect = channel.unary_unary(
-        '/instrosetta.interfaces.optomechanics.filter_flipper.v1.FilterFlipper/Disconnect',
-        request_serializer=instrosetta_dot_interfaces_dot_optomechanics_dot_filter__flipper__pb2.DisconnectRequest.SerializeToString,
-        response_deserializer=instrosetta_dot_interfaces_dot_optomechanics_dot_filter__flipper__pb2.DisconnectResponse.FromString,
+    self.Shutdown = channel.unary_unary(
+        '/instrosetta.interfaces.optomechanics.filter_flipper.v1.FilterFlipper/Shutdown',
+        request_serializer=instrosetta_dot_interfaces_dot_optomechanics_dot_filter__flipper__pb2.ShutdownRequest.SerializeToString,
+        response_deserializer=instrosetta_dot_interfaces_dot_optomechanics_dot_filter__flipper__pb2.ShutdownResponse.FromString,
         )
     self.GetPosition = channel.unary_unary(
         '/instrosetta.interfaces.optomechanics.filter_flipper.v1.FilterFlipper/GetPosition',
@@ -55,21 +50,14 @@ class FilterFlipperServicer(object):
   # missing associated documentation comment in .proto file
   pass
 
-  def Echo(self, request, context):
+  def Initialize(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def Connect(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
-  def Disconnect(self, request, context):
+  def Shutdown(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -107,20 +95,15 @@ class FilterFlipperServicer(object):
 
 def add_FilterFlipperServicer_to_server(servicer, server):
   rpc_method_handlers = {
-      'Echo': grpc.unary_unary_rpc_method_handler(
-          servicer.Echo,
-          request_deserializer=instrosetta_dot_interfaces_dot_optomechanics_dot_filter__flipper__pb2.EchoRequest.FromString,
-          response_serializer=instrosetta_dot_interfaces_dot_optomechanics_dot_filter__flipper__pb2.EchoResponse.SerializeToString,
+      'Initialize': grpc.unary_unary_rpc_method_handler(
+          servicer.Initialize,
+          request_deserializer=instrosetta_dot_interfaces_dot_optomechanics_dot_filter__flipper__pb2.InitializeRequest.FromString,
+          response_serializer=instrosetta_dot_interfaces_dot_optomechanics_dot_filter__flipper__pb2.InitializeResponse.SerializeToString,
       ),
-      'Connect': grpc.unary_unary_rpc_method_handler(
-          servicer.Connect,
-          request_deserializer=instrosetta_dot_interfaces_dot_optomechanics_dot_filter__flipper__pb2.ConnectRequest.FromString,
-          response_serializer=instrosetta_dot_interfaces_dot_optomechanics_dot_filter__flipper__pb2.ConnectResponse.SerializeToString,
-      ),
-      'Disconnect': grpc.unary_unary_rpc_method_handler(
-          servicer.Disconnect,
-          request_deserializer=instrosetta_dot_interfaces_dot_optomechanics_dot_filter__flipper__pb2.DisconnectRequest.FromString,
-          response_serializer=instrosetta_dot_interfaces_dot_optomechanics_dot_filter__flipper__pb2.DisconnectResponse.SerializeToString,
+      'Shutdown': grpc.unary_unary_rpc_method_handler(
+          servicer.Shutdown,
+          request_deserializer=instrosetta_dot_interfaces_dot_optomechanics_dot_filter__flipper__pb2.ShutdownRequest.FromString,
+          response_serializer=instrosetta_dot_interfaces_dot_optomechanics_dot_filter__flipper__pb2.ShutdownResponse.SerializeToString,
       ),
       'GetPosition': grpc.unary_unary_rpc_method_handler(
           servicer.GetPosition,

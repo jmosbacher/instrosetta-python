@@ -13,7 +13,6 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from instrosetta.common import connection_pb2 as instrosetta_dot_common_dot_connection__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -21,9 +20,8 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='instrosetta.interfaces.electronics.simple_switch.v1',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n6instrosetta/interfaces/electronics/simple_switch.proto\x12\x33instrosetta.interfaces.electronics.simple_switch.v1\x1a#instrosetta/common/connection.proto\"\x1b\n\x0b\x46lipRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"m\n\x0c\x46lipResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12O\n\x05state\x18\x02 \x01(\x0e\x32@.instrosetta.interfaces.electronics.simple_switch.v1.SwitchState\"\x1f\n\x0fGetStateRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"q\n\x10GetStateResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12O\n\x05state\x18\x02 \x01(\x0e\x32@.instrosetta.interfaces.electronics.simple_switch.v1.SwitchState\"p\n\x0fSetStateRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12O\n\x05state\x18\x02 \x01(\x0e\x32@.instrosetta.interfaces.electronics.simple_switch.v1.SwitchState\"q\n\x10SetStateResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12O\n\x05state\x18\x02 \x01(\x0e\x32@.instrosetta.interfaces.electronics.simple_switch.v1.SwitchState*+\n\x0bSwitchState\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x07\n\x03OFF\x10\x01\x12\x06\n\x02ON\x10\x02\x32\xbf\x04\n\x0cSimpleSwitch\x12.\n\x07\x43onnect\x12\x0f.ConnectRequest\x1a\x10.ConnectResponse\"\x00\x12\x37\n\nDisconnect\x12\x12.DisconnectRequest\x1a\x13.DisconnectResponse\"\x00\x12\x8d\x01\n\x04\x46lip\x12@.instrosetta.interfaces.electronics.simple_switch.v1.FlipRequest\x1a\x41.instrosetta.interfaces.electronics.simple_switch.v1.FlipResponse\"\x00\x12\x99\x01\n\x08GetState\x12\x44.instrosetta.interfaces.electronics.simple_switch.v1.GetStateRequest\x1a\x45.instrosetta.interfaces.electronics.simple_switch.v1.GetStateResponse\"\x00\x12\x99\x01\n\x08SetState\x12\x44.instrosetta.interfaces.electronics.simple_switch.v1.SetStateRequest\x1a\x45.instrosetta.interfaces.electronics.simple_switch.v1.SetStateResponse\"\x00\x62\x06proto3')
-  ,
-  dependencies=[instrosetta_dot_common_dot_connection__pb2.DESCRIPTOR,])
+  serialized_pb=_b('\n6instrosetta/interfaces/electronics/simple_switch.proto\x12\x33instrosetta.interfaces.electronics.simple_switch.v1\"\xc0\x01\n\x11InitializeRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12j\n\nproperties\x18\x02 \x03(\x0b\x32V.instrosetta.interfaces.electronics.simple_switch.v1.InitializeRequest.PropertiesEntry\x1a\x31\n\x0fPropertiesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"3\n\x12InitializeResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07success\x18\x02 \x01(\x08\"\x1f\n\x0fShutdownRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"1\n\x10ShutdownResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07success\x18\x02 \x01(\x08\"\x1b\n\x0b\x46lipRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"m\n\x0c\x46lipResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12O\n\x05state\x18\x02 \x01(\x0e\x32@.instrosetta.interfaces.electronics.simple_switch.v1.SwitchState\"\x1f\n\x0fGetStateRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"q\n\x10GetStateResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12O\n\x05state\x18\x02 \x01(\x0e\x32@.instrosetta.interfaces.electronics.simple_switch.v1.SwitchState\"p\n\x0fSetStateRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12O\n\x05state\x18\x02 \x01(\x0e\x32@.instrosetta.interfaces.electronics.simple_switch.v1.SwitchState\"q\n\x10SetStateResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12O\n\x05state\x18\x02 \x01(\x0e\x32@.instrosetta.interfaces.electronics.simple_switch.v1.SwitchState*+\n\x0bSwitchState\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x07\n\x03OFF\x10\x01\x12\x06\n\x02ON\x10\x02\x32\x94\x06\n\x0cSimpleSwitch\x12\x9f\x01\n\nInitialize\x12\x46.instrosetta.interfaces.electronics.simple_switch.v1.InitializeRequest\x1aG.instrosetta.interfaces.electronics.simple_switch.v1.InitializeResponse\"\x00\x12\x99\x01\n\x08Shutdown\x12\x44.instrosetta.interfaces.electronics.simple_switch.v1.ShutdownRequest\x1a\x45.instrosetta.interfaces.electronics.simple_switch.v1.ShutdownResponse\"\x00\x12\x8d\x01\n\x04\x46lip\x12@.instrosetta.interfaces.electronics.simple_switch.v1.FlipRequest\x1a\x41.instrosetta.interfaces.electronics.simple_switch.v1.FlipResponse\"\x00\x12\x99\x01\n\x08GetState\x12\x44.instrosetta.interfaces.electronics.simple_switch.v1.GetStateRequest\x1a\x45.instrosetta.interfaces.electronics.simple_switch.v1.GetStateResponse\"\x00\x12\x99\x01\n\x08SetState\x12\x44.instrosetta.interfaces.electronics.simple_switch.v1.SetStateRequest\x1a\x45.instrosetta.interfaces.electronics.simple_switch.v1.SetStateResponse\"\x00\x62\x06proto3')
+)
 
 _SWITCHSTATE = _descriptor.EnumDescriptor(
   name='SwitchState',
@@ -46,8 +44,8 @@ _SWITCHSTATE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=665,
-  serialized_end=708,
+  serialized_start=960,
+  serialized_end=1003,
 )
 _sym_db.RegisterEnumDescriptor(_SWITCHSTATE)
 
@@ -56,6 +54,188 @@ UNKNOWN = 0
 OFF = 1
 ON = 2
 
+
+
+_INITIALIZEREQUEST_PROPERTIESENTRY = _descriptor.Descriptor(
+  name='PropertiesEntry',
+  full_name='instrosetta.interfaces.electronics.simple_switch.v1.InitializeRequest.PropertiesEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='instrosetta.interfaces.electronics.simple_switch.v1.InitializeRequest.PropertiesEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='instrosetta.interfaces.electronics.simple_switch.v1.InitializeRequest.PropertiesEntry.value', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=_b('8\001'),
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=255,
+  serialized_end=304,
+)
+
+_INITIALIZEREQUEST = _descriptor.Descriptor(
+  name='InitializeRequest',
+  full_name='instrosetta.interfaces.electronics.simple_switch.v1.InitializeRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='instrosetta.interfaces.electronics.simple_switch.v1.InitializeRequest.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='properties', full_name='instrosetta.interfaces.electronics.simple_switch.v1.InitializeRequest.properties', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[_INITIALIZEREQUEST_PROPERTIESENTRY, ],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=112,
+  serialized_end=304,
+)
+
+
+_INITIALIZERESPONSE = _descriptor.Descriptor(
+  name='InitializeResponse',
+  full_name='instrosetta.interfaces.electronics.simple_switch.v1.InitializeResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='instrosetta.interfaces.electronics.simple_switch.v1.InitializeResponse.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='success', full_name='instrosetta.interfaces.electronics.simple_switch.v1.InitializeResponse.success', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=306,
+  serialized_end=357,
+)
+
+
+_SHUTDOWNREQUEST = _descriptor.Descriptor(
+  name='ShutdownRequest',
+  full_name='instrosetta.interfaces.electronics.simple_switch.v1.ShutdownRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='instrosetta.interfaces.electronics.simple_switch.v1.ShutdownRequest.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=359,
+  serialized_end=390,
+)
+
+
+_SHUTDOWNRESPONSE = _descriptor.Descriptor(
+  name='ShutdownResponse',
+  full_name='instrosetta.interfaces.electronics.simple_switch.v1.ShutdownResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='instrosetta.interfaces.electronics.simple_switch.v1.ShutdownResponse.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='success', full_name='instrosetta.interfaces.electronics.simple_switch.v1.ShutdownResponse.success', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=392,
+  serialized_end=441,
+)
 
 
 _FLIPREQUEST = _descriptor.Descriptor(
@@ -84,8 +264,8 @@ _FLIPREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=148,
-  serialized_end=175,
+  serialized_start=443,
+  serialized_end=470,
 )
 
 
@@ -122,8 +302,8 @@ _FLIPRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=177,
-  serialized_end=286,
+  serialized_start=472,
+  serialized_end=581,
 )
 
 
@@ -153,8 +333,8 @@ _GETSTATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=288,
-  serialized_end=319,
+  serialized_start=583,
+  serialized_end=614,
 )
 
 
@@ -191,8 +371,8 @@ _GETSTATERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=321,
-  serialized_end=434,
+  serialized_start=616,
+  serialized_end=729,
 )
 
 
@@ -229,8 +409,8 @@ _SETSTATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=436,
-  serialized_end=548,
+  serialized_start=731,
+  serialized_end=843,
 )
 
 
@@ -267,14 +447,20 @@ _SETSTATERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=550,
-  serialized_end=663,
+  serialized_start=845,
+  serialized_end=958,
 )
 
+_INITIALIZEREQUEST_PROPERTIESENTRY.containing_type = _INITIALIZEREQUEST
+_INITIALIZEREQUEST.fields_by_name['properties'].message_type = _INITIALIZEREQUEST_PROPERTIESENTRY
 _FLIPRESPONSE.fields_by_name['state'].enum_type = _SWITCHSTATE
 _GETSTATERESPONSE.fields_by_name['state'].enum_type = _SWITCHSTATE
 _SETSTATEREQUEST.fields_by_name['state'].enum_type = _SWITCHSTATE
 _SETSTATERESPONSE.fields_by_name['state'].enum_type = _SWITCHSTATE
+DESCRIPTOR.message_types_by_name['InitializeRequest'] = _INITIALIZEREQUEST
+DESCRIPTOR.message_types_by_name['InitializeResponse'] = _INITIALIZERESPONSE
+DESCRIPTOR.message_types_by_name['ShutdownRequest'] = _SHUTDOWNREQUEST
+DESCRIPTOR.message_types_by_name['ShutdownResponse'] = _SHUTDOWNRESPONSE
 DESCRIPTOR.message_types_by_name['FlipRequest'] = _FLIPREQUEST
 DESCRIPTOR.message_types_by_name['FlipResponse'] = _FLIPRESPONSE
 DESCRIPTOR.message_types_by_name['GetStateRequest'] = _GETSTATEREQUEST
@@ -283,6 +469,42 @@ DESCRIPTOR.message_types_by_name['SetStateRequest'] = _SETSTATEREQUEST
 DESCRIPTOR.message_types_by_name['SetStateResponse'] = _SETSTATERESPONSE
 DESCRIPTOR.enum_types_by_name['SwitchState'] = _SWITCHSTATE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
+
+InitializeRequest = _reflection.GeneratedProtocolMessageType('InitializeRequest', (_message.Message,), dict(
+
+  PropertiesEntry = _reflection.GeneratedProtocolMessageType('PropertiesEntry', (_message.Message,), dict(
+    DESCRIPTOR = _INITIALIZEREQUEST_PROPERTIESENTRY,
+    __module__ = 'instrosetta.interfaces.electronics.simple_switch_pb2'
+    # @@protoc_insertion_point(class_scope:instrosetta.interfaces.electronics.simple_switch.v1.InitializeRequest.PropertiesEntry)
+    ))
+  ,
+  DESCRIPTOR = _INITIALIZEREQUEST,
+  __module__ = 'instrosetta.interfaces.electronics.simple_switch_pb2'
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.electronics.simple_switch.v1.InitializeRequest)
+  ))
+_sym_db.RegisterMessage(InitializeRequest)
+_sym_db.RegisterMessage(InitializeRequest.PropertiesEntry)
+
+InitializeResponse = _reflection.GeneratedProtocolMessageType('InitializeResponse', (_message.Message,), dict(
+  DESCRIPTOR = _INITIALIZERESPONSE,
+  __module__ = 'instrosetta.interfaces.electronics.simple_switch_pb2'
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.electronics.simple_switch.v1.InitializeResponse)
+  ))
+_sym_db.RegisterMessage(InitializeResponse)
+
+ShutdownRequest = _reflection.GeneratedProtocolMessageType('ShutdownRequest', (_message.Message,), dict(
+  DESCRIPTOR = _SHUTDOWNREQUEST,
+  __module__ = 'instrosetta.interfaces.electronics.simple_switch_pb2'
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.electronics.simple_switch.v1.ShutdownRequest)
+  ))
+_sym_db.RegisterMessage(ShutdownRequest)
+
+ShutdownResponse = _reflection.GeneratedProtocolMessageType('ShutdownResponse', (_message.Message,), dict(
+  DESCRIPTOR = _SHUTDOWNRESPONSE,
+  __module__ = 'instrosetta.interfaces.electronics.simple_switch_pb2'
+  # @@protoc_insertion_point(class_scope:instrosetta.interfaces.electronics.simple_switch.v1.ShutdownResponse)
+  ))
+_sym_db.RegisterMessage(ShutdownResponse)
 
 FlipRequest = _reflection.GeneratedProtocolMessageType('FlipRequest', (_message.Message,), dict(
   DESCRIPTOR = _FLIPREQUEST,
@@ -327,6 +549,7 @@ SetStateResponse = _reflection.GeneratedProtocolMessageType('SetStateResponse', 
 _sym_db.RegisterMessage(SetStateResponse)
 
 
+_INITIALIZEREQUEST_PROPERTIESENTRY._options = None
 
 _SIMPLESWITCH = _descriptor.ServiceDescriptor(
   name='SimpleSwitch',
@@ -334,25 +557,25 @@ _SIMPLESWITCH = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=711,
-  serialized_end=1286,
+  serialized_start=1006,
+  serialized_end=1794,
   methods=[
   _descriptor.MethodDescriptor(
-    name='Connect',
-    full_name='instrosetta.interfaces.electronics.simple_switch.v1.SimpleSwitch.Connect',
+    name='Initialize',
+    full_name='instrosetta.interfaces.electronics.simple_switch.v1.SimpleSwitch.Initialize',
     index=0,
     containing_service=None,
-    input_type=instrosetta_dot_common_dot_connection__pb2._CONNECTREQUEST,
-    output_type=instrosetta_dot_common_dot_connection__pb2._CONNECTRESPONSE,
+    input_type=_INITIALIZEREQUEST,
+    output_type=_INITIALIZERESPONSE,
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='Disconnect',
-    full_name='instrosetta.interfaces.electronics.simple_switch.v1.SimpleSwitch.Disconnect',
+    name='Shutdown',
+    full_name='instrosetta.interfaces.electronics.simple_switch.v1.SimpleSwitch.Shutdown',
     index=1,
     containing_service=None,
-    input_type=instrosetta_dot_common_dot_connection__pb2._DISCONNECTREQUEST,
-    output_type=instrosetta_dot_common_dot_connection__pb2._DISCONNECTRESPONSE,
+    input_type=_SHUTDOWNREQUEST,
+    output_type=_SHUTDOWNRESPONSE,
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(

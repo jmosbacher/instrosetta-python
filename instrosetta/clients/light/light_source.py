@@ -13,13 +13,13 @@ Q_ = ureg.Quantity
 class SingleAxis(RpcClient):
     stub_class = light_source_pb2_grpc.LightSourceStub
 
-    def connect(self, device_id='', timeout=5):
-        req = connection_pb2.ConnectRequest(device_id=device_id, timeout=timeout)
-        self.single_rpc("Connect", req)
+    def initialize(self, device_id='', timeout=5):
+        req = light_source_pb2.InitializeRequest(device_id=device_id, timeout=timeout)
+        self.single_rpc("Initialize", req)
 
-    def disconnect(self):
-        req = connection_pb2.DisconnectRequest()
-        self.single_rpc("Disconnect", req)
+    def shutdown(self):
+        req = light_source_pb2.ShutdownRequest()
+        self.single_rpc("Shutdown", req)
 
     @property
     def power(self):

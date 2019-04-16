@@ -4,7 +4,6 @@ import pint
 from instrosetta.utils.units import accept_text
 from instrosetta.interfaces.motion_control import singleaxis_pb2
 from instrosetta.interfaces.motion_control import singleaxis_pb2_grpc
-from instrosetta.common import connection_pb2
 from instrosetta.client import RpcClient
 ureg = pint.UnitRegistry()
 Q_ = ureg.Quantity
@@ -17,13 +16,14 @@ class SingleAxis(RpcClient):
         req = singleaxis_pb2.ScanDevicesRequest()
         return [resp.device_id for resp in self.streaming_rpc('ScanDevices', req)]
 
-    def connect(self, device_id='', timeout=5):
-        req = connection_pb2.ConnectRequest(device_id=device_id, timeout=timeout)
-        self.single_rpc("Connect", req)
+    def initialize(self, device_id='', timeout=5):
+        req = singleaxis_pb2.InitializeRequest(device_id=device_id, timeout=timeout)
+        self.single_rpc("Initialize", req)
 
-    def disconnect(self):
-        req = connection_pb2.DisconnectRequest()
-        self.single_rpc("Disconnect", req)
+    def shutdown(self):
+        req = singleaxis_pb2.ShutdownRequest()
+        self.single_rpc("Shutdown", req)
+
 
     def home(self):
         req = singleaxis_pb2.HomeMotorRequest()
