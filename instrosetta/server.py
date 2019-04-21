@@ -2,15 +2,10 @@ from concurrent import futures
 import time
 import math
 import grpc
-
+from instrosetta.servers.debugging.echo_servicer import EchoServicer
 _ONE_DAY_IN_SECONDS = 60 * 60 * 24
 
 class RpcServer:
-
-    @staticmethod
-    def bind(servicer, server):
-        raise NotImplementedError
-
     servicer_class = lambda: None
     name = "RPC"
     
@@ -20,7 +15,9 @@ class RpcServer:
             print("No servicer is defined.")
             return
         server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
-        self.bind(servicer, server)
+        servicer.bind(server)
+        echo_servicer = EchoServicer()
+        echo_servicer.bind(server)
         server.add_insecure_port(address)
         server.start()
         print(f"{self.name} device server running at {address}")
