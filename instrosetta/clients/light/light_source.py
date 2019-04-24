@@ -10,7 +10,7 @@ ureg = pint.UnitRegistry()
 Q_ = ureg.Quantity
 
 
-class SingleAxis(RpcClient):
+class LightSource(RpcClient):
     stub_class = light_source_pb2_grpc.LightSourceStub
 
     def initialize(self, device_id='', timeout=5):
